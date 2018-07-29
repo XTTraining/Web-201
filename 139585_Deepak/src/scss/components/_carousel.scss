@@ -1,0 +1,39 @@
+.f-carousel {
+    grid-column: main-start/main-end;
+}
+
+.carousel-indicators li {
+    width: 30px;
+    height: 5px;
+    margin: 0 8px;
+}
+
+.carousel-indicators .active {
+    width: 30px;
+    height: 5px;
+    margin: 0 8px;
+}
+
+.carousel-caption {
+    background-color:rgba(6, 6, 6, 0.2);
+    padding: 0;
+    margin-bottom: 2vw;
+    right: 0;
+    left: 0;
+    &-head {
+        font-size: 6rem;
+        opacity: 0.8;
+        @include respond(phone){
+            font-size: 3rem;
+        }
+    }
+    &-body {
+        font-size: 3rem;
+        text-shadow: 3px 4px 5px #000;
+        @include respond(phone){
+            font-size: 2rem;
+        }
+
+    }
+
+}

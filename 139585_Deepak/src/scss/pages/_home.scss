@@ -1,0 +1,51 @@
+.food {
+    grid-column: main-start/main-end;
+    background-color: $color-primary;
+    border-radius: 4px;
+    padding: 2vw;
+}
+
+.checkout {
+    grid-column: main-start/main-end;
+    margin: 1rem 0;
+    justify-self: end;
+}
+
+.header {
+    /*make stick at top*/
+    position: sticky;
+    top: 0;
+    /*make stick at top*/
+    z-index: 16;
+    background-color: #394264;
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: 5vw repeat(2, 1fr) repeat(2, minmax(max-content, 50px)) 5vw;
+    align-items: center; //vertically center
+    box-shadow: $shadow-light;
+
+    @include respond(phone) {
+        grid-template-columns: 5vw min-content 1fr repeat(2, minmax(max-content, 50px)) 5vw;
+    }
+
+}
+
+.footer {
+    background-color: $color-primary;
+    grid-column: full-start / full-end;
+    padding: 1vw 3vw 0vw 3vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); //grid-template-rows: repeat(3, 1fr);
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    //    background: url('/img/loading.gif') 50% 50% no-repeat rgba(249, 249, 249, 0.8);
+    background: url('../img/loader-2_food.gif') 50% 50% no-repeat rgba(249, 249, 249, 0.8);
+    background-size: 34rem;
+}

@@ -1,0 +1,45 @@
+.food__search {
+    border-bottom: 2px solid $color-white;
+    width: 25vw;
+    min-width: 22rem;
+    justify-self: end;
+    .icon {
+        height: 2rem;
+        width: 2rem;
+        position: relative;
+        fill: #fff;
+        /* top: -2px; */
+        top: -27px;
+        left: 92%;
+        cursor: pointer;
+    }
+
+    input {
+        border: none;
+        background: none;
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        font-family: 'Dosis', sans-serif;
+        font-size: 2rem;
+        font-weight: 200;
+        font-style: italic;
+        outline: none;
+        letter-spacing: 0.15rem;
+    }
+    &:focus-within {
+        border-bottom: 2px solid #11a8ab;
+    }
+    &.error {
+        &::after {
+            content: "Enter atleast 3 letters";
+            font-size: 1.3rem;
+            position: relative;
+            top: -0.4rem;
+            left: -2.3rem;
+            backface-visibility: hidden;
+            letter-spacing: 3px;
+            color: $color-primary-dark;
+        }
+    }
+}

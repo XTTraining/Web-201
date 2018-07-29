@@ -1,0 +1,18 @@
+{{#each this}}
+   <div class="cart__item" data-type="desserts" data-id="{{id}}">
+    <svg class="icon food__item--icon icon__preference {{foodclass category}}">
+        <use xlink:href="img/sprite.svg#icon-radio-checked"></use>
+    </svg>
+    <div class="cart__item--img">
+        <img src="{{image}}">
+    </div>
+    <div class="cart__item--name">{{name}}</div>
+    <div class="cart__item--button">
+        <div class="food__item--add-2">-</div>
+        <div class="food__item--add-3">{{count}}</div>
+        <div class="food__item--add-4">+</div>
+    </div>
+    <div class="cart__item--price">{{mul price count}}</div>
+
+</div>
+{{/each}}

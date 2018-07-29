@@ -1,0 +1,35 @@
+.btn {
+    cursor: pointer;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    border: none;
+    color: inherit;
+
+    transition: all .3s;
+    &:hover {
+        box-shadow: $shadow-light;
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+}
+
+.btn-blue {
+    //  background: linear-gradient(to right, $color-secondary-dark, $color-secondary-light);
+    background-color: $color-primary;
+}
+
+.btn-cart {
+
+    font-size: 1.5rem; //padding: 1rem 2rem;
+    background-color: #394264;
+    width: fit-content;
+    @include respond(tab-P) {
+        margin: 0.5rem !important;
+        width: 80%;
+    }    @include respond(phone) {
+        width: fit-content;
+    }
+
+}
