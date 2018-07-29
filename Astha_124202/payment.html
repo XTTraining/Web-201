@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <title>Delight At Door</title>
+</head>
+
+<body class="payment__container" role="main">
+<div class="payment__header">
+            <img src="img/footerImage.png" alt="delight logo" class="header__logo">
+            <a href="/" class="payment__home">Continue Ordering Food...</a>
+    </div>
+<h1 class="heading">DINE TO DOOR</h1>  
+<div class="payment">
+<div class="payment__details">
+    <div class="payment__address">
+        <div class="payment__address-text">Delivery Address</div>
+        <label for="textArea" class="hide">delivery address</label>
+        <textarea rows="4" cols="50" id="textArea"aria-label="delivery address" class="payment__textbox">
+               Your Address Here.....
+        </textarea>
+    </div>
+    <div class="payment__modes">
+      <div class="payment__address-text"> Choose how to pay</div>
+      <div class="">
+            <div class="payment__mode">
+                <input type="radio" class="payment__mode-input" id="paytm" name="size">
+                <label for="paytm" class="payment__mode-label">
+                    <span class="payment__button"></span>
+                    Pay By Paytm 
+                </label>
+                <img src="" alt="" class="payment__image">
+            </div>
+
+            <div class="payment__mode">
+                <input type="radio" class="payment__mode-input" id="card" name="size">
+                <label for="card" class="payment__mode-label">
+                    <span class="payment__button"></span>
+                    Card/Netbanking 
+                </label>
+                <img src="" alt="" class="payment__image">
+            </div>
+
+            <div class="payment__mode">
+                    <input type="radio" class="payment__mode-input" id="cod" name="size">
+                    <label for="cod" class="payment__mode-label">
+                        <span class="payment__button"></span>
+                        Cash on Delivery 
+                    </label>
+                    <img src="" alt="" class="payment__image">
+                </div>
+        </div>
+      </div>
+   </div>
+</div>
+
+<!-- <a href="/payment.html" class="cartItem__checkout">PROCEED TO MAKE PAYMENT</a> -->
+<a href="/payment.html" class="orderList__checkout">PROCEED TO MAKE PAYMENT</a>
+<script type="text/javascript" src="js/bundle.js"></script></body>
+</body>
+
+</html>
