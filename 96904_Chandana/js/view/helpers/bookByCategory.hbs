@@ -1,0 +1,41 @@
+
+{{#each this}}
+<div class="features__row accordion">
+   {{Name}}
+</div>
+<div class="features__row panel">
+    {{#each books}}
+    <div class="features__cell">                                        
+        <div class="book">
+            <div class="book__image">
+                <img src="./img/books/{{Image}}" alt="{{Title}}" class="book-img">
+            </div>
+            <div class="book__desc">
+                <div class="btn_addToFav" id="BtnLike__{{ISBN}}">  
+                    {{#if isLiked}}                                      
+                        <svg class="icon icon-like Btn__AddToFav"  tabindex="0" id="svg_addToFav_{{Category}}__{{ISBN}}">
+                                <use xlink:href="./img/icons/SVG-sprite.svg#like-2"></use>
+                        </svg>
+                    {{else}}                                                      
+                        <svg class="icon icon-like Btn__AddToFav"  tabindex="0">
+                                <use xlink:href="./img/icons/SVG-sprite.svg#like"></use>
+                        </svg>
+                    {{/if}}
+                </div>
+                <div class="book-title">{{Title}}</div>
+                <div class="book-author">By: {{Author}}</div>
+                <div class="book-mrp">MRP: Rs. {{MRP}}</div>
+                <div class="book-price">Our Price: Rs. {{Price}}</div>
+                <div class="book-btn" id="BtnDetails__{{ISBN}}">
+                    <input type="button" value="View Details" data-bookId="{{ISBN}}" tabindex="0" class="Btn__ViewDetails btn-small">
+                    <input type="button" value="Add to Cart" data-bookId="{{ISBN}}" tabindex="0" class="Btn__AddToCart btn-small">
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{/each}}
+<div class="features__row div-center">
+  <span id="btnLoadMore" class="button_nextPage" text="Load More...">Load More ... </span>
+</div>

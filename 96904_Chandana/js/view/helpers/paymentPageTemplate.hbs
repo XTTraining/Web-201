@@ -1,0 +1,116 @@
+<div class="payment-wrapper">
+	<div class="payment__box box-default">
+		<div class="col-1">
+			<svg class="icon">
+				<use xlink:href="./img/icons/SVG-sprite.svg#placeholder"></use>
+			</svg>
+			Address</div>
+		<div class="col-2">Lane 2, SH07, Bangalore, Karnataka 560067</div>
+		<div class="col-3">
+			<div class="btn_change_address">Change</div>
+		</div>
+	</div>
+	<div class="payment__box box-offers">
+		<div class="col-1">
+			<svg class="icon">
+				<use xlink:href="./img/icons/SVG-sprite.svg#gift"></use>
+			</svg>
+			Is this a gift order?</div>
+		<div class="col-2">&nbsp;</div>
+		<div class="col-3">
+			<div class="btn_add_message">Add Message</div>
+		</div>
+	</div>
+	<div class="payment__box box-others">
+		<div class="payment__option">
+			<div>
+				<svg class="icon">
+					<use xlink:href="./img/icons/SVG-sprite.svg#credit-card-1"></use>
+				</svg>
+				Payment Options
+			</div>
+			<div class="payment__option-1">
+				<input type="radio" value="paymentOption" name="PaymentType">&nbsp;Default Payment Option<br><br>
+				<div class="payment__option-radio">
+					<input type="radio" value="paymentSubOption" name="PaymentSubType"> 
+					<svg class="icon">&nbsp;
+						<use xlink:href="./img/icons/SVG-sprite.svg#cash"></use>
+					</svg>
+					
+					&nbsp; Cash On Delibery<br>
+				</div>
+			</div>
+			<div class="payment__option-2">
+				<input type="radio" value="paymentOption" name="PaymentType">&nbsp;Payment Option with Others<br><br>
+				<div class="payment__option-radio">
+					<input type="radio" value="paymentSubOption" name="PaymentSubType"> 
+					<svg class="icon">&nbsp;
+						<use xlink:href="./img/icons/SVG-sprite.svg#visa"></use>
+					</svg>
+					
+					&nbsp; Pay using any Visa Credit Card<br>
+				</div>
+				<div class="payment__option-radio">
+					<input type="radio" value="paymentSubOption" name="PaymentSubType"> 
+					<svg class="icon">&nbsp;
+						<use xlink:href="./img/icons/SVG-sprite.svg#mastercard-1"></use>
+					</svg>
+					
+					&nbsp; Pay using Maestro Card <br>
+				</div>
+				<div class="payment__option-radio">
+					<input type="radio" value="paymentSubOption" name="PaymentSubType"> 
+					<svg class="icon">&nbsp;
+						<use xlink:href="./img/icons/SVG-sprite.svg#mastercard"></use>
+					</svg>
+					
+					&nbsp; Pay using MasterCard<br>
+				</div>
+			</div>
+			<div class="payment__option-3">
+				<input type="radio" value="paymentOption" name="PaymentType">&nbsp;Other Payment Options<br><br>
+				<div class="payment__option-radio">
+					<input type="radio" value="paymentSubOption" name="PaymentSubType"> 
+					<svg class="icon">&nbsp;
+						<use xlink:href="./img/icons/SVG-sprite.svg#paytm"></use>
+					</svg>
+					
+					&nbsp; Pay using Payment Wallet<br>
+				</div>
+				<div class="payment__option-radio">
+					<input type="radio" value="paymentSubOption" name="PaymentSubType"> 
+					<svg class="icon">&nbsp;
+						<use xlink:href="./img/icons/SVG-sprite.svg#purse"></use>
+					</svg>
+					
+					&nbsp; Pay using other Wallet<br>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="confirmation__box">
+	<div class="confirmation__box-title">Order Summary</div>
+	<div class="confirmation__box-row">
+		<div>Basket Value</div>
+		<div>Rs. {{TotalPrice}}</div>
+	</div> 
+	<div class="confirmation__box-row">
+		<div>GST @ {{GstRate}}</div>
+		<div>Rs. {{GST}}</div>
+	</div> 
+	<div class="confirmation__box-row border_row">
+		<div>Delivery Charges</div>
+		<div>Rs. {{DeliveryCharge}}</div>
+	</div>
+	<div class="confirmation__box-row">
+		<div>Total Amount Payable</div>
+		<div>Rs. {{FinalPrice}}</div>
+	</div>
+	<div class="confirmation__box-row">
+		<div>&nbsp;</div>
+		<div class="confirmation__box-button" id="btn_confirm_payment">Confirm</div>
+	</div>
+
+</div>

@@ -1,0 +1,21 @@
+.notification__detail {
+
+    &-like {
+        position: relative;
+        background-color: white;
+        font-size: 1rem;
+        z-index: 5000;
+        //display: none;
+
+        li {
+            border: solid 1px red;
+            color: black
+        }
+    }
+
+    &-img {
+        width: 4rem;
+        height: auto;            
+    } 
+    
+}

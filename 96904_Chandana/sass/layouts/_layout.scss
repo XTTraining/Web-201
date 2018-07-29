@@ -1,0 +1,97 @@
+.container {
+    display: grid;
+    
+    min-height: 0; 
+    min-width: 0; 
+
+    grid-template-rows: [header-start] 6.25rem [header-end main-start] 
+                    minmax(min-content, max-content) [main-end categories-start]
+                    minmax(min-content, max-content) [categories-end library-start]
+                    40rem [library-end prefooter-start]
+                    max-content [prefooter-end footer-start]
+                    10rem [footer-end];
+    grid-template-columns: [col-start] repeat(12, 1fr) [col-end];
+
+    @include respond(phone){
+        grid-template-rows: [header-start] 5rem [header-end main-start] 
+                    minmax(min-content, max-content) [main-end categories-start]
+                    minmax(min-content, max-content) [categories-end library-start]
+                    20rem [library-end footer-start]
+                    10rem [footer-end];
+    }
+
+    @include respond(tab-land){
+        grid-template-rows: [header-start] 6rem [header-end main-start] 
+                    minmax(min-content, max-content) [main-end categories-start]
+                    minmax(min-content, max-content) [categories-end library-start]
+                    25rem [library-end footer-start]
+                    10rem [footer-end];
+    }
+
+    @include respond(tab-port){
+        grid-template-rows: [header-start] 6rem [header-end main-start] 
+                    minmax(min-content, max-content) [main-end categories-start]
+                    minmax(min-content, max-content) [categories-end library-start]
+                    30rem [library-end footer-start]
+                    10rem [footer-end];
+    }
+}
+
+.main-content { 
+    grid-row: main-start / main-end;
+    grid-column: 1 / span 12;
+    display: grid;
+
+    grid-template-rows: [carousel-start] calc(80vh - 6.25rem) [carousel-end key-start] 
+                        15vh [key-end search-start]
+                        25vh [search-end features-start] 
+                        minmax(min-content, max-content) [features-end];
+                        
+    grid-template-columns: [main-col-start] repeat(12, 1fr) [main-col-end];
+
+    @include respond(phone){
+        grid-template-rows: [carousel-start] calc(45vh - 5rem) [carousel-end key-start] 
+                        8rem [key-end search-start]
+                        25vh [search-end features-start] 
+                        minmax(min-content, max-content) [features-end];
+    }
+
+    @include respond(tab-port){
+        grid-template-rows: [carousel-start] calc(50vh - 6rem) [carousel-end key-start] 
+                        10vh vh [key-end search-start]
+                        25vh [search-end features-start] 
+                        minmax(min-content, max-content) [features-end];
+    }
+
+    @include respond(tab-land){
+        grid-template-rows: [carousel-start] calc(55vh - 6rem) [carousel-end key-start] 
+                        12vh [key-end search-start]
+                        25vh [search-end features-start] 
+                        minmax(min-content, max-content) [features-end];
+    }
+
+}
+
+.main-cart, .main-payment {
+    grid-row: main-start / main-end;
+    grid-column: 2 / span 10;
+
+    @include respond(tab-port) {
+        grid-column: 1 / span 12;
+    }
+}
+
+.main-payment {
+    display: flex;
+    flex-direction: row;
+
+    @include respond(tab-port){
+        flex-direction: column;
+    }
+
+    padding: 2rem;
+}
+
+
+
+

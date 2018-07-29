@@ -1,0 +1,31 @@
+.nav {
+    background-color: var(--color-grey-light-1);
+    font-size: 1.5rem;
+    grid-column: 4 / span 6;
+    grid-row: header-start / header-end;
+    color: var(--color-primary);
+
+    @include respond(phone){
+        display: none;
+    }
+
+    &__main {
+        list-style: none;
+        text-decoration: none;
+        height: 100%;
+
+        display: flex;
+
+        &-li {
+            padding-top: 4rem;
+            transition: all 0.4s;
+            text-transform: capitalize;
+            &:hover,
+            &:active {
+                transform: scale(1.05);
+                color: var(--color-secondary);
+            }
+        }
+    }
+
+}

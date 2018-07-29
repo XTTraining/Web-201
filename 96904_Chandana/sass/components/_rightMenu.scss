@@ -1,0 +1,23 @@
+.topRight {
+    background-color: var(--color-grey-light-1);
+    font-size: 4rem;
+    grid-column: 10 / 13;
+    grid-row: header-start / header-end;
+
+    width: 100%;
+
+    &_svg {
+        width: 100%;
+    }
+
+}
+
+.rightMenu {
+    align-self: center;
+    text-align: center;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+

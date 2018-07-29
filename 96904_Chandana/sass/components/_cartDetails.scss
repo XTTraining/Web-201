@@ -1,0 +1,147 @@
+.cart-row, .cart-row-heading {
+    grid-column: 4 / span 8;
+    grid-row: details-start / details-end;
+    position: relative;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+
+    font-size: 1.6rem;
+
+    @include respond(tab-port) {
+        grid-column: 1 / span 12;
+    }
+}
+
+.cart-row {
+    &::after {
+        @include grey-Borderline;
+        top: 100%;
+    }
+}
+
+.cart-row-heading {
+    margin-top: 4rem;
+
+    @include respond(tab-port) {
+        margin-top: 3rem;
+    }
+}
+
+.item-image {
+    width: 10rem;
+    height: auto;
+    padding-left: 2rem;
+
+    @include respond(tab-port) {
+        width: 10rem;
+        margin-right: 3rem;
+    }
+}
+
+.wrapper {
+    display: flex;
+    margin: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: row;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
+
+    &-img {
+        width: 14vw;
+        height: auto;
+
+        @include respond(tab-port) {
+            padding-left: 20vw;
+            width: 80vw;
+            
+        }
+    }
+
+    &-desc {
+        flex-grow: 1;
+
+        @include respond(phone) {
+            width: 80vw;
+            
+        }
+        
+        &-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            
+            @include titleHover;
+        }
+
+        &-author {
+            font-size: 1.3rem;
+            color: var(--color-grey-dark);
+        }
+    }
+
+    &-price, &-text {
+        width: 10vw;
+
+        @include respond(tab-port) {
+            width: 20vw;
+        }
+    }
+
+    &-quantity input {
+        width: 4rem;
+        height: 3rem;
+        width: 25vw;
+    }
+
+    &-heading-title {
+        flex-grow: 1;
+        margin-top: 4rem;
+    }
+
+    &-text {
+        padding-left: 3rem;
+    }
+     
+}
+
+.header {
+    &-continue {
+        margin-top: 4rem;
+        font-size: 1.6rem;
+        text-align: right;
+        padding-right: 2rem;
+    }
+
+    &-checkout {
+        margin-top: 4rem;
+        font-size: 1.3rem;
+        
+        padding: 1rem 2rem;
+
+        @include btnBlock;
+
+    }
+}
+
+.button-checkout {
+    width: 20vw;
+    height: 7vh;
+    outline: none;
+    text-decoration: none;
+    
+    &:hover, &:active {
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+.heading {
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;   
+    padding: 2rem;
+    margin: 1.5rem;
+}

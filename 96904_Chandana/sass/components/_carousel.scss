@@ -1,0 +1,173 @@
+.carousel {
+    grid-column: 2 / 12;
+    grid-row: carousel-start / carousel-end;
+    overflow: hidden;
+    transition: all 0.6s east-in;
+
+    @include respond(tab-port) {
+        grid-column: 1 / 13;
+    }
+
+    &-1 {
+        background-image:linear-gradient(105deg, rgba(#0fbcf9,0.9) 0%, rgba(#0fbcf9,0.9) 50%, transparent 50%), url(../img/carousel-1.jpg);
+        height: 100%;
+        z-index: 10;
+         
+        &-text {
+            @include curatedText;
+            width: 45%;
+            text-align: end;
+            color: var(--color-grey-dark);
+            transition: all .4s;
+            padding-top: 10rem;
+
+            @include respond(tab-port){
+                padding-top: 2rem;
+                font-size: 2rem;
+                width: 60%;
+                text-align: center;
+            }
+
+            animation-duration: 0.4s;
+
+            &-writer {                
+                padding-right: 6rem;
+                @include respond(tab-port){
+                    padding-right: 4rem;
+                }
+            }
+        }
+    }
+
+    &-2 {
+        background-image: linear-gradient(to right, rgba(216, 112, 147, 0.377) 20%, palevioletred), url(../img/youlovedme.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        overflow: hidden;
+        padding: 6rem 20rem;
+        text-align: left;
+
+        @include respond(tab-port){
+            padding: 4rem 10rem;
+        }
+
+        &-img {
+            width: 22rem;
+            height: auto;
+            text-align: center;
+            display: inline-block;
+
+            @include respond(phone){
+                width: 14rem;
+            }
+            
+            @include respond(tab-port){
+                width: 18rem;
+            }
+
+        }
+         
+        &-text {
+            display: inline-block;
+            font-size: 2.5rem;
+            line-height: 4rem;
+            top: -20rem;
+            left: 2rem;
+
+            @include respond(tab-port){
+                top: -18rem;
+                left: 2rem;
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+
+            &-writer {                
+                padding-right: 6rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        &-btn {
+            &-link {
+                text-decoration: none;
+                transform: all .5s ease;
+                color: #fff;
+
+                &:hover, &:active {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    &-3 {
+        background-image:linear-gradient(105deg, rgba(#0fbcf9,0.9) 0%, rgba(#0fbcf9,0.9) 50%, transparent 50%), url(../img/carousel-1.jpg);
+        height: 100%;
+         
+        &-text {
+            @include curatedText;
+            width: 45%;
+            text-align: end;
+            color: var(--color-grey-dark);
+            transition: all .4s;
+            padding-top: 10rem;
+
+            animation-name: moveInBottom;
+            animation-duration: 4s;
+
+            &-writer {
+                
+                padding-right: 6rem;
+            }
+        }
+    }
+
+    .slide__nav {
+        font-size: 6rem;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        z-index: 100;
+
+        &-prev {
+            text-align: left;
+            left: 2%;
+        }
+
+        &-next {
+            text-align: right;
+            right: 2%;
+        }
+    }
+}
+
+
+.prev, .next {
+    color: var(--color-grey-dark);
+    position: relative;
+    top: -23rem;
+    font-size: 5rem;
+    font-weight: 300;
+    z-index: 550;
+
+    @include respond(tab-port){
+        top: -18rem;
+        font-size: 4rem;
+    }
+
+    &:hover{
+        background-color: rgba(0,0,0,0.8);
+        color: var(--color-secondary);
+    }
+}
+
+.prev {
+    left: 1%;
+}
+
+.next {
+    left: 93%;
+}
+
+
