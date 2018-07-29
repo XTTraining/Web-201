@@ -1,0 +1,873 @@
+/* 1 */
+{
+    "_id" : ObjectId("5b3bb09bfc99e3afc077837f"),
+    "restaurantid" : 1,
+    "name" : "Shree Sweets",
+    "coupon" : "SS10",
+    "ratings" : 4.3,
+    "address" : "SCO-167, Sector-14, Gurgaon, Haryana, 122001",
+    "image" : "ladoos",
+    "delieveryTime" : "45 mins",
+    "offers" : {
+        "discount" : 10
+    },
+    "menu" : [ 
+        {
+            "name" : "Pav Bhaji",
+            "gst" : 18,
+            "category" : "snacks",
+            "cuisine" : "north-indian",
+            "description" : "bombay styled bhaji smashed in tomato gravy",
+            "subcategory" : "veg",
+            "image" : "pav-bhaji",
+            "price" : {
+                "amount" : 55,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Chole Bhature",
+            "gst" : 18,
+            "category" : "snacks",
+            "cuisine" : "north-indian",
+            "description" : "amritsari pindi choley along with puffed bhatura",
+            "subcategory" : "veg",
+            "image" : "bhature",
+            "price" : {
+                "amount" : 90,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Dahi Bhale",
+            "gst" : 18,
+            "category" : "snacks",
+            "cuisine" : "north-indian",
+            "description" : "smashed and smeared in curd along with best selected masalas",
+            "subcategory" : "veg",
+            "image" : "dahi-bhalle",
+            "price" : {
+                "amount" : 45,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Choley Tikki",
+            "gst" : 18,
+            "category" : "snacks",
+            "cuisine" : "south-indian",
+            "description" : "rich in taste fried in olive oil for health",
+            "subcategory" : "veg",
+            "image" : "tikki",
+            "price" : {
+                "amount" : 45,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Masala Dosa",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "south-indian",
+            "description" : "rich in taste fried in olive oil for health",
+            "subcategory" : "veg",
+            "image" : "dosa",
+            "price" : {
+                "amount" : 85,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Onion Masala Dosa",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "south-indian",
+            "description" : "rich in taste fried in olive oil for health",
+            "subcategory" : "veg",
+            "image" : "dosa",
+            "price" : {
+                "amount" : 95,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Mysore Masala Dosa",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "south-indian",
+            "description" : "rich in taste fried in olive oil for health",
+            "subcategory" : "veg",
+            "image" : "dosa",
+            "price" : {
+                "amount" : 100,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Rawa Dosa",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "south-indian",
+            "description" : "rich in taste fried in olive oil for health",
+            "subcategory" : "veg",
+            "image" : "dosa",
+            "price" : {
+                "amount" : 155,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Jalebi",
+            "gst" : 15,
+            "category" : "sweets",
+            "cuisine" : "north-indian",
+            "description" : "crispy and hot",
+            "subcategory" : "veg",
+            "image" : "jalebi",
+            "price" : {
+                "amount" : 190,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "kg"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Barfi",
+            "gst" : 15,
+            "category" : "sweets",
+            "cuisine" : "north-indian",
+            "description" : "cooked in cow milk",
+            "subcategory" : "veg",
+            "image" : "barfi",
+            "price" : {
+                "amount" : 320,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "kg"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Ladoo",
+            "gst" : 15,
+            "category" : "sweets",
+            "cuisine" : "north-indian",
+            "description" : "prepared in olive oil and low sugar, perfect for health and taste",
+            "subcategory" : "veg",
+            "image" : "ladoo",
+            "price" : {
+                "amount" : 200,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "kg"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Gulab Jamun",
+            "gst" : 15,
+            "category" : "sweets",
+            "cuisine" : "north-indian",
+            "description" : "prepared in olive oil and low sugar, perfect for health and taste",
+            "subcategory" : "veg",
+            "image" : "gulab-jamun",
+            "price" : {
+                "amount" : 30,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 2,
+                "unit" : "pcs"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Rasgulla",
+            "gst" : 15,
+            "category" : "sweets",
+            "cuisine" : "north-indian",
+            "description" : "prepared in olive oil and low sugar, perfect for health and taste",
+            "subcategory" : "veg",
+            "image" : "rasgulla",
+            "price" : {
+                "amount" : 30,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 2,
+                "unit" : "pcs"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Paneer Buttor Masala",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "north-indian",
+            "subcategory" : "veg",
+            "image" : "paneer-butter-masala",
+            "price" : {
+                "amount" : 250,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Dal Makhni",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "north-indian",
+            "subcategory" : "veg",
+            "image" : "dal",
+            "price" : {
+                "amount" : 150,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Malai Kofta",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "north-indian",
+            "subcategory" : "veg",
+            "image" : "malai-kofta",
+            "price" : {
+                "amount" : 90,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Rumali Roti",
+            "gst" : 18,
+            "category" : "breads",
+            "cuisine" : "north-indian",
+            "subcategory" : "veg",
+            "image" : "rumali",
+            "price" : {
+                "amount" : 12,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "pc"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }, 
+        {
+            "name" : "Tandoori Roti",
+            "gst" : 18,
+            "category" : "breads",
+            "cuisine" : "north-indian",
+            "subcategory" : "veg",
+            "image" : "tandoori",
+            "price" : {
+                "amount" : 20,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "pc"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }, 
+        {
+            "name" : "Tandoori Buter Roti",
+            "gst" : 18,
+            "category" : "breads",
+            "cuisine" : "north-indian",
+            "subcategory" : "veg",
+            "image" : "tandoori",
+            "price" : {
+                "amount" : 25,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "pc"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }, 
+        {
+            "name" : "Stuffed Naan",
+            "gst" : 18,
+            "category" : "breads",
+            "cuisine" : "north-indian",
+            "subcategory" : "veg",
+            "image" : "tandoori",
+            "price" : {
+                "amount" : 50,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "pc"
+            },
+            "maxQuantity" : 20,
+            "available" : true
+        }, 
+        {
+            "name" : "Lime Soda",
+            "gst" : 5,
+            "category" : "beverages",
+            "cuisine" : "",
+            "subcategory" : "",
+            "image" : "lime",
+            "price" : {
+                "amount" : 50,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "glass"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }, 
+        {
+            "name" : "Virgin Mojito",
+            "gst" : 5,
+            "category" : "beverages",
+            "cuisine" : "",
+            "subcategory" : "",
+            "image" : "mojito",
+            "price" : {
+                "amount" : 90,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "glass"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }, 
+        {
+            "name" : "Sweet Lassi",
+            "gst" : 5,
+            "category" : "beverages",
+            "cuisine" : "",
+            "subcategory" : "",
+            "image" : "lassi",
+            "price" : {
+                "amount" : 60,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "glass"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }, 
+        {
+            "name" : "Grilled Veg Sandwich",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "continental",
+            "subcategory" : "veg",
+            "image" : "sandwich",
+            "price" : {
+                "amount" : 60,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "pc"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }, 
+        {
+            "name" : "Grilled Paneer Sandwich",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "continental",
+            "subcategory" : "veg",
+            "image" : "sandwich",
+            "price" : {
+                "amount" : 90,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "pc"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }, 
+        {
+            "name" : "Veg Burger",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "continental",
+            "subcategory" : "veg",
+            "image" : "burger",
+            "price" : {
+                "amount" : 40,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "pc"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }, 
+        {
+            "name" : "Noodles",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "chinese",
+            "subcategory" : "veg",
+            "image" : "noodles",
+            "price" : {
+                "amount" : 120,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 30,
+            "available" : true
+        }
+    ]
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5b4df2bc9827eeebeda97f63"),
+    "restaurantid" : 1,
+    "coupon" : "YO5",
+    "name" : "YO China",
+    "ratings" : 4.1,
+    "address" : "SCO-172, Sector-14, Gurgaon, Haryana, 122001",
+    "image" : "ladoos",
+    "delieveryTime" : "45 mins",
+    "offers" : {
+        "discount" : 5
+    },
+    "menu" : [ 
+        {
+            "name" : "Veg Hakka Noodles",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "chinese",
+            "subcategory" : "veg",
+            "image" : "noodles",
+            "price" : {
+                "amount" : 155,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Paneer Hakka Noodles",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "chinese",
+            "subcategory" : "veg",
+            "image" : "noodles",
+            "price" : {
+                "amount" : 190,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Veg Garlic Hakka Noodles",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "chinese",
+            "subcategory" : "veg",
+            "image" : "noodles",
+            "price" : {
+                "amount" : 175,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Chicken Hakka Noodles",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "chinese",
+            "subcategory" : "non-veg",
+            "image" : "noodles",
+            "price" : {
+                "amount" : 210,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Veg Manchurian",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "chinese",
+            "subcategory" : "veg",
+            "image" : "manchurian",
+            "price" : {
+                "amount" : 245,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Chicken Manchurian",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "chinese",
+            "subcategory" : "non-veg",
+            "image" : "manchurain",
+            "price" : {
+                "amount" : 85,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Spring Rolls",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "chinese",
+            "subcategory" : "veg",
+            "image" : "spring-rolls",
+            "price" : {
+                "amount" : 95,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Plain Fried Rice",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "north-indian",
+            "subcategory" : "veg",
+            "image" : "dosa",
+            "price" : {
+                "amount" : 110,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Garlic Fried Rice",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "north-indian",
+            "subcategory" : "veg",
+            "image" : "dosa",
+            "price" : {
+                "amount" : 135,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Chicken Fried Rice",
+            "gst" : 18,
+            "category" : "main-course",
+            "cuisine" : "north-indian",
+            "subcategory" : "non-veg",
+            "image" : "dosa",
+            "price" : {
+                "amount" : 155,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }
+    ]
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5b4e0ee9d80d86ee7691d546"),
+    "restaurantid" : 1,
+    "coupon" : "Burger15",
+    "name" : "Burgers",
+    "ratings" : 4.1,
+    "address" : "SCO-142, Sector-14, Gurgaon, Haryana, 122001",
+    "image" : "burger",
+    "delieveryTime" : "45 mins",
+    "offers" : {
+        "discount" : 15
+    },
+    "menu" : [ 
+        {
+            "name" : "Veg Burger",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "fast-food",
+            "subcategory" : "veg",
+            "image" : "burger",
+            "price" : {
+                "amount" : 35,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Veg Crunchy Burger",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "fast-food",
+            "subcategory" : "veg",
+            "image" : "burger",
+            "price" : {
+                "amount" : 55,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Paneer Burger",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "fast-food",
+            "subcategory" : "veg",
+            "image" : "burger",
+            "price" : {
+                "amount" : 55,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Chicken Burger",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "fast-food",
+            "subcategory" : "non-veg",
+            "image" : "burger",
+            "price" : {
+                "amount" : 55,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Veg Maharaja Burger",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "fast-food",
+            "subcategory" : "veg",
+            "image" : "burger",
+            "price" : {
+                "amount" : 95,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Chicken Maharaja Burger",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "fast-food",
+            "subcategory" : "non-veg",
+            "image" : "burger",
+            "price" : {
+                "amount" : 125,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Veg Cheese Burger",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "fast-food",
+            "subcategory" : "veg",
+            "image" : "burger",
+            "price" : {
+                "amount" : 70,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }, 
+        {
+            "name" : "Chicken Cheese Burger",
+            "gst" : 18,
+            "category" : "continental",
+            "cuisine" : "fast-food",
+            "subcategory" : "non-veg",
+            "image" : "burger",
+            "price" : {
+                "amount" : 80,
+                "currency" : "INR"
+            },
+            "quantity" : {
+                "numericValue" : 1,
+                "unit" : "plate"
+            },
+            "maxQuantity" : 10,
+            "available" : true
+        }
+    ]
+}

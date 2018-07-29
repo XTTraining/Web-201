@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="css/icon-font.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <!-- <link rel="stylesheet" href="../dist/css/style.prefix.css"> -->
+
+    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCLTpfMA4zsWpMxKE-qMjNqP1BvMoWAkIA",
+            authDomain: "masalacafe-eea2d.firebaseapp.com",
+            databaseURL: "https://masalacafe-eea2d.firebaseio.com",
+            projectId: "masalacafe-eea2d",
+            storageBucket: "masalacafe-eea2d.appspot.com",
+            messagingSenderId: "701483082017"
+        };
+        var app = firebase.initializeApp(config);
+    </script>
+    <title>Masala cafe | finger licking good</title>
+</head>
+
+<body>
+    <div class="mask">
+
+    </div>
+
+    <div class="maincontainer">
+        <div class="sidemenu">
+            <ul class="sidemenu__nav-link">
+                <a href="#">
+                    <li>
+                        <svg class="sidemenu__nav__icon">
+                            <use xlink:href="img/svg/sprite6.svg#icon-home"></use>
+                        </svg>
+                        <span>
+                            Home
+                        </span>
+
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <svg class="sidemenu__nav__icon">
+                            <use xlink:href="img/svg/sprite6.svg#icon-shopping-cart"></use>
+                        </svg>
+                        <span>
+                            Order online
+                        </span>
+
+
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <svg class="sidemenu__nav__icon">
+                            <use xlink:href="img/svg/sprite6.svg#icon-phone"></use>
+                        </svg>
+                        <span>
+                            Contact us
+                        </span>
+
+                    </li>
+                </a>
+
+
+            </ul>
+
+        </div>
+        <header class="header">
+            <div class="hamburger">
+                <span class="hamburger__top-bun"></span>
+                <span class="hamburger__top-middle"></span>
+                <span class="hamburger__bottom-bun"></span>
+            </div>
+            <div class="header__logo">
+
+                <picture>
+                    <!-- <source media="(min-width: 650px)" srcset="img/logo1-white.png"> -->
+                    <source media="(max-width: 37.5em)" srcset="img/logo1-white.png">
+                    <img class="header__logo-img" src="img/logo1.png" alt="Flowers">
+                </picture>
+
+
+                <!-- <img class="header__logo-img" src="img/logo1-white.png" alt="masala cafe"> -->
+                <!-- <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+            </form> -->
+            </div>
+            <div class="header__nav">
+                <ul class="header__nav-link">
+                    <li>
+                        <a href="/"> Order online</a>
+                    </li>
+                    <li>
+                        <a href="#"> Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="user-nav">
+
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/svg/sprite6.svg#icon-shopping-cart"></use>
+                    </svg>
+                    <span class="user-nav__notification">0</span>
+                </div>
+                <!-- <div class="user-nav__user">
+                    <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
+                    <span class="user-nav__user-name">Jonas</span>
+                </div> -->
+            </nav>
+
+
+        </header>
+        <!-- <div class="section__hero">
+               
+
+            banner
+            <br>
+
+        </div> -->
+
+
+        <div class="section-orderlist">
+
+
+            <div class="cart">
+                <div class="payment--step1">
+                    <div class="cart__header">
+                        <span class="cart__header-title align--center">
+                            Your order summary
+                        </span>
+                        <!-- <span class="cart__header-additems">
+                            <a class="btn2 btn2--red" href="./test2.html">Add more items
+                                <span class="arrow__right">&rarr;</span>
+                            </a>
+                        </span> -->
+                    </div>
+                    <div class="cart__bodyreadonly">
+                        <div class="cart__row">
+                            <span class="align--center u-padding--3">
+                                You cart is empty
+                            </span>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="payment--step2">
+                    <div class="cart__header">
+                        <span class="cart__header-title align--center">
+                            Delivery Address
+                        </span>
+                        <!-- <span class="cart__header-additems">
+                            <a class="btn2 btn2--red" href="./test2.html">Add more items
+                                <span class="arrow__right">&rarr;</span>
+                            </a>
+                        </span> -->
+                    </div>
+                    <form action="#" class="cart__body-form1" autocomplete="off">
+                        <fieldset class="cart__body-form">
+                            <legend class="u-hide">Devlivery address</legend>
+                            <div class="form__group">
+                                <input type="text" class="form__input" autocomplete="off" placeholder="Full name" id="name" required="">
+                                <label for="name" class="form__label">Full name</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" class="form__input" autocomplete="off" placeholder="Email address" id="email" required="">
+                                <label for="email" class="form__label">Email address</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="tel" class="form__input" autocomplete="off" placeholder="Phone number" id="phone" required="">
+                                <label for="phone" class="form__label">Phone number</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input" autocomplete="off" placeholder="Address line 1" id="address1" required="">
+                                <label for="address1" class="form__label">Phone number</label>
+                            </div>
+                            <div class="form__group">
+
+                                <input type="text" class="form__input" autocomplete="off" placeholder="Address line 2" id="address2" required="">
+
+                                <label for="address2" class="form__label">Address line 2</label>
+                            </div>
+                            <div class="form__group">
+
+                                <input type="text" class="form__input" autocomplete="off" placeholder="Pincode" id="postcode" required="">
+
+                                <label for="postcode" class="form__label">Pincode</label>
+                            </div>
+
+                            <div class="form__group">
+
+                                <button class="btn btn--red btn--slim">
+                                    Save
+                                </button>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="payment--step3">
+                    <div class="cart__header">
+                        <span class="cart__header-title align--center">
+                            Choose payment method
+                        </span>
+                        <!-- <span class="cart__header-additems">
+                            <a class="btn2 btn2--red" href="./test2.html">Add more items
+                                <span class="arrow__right">&rarr;</span>
+                            </a>
+                        </span> -->
+                    </div>
+                    <div class="cart__paymentwidget">
+                        <div class="cart__row u-padding--0">
+                            <div class="tab">
+                                <span class="tablinks current" data-id="COD" id="defaultOpen">Cash on Delivery</span>
+                                <span class="tablinks" data-id="Wallet">e-Wallet</span>
+                                <span class="tablinks" data-id="CreditCard">Credit Card</span>
+                            </div>
+
+                            <div id="COD" class="tabcontent">
+
+                                <div class="tab--row align--center">
+                                    <span class="cart__row-text">
+                                        You need to pay cash on Delivery
+                                    </span>
+                                </div>
+                                <div class="tab--row align--center">
+
+                                    <button class="btn btn--red btn--slim">
+                                        Confirm order
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="Wallet" class="tabcontent hide">
+                                <div class="tab--row align--center">
+                                    <span class="cart__row-text">
+                                        Please select a wallet provider
+                                    </span>
+                                </div>
+                                <div class="tab--row_option align--center">
+
+                                    <div class="cart__walletoption">
+                                        <label for="paytm">
+                                            <div class="cart__walleticon">
+                                                <input class="cart__walleticon-radio" type="radio" name="wallet" id="paytm">
+                                                <img class="icon--wallet" src="./img/icons/paytm.png" alt="paytm">
+                                                <svg class="user-nav__icon cart__walleticon-svg">
+                                                    <use xlink:href="img/svg/sprite6.svg#icon-checkmark"></use>
+                                                </svg>
+                                            </div>
+                                            paytm
+                                        </label>
+                                    </div>
+                                    <div class="cart__walletoption">
+                                        <label for="amazonpay">
+                                            <div class="cart__walleticon">
+                                                <input class="cart__walleticon-radio" type="radio" name="wallet" id="amazonpay">
+                                                <img class="icon--wallet" src="./img/icons/amazon.png" alt="amazon pay">
+                                                <svg class="user-nav__icon cart__walleticon-svg">
+                                                    <use xlink:href="img/svg/sprite6.svg#icon-checkmark"></use>
+                                                </svg>
+                                            </div>
+                                            amazon pay
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tab--row align--center">
+
+                                    <button class="btn btn--red btn--slim">
+                                        Pay
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div id="CreditCard" class="tabcontent hide">
+                                    <div class="tab--row align--center">
+                                            <span class="cart__row-text">
+                                                    Enter you credit card details
+                                            </span>
+                                        </div>
+                                <div class="cart--creditcard">
+                                        
+                                    <div class="form__group">
+                                            <input type="text" class="form--cc__input" autocomplete="off" placeholder="Please enter card number" id="cardnumber" required="true">
+                                            <label for="cardnumber" class="form__label u-displaynone">Please enter card number</label>
+                                    </div>
+                                    <div class="form__group">
+                                            <input type="text" class="form--cc__input" autocomplete="off" placeholder="Name of the card" id="cardholdername" required="true">
+                                            <label for="cardholdername" class="form__label u-displaynone">Name on the card</label>
+                                    </div>
+                                    <div class="form__group clearfix">
+                                            <input type="text" class="form--cc__input form--cc__input-expiry" autocomplete="off" placeholder="DD/MM/YY" id="expirydate" required="true">
+                                            <input type="text" class="form--cc__input form--cc__input-cvv" autocomplete="off" placeholder="CVV" id="cvv" required="true">
+                                            <label for="expirydate" class="form__label u-displaynone">expiry date</label>
+                                            
+                                            <label for="cvv" class="form__label u-displaynone">CVV</label>
+                                    </div>
+
+                                     
+
+                                </div>
+                                <div class="tab--row align--center">
+
+                                        <button class="btn btn--red btn--slim">
+                                            Pay
+                                        </button>
+                                    </div>
+                                
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="cart__footer">
+
+                    <!-- <button class="btn btn--red">
+                                Pay
+                            </button> -->
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="footer__link">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Company</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Contact us</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Carrers</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Privacy policy</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Terms</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__copy">
+            <span>
+                © Copyright 2017 by Jonas Schmedtmann. Feel free to use this project for your own purposes. This does NOT apply if you plan
+                to produce your own course or tutorials based on this project.
+            </span>
+        </div>
+
+
+
+
+    </footer>
+    <script src="../dist/js/main.js">
+    </script>
+</body>
+
+</html>
