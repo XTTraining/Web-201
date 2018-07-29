@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a book store websie application, developed as an assignment project">
+    <meta name="theme-color" content="#317EFB"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Book Store</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600" rel="stylesheet">  
+</head>
+<body>
+    <div class="container">
+        <div class="navigation" aria-labelledby="navi-toggle">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button">
+                <svg class="logo_image " id="logo">
+                    <use xlink:href="./img/SVG-sprite.svg#textbook"></use>
+                </svg>
+            </label>
+            <div class="navigation__background">
+                &nbsp;
+            </div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About Us</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Category</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Library</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Best Sellers</a></li>
+                    </ul>
+            </nav>
+        </div>
+        <div class="logo" role="complementary" aria-labelledby="logo-1">&nbsp;
+            <svg class="logo_image" id="logo-1">
+                <use xlink:href="./img/SVG-sprite.svg#textbook"></use>
+            </svg>
+            <div class="logo_text"><span class="logo_text-black">Book</span>aholic</div>
+        </div>
+        <nav class="nav" role="navigation" aria-labelledby="main_nav">
+            <ul class="nav__main" id="main_nav">
+                <li class="nav__main-li"><a href="#section__categories" tabindex="0">Home</a> <span class="vert_bar">&vert;</span></li>
+                <li class="nav__main-li"><a href="#section__footer" tabindex="0">About us</a><span class="vert_bar">&vert;</span></li>
+                <li class="nav__main-li"><a href="#section__categories" tabindex="0">Category</a><span class="vert_bar">&vert;</span></li>
+                <li class="nav__main-li"><a href="#section__library" tabindex="0">Library</a><span class="vert_bar">&vert;</span></li>
+                <li class="nav__main-li"><a href="#" tabindex="0">Best Sellers</a></li>
+            </ul>
+        </nav>
+        <div class="topRight" role="navigation" aria-labelledby="toprightnavigation">
+            <div class="rightMenu" id="toprightnavigation">
+                <div class="rightMenu_svg">
+                    <svg class="icon">
+                        <use xlink:href="./img/icons/SVG-sprite.svg#like"></use>
+                    </svg><span class="notification" tabindex="-1" id="notification_like">0</span>
+                   
+                </div>
+                <div class="rightMenu_svg">
+                    <svg class="icon">
+                        <use xlink:href="./img/icons/SVG-sprite.svg#shopping-bag"></use>
+                    </svg><span class="notification" tabindex="-1" id="notification_cart">0</span>
+                </div>
+                <div class="rightMenu_svg">
+                    <svg class="icon">
+                        <use xlink:href="./img/icons/SVG-sprite.svg#user"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="section main-payment" id="section__main">
+            
+        </div>        
+        
+        <section class="categories" id="section__categories"  role="complementary"  aria-labelledby="categoryinfo">
+                <div class="header__h2 suggestion-heading" id="categoryinfo">Browse Most Popular Categories</div>
+                <div class="suggestions">
+                    <div class="tile" tabindex="0">
+                        <img src="./img/tux-1.png" class="tile__img" alt="Literature books">
+                        <div class="tile__text-cat">Literature
+                            <div class="tile__text-para">
+                                Literature & Fiction <br>
+                                Poetry <br>
+                                Drama <br>
+                                Literature Criticism
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile" tabindex="0">
+                        <img src="./img/owl-1.png" class="tile__img" alt="Technology books">
+                        <div class="tile__text-cat">Technology
+                            <div class="tile__text-para">
+                                Computers <br>
+                                Science <br>
+                                Technology <br>
+                                Mathematics <br>
+                                Technology and Engineering
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile" tabindex="0">
+                        <img src="./img/boy.png" class="tile__img" alt="Non Fiction Category">
+                        <div class="tile__text-cat">Non Fiction
+                            <div class="tile__text-para">
+                                Self Help <br>
+                                Biography & Autobiography <br>
+                                Competitive Exames <br>
+                                Comics and Graphics Novels
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile" tabindex="0">
+                        <img src="./img/book-2.png" class="tile__img" alt="Fiction Category">
+                        <div class="tile__text-cat">Fiction
+                            <div class="tile__text-para">
+                                Fiction <br>
+                                Humor <br>
+                                True Crime <br>
+                                Romance <br>
+                                Mastery & Thriller
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>        
+        <section class="footer" id="section__footer" role="navigation"  aria-labelledby="footer">
+            <div class="footer__menu" id="footer">
+                <ul class="footer__menu-ul">
+                    <li class="footer__menu-li"><a href="#" tabindex="0" class="footer__menu-a">About Us</a> &nbsp;&vert;&nbsp;</li>
+                    <li class="footer__menu-li"><a href="#" tabindex="0" class="footer__menu-a">Contact Us</a>&nbsp;&vert;&nbsp;</li>
+                    <li class="footer__menu-li"><a href="#" tabindex="0" class="footer__menu-a">Copyright</a>&nbsp;&vert;&nbsp;</li>
+                    <li class="footer__menu-li"><a href="#" tabindex="0" class="footer__menu-a">Privacy Policy</a>&nbsp;&vert;&nbsp;</li>
+                    <li class="footer__menu-li"><a href="#" tabindex="0" class="footer__menu-a">Legal Terms</a></li>
+                </ul>
+            </div>
+            <div class="copyright">&copy; Copyright 2018: Designed and Developed by Chandana</div>
+        </section>
+    </div> 
+</body>
+</html>
+

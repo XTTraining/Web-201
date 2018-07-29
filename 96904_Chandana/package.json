@@ -1,0 +1,71 @@
+{
+  "name": "assignmentweb201",
+  "version": "1.0.0",
+  "description": "Book lovers paradise",
+  "main": "index.js",
+  "browserslist": [
+    "> 1%",
+    "ie > 9"
+  ],
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "devserver": "Live-server",
+    "build": "webpack --mode production",
+    "compile:sass": "node-sass sass/main.scss dist/css/style.css",
+    "watch:sass": "node-sass sass/main.scss dist/css/style.css -w",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "start:Dev": "webpack-dev-server --mode development --open",
+    "start:Prod": "webpack-dev-server --mode production --open",
+    "test": "jasmine"
+  },
+  "author": "Chandana Mandal",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.0.1",
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.0.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "jasmine": "^3.1.0",
+    "jasmine-node": "^1.15.0",
+    "node-sass": "^4.9.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-jasmine-html-runner-plugin": "^0.8.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "cache-js": "0.0.7",
+    "cachejs": "^0.1.24",
+    "firebase": "^5.2.0",
+    "handlebars": "^4.0.11",
+    "handlebars-loader": "^1.7.0",
+    "handlebars-paginate": "^0.1.0",
+    "jquery": "^3.3.1",
+    "lscache": "^1.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "npm-run-all": "^4.1.3",
+    "serviceworker-webpack-plugin": "^1.0.1"
+  }
+}
