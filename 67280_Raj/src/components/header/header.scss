@@ -1,0 +1,95 @@
+.header {
+    height:8rem;
+    background-color: #fff;
+    border-bottom: var(--color-primary-light);
+    display: flex; //or inline-flex
+    flex-direction: row; 
+    align-content: space-between;
+    //position: fixed;
+    width: 100%;
+
+    @include respond(tab-port)
+    {
+        align-content: space-around;
+    }
+}
+
+.shopping__cart
+{
+    flex: 0 0 20%;
+    display:flex;
+    flex-direction:row;
+
+    align-self: center;
+    align-content: flex-end !important;
+&__cart {
+
+    align-self: flex-end !important;
+}
+}
+//// header
+.logo {
+    height:8rem;
+    flex:0 0 40%;
+    }
+
+    .nav-icon {
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: var(--color-primary);
+    }
+    .shop__qun{
+        background: #d50c0d none repeat scroll 0 0;
+        border-radius: 100%;
+        color: #fff;
+        height: 22px;
+        line-height: 19.5px;
+        position: relative;
+           text-align: center;
+        top: 5%;
+        width: 22px;
+        span{
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+    .navigation {
+
+        flex:0 0 60%;
+        align-self: center;
+
+
+        &__list {
+            list-style: none;
+            display: flex; //or inline-flex
+            flex-direction: row; 
+            align-self: stretch;
+            justify-content: center;
+            align-content: center;
+        }
+        &__item {
+            flex:0 0 12%;
+            align-self: stretch;
+        }
+        &__link {
+            &:link,
+            &:visited {
+                font-weight: 600;
+                color: var(--text-color-dark);
+                font-size: 14px;
+                text-transform: uppercase;
+                text-decoration: none;
+              //  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+
+                transition: all .4s;
+    
+            }
+            
+            &:hover,
+            &:active {
+                     //      color: $color-primary;
+                //transform: translateX(1rem);
+            }
+        }
+    
+    }

@@ -1,0 +1,37 @@
+@import "../components/core/base";
+.payment-container {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include respond(tab-port)
+    {
+ flex-direction: column;
+    }
+}
+.user-forms {
+    flex: 0 0 45%;
+    margin:20px;
+     @include respond(tab-port)
+    {
+        flex: 0 0 100%;
+        margin:5px;
+        order:2;
+    }
+}
+
+.cart-summary {
+    flex: 0 0 45%;
+    margin:20px;
+    @include respond(tab-port)
+    {
+        flex: 0 0 100%;
+        margin:5px;
+        order:1;
+    }
+}
