@@ -1,0 +1,199 @@
+.featured_products {
+    text-align: center;
+}
+
+.featured_products h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: #323232;
+    border-bottom: 2px solid red;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.accordion {
+    background-color:lightblue;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: indianred;
+}
+
+.accordion:after {
+    content: '\002B';
+    font-weight: 300;
+    float: right;
+    margin-left: 5px;
+    color: $color-secondary-dark;
+    border: 1px solid $color-secondary-dark;
+    border-radius: 200px;
+    padding: 6px 10px;
+}
+
+.active:after {
+    content: "\2212";
+    color: $color-secondary-dark;
+    border: 1px solid $color-secondary-dark;
+    border-radius: 200px;
+    font-weight: 300;
+    padding: 6px 10px;
+}
+
+.panel {
+    width:100%;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.items-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 10px 0px;
+}
+
+.list-item {
+    width: 33%;
+    padding: 7px;
+    margin: 10px 0px;
+    box-shadow: var(--shadow-light);
+    @media only screen and (max-width: $bp-medium) {
+        width: 50%;
+    }
+    @media only screen and (max-width: $bp-small) {
+        width: 100%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        width: 100%;
+    }
+}
+
+.list-item img {
+    width: 100%;
+}
+
+h3.product-name {
+    text-align: left;
+    font-size: 15px;
+}
+
+.prod-price {
+    display: block;
+    font-size: 15px;
+    float: left;
+}
+
+.item-quantity {
+    width: 40px;
+    border: 1px solid rgb(184, 176, 176);
+    display: block;
+    float: right;
+    padding: 7px;
+    margin: 0px 5px;
+    text-align: center;
+    font-size: 13px;
+}
+
+ 
+.add-button,
+.rem-button {
+    border: 1px solid orange;
+    border-radius: 20px;
+    padding: 4px;
+    width: 34px;
+    font-size: 15px;
+    display: block;
+    float: right;
+    cursor:pointer;
+}
+
+.productfilter{
+padding:2px;
+margin: 2px;
+display: block;
+float: left;
+text-align: left;
+}
+.search_input {
+    font-family: inherit;
+    font-size: 15px;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 1.5rem 4rem;
+    border-radius: 100px;
+    width: 50%;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.btnsearch:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+.btnsearch {
+    background-color: #55c57a;
+    color: #fff;
+}
+.btnsearch, .btnsearch:link, .btnsearch:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+}
+
+.productcheckout{
+    display:block;
+    float: right;;
+    text-align: right;
+    margin: 0px 5px;
+}
+
+.searchFilters{
+   background-color:var(--color-grey-light-2);
+    display:block;
+    margin: 5px 5px;
+    padding:5px 5px;
+}
+
+.filterdata{
+
+    text-align: left;
+    font-size: 13px;
+    margin: 0px 10px;
+}
+
+.filterdata input{
+    margin: 10px 10px;
+    
+}
