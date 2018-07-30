@@ -26,18 +26,18 @@ Steps:
 
 4. Initialize packages by below command
 
-npm install
+'npm install'
 
 5. Build the project
 
-npm run build
+'npm run build'
 
 6. Run the project
 
-npm run prod
+'npm run prod'
 
 7. Run the project in development environment.
-npm start
+'npm start'
 
 
 
