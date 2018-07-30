@@ -11,5 +11,38 @@ This project is developed and maintained by Sapient XT Team and is part of assig
 3. To build the project, run command `npm run build`
 4. To execute project in live Production environment, run command `npm run prod`
 
+### Prerequisites
+
+1. Install Node and NPM
+http://blog.teamtreehouse.com/install-node-js-npm-windows
+
+Steps:
+
+1. Download the zip file
+
+2. Extract it locally
+
+3. Open command prompt in admin mode and navigate to the root directory of the project.
+
+2. Initialize packages by below command
+
+npm install
+
+3. Build the project
+
+npm run build
+
+4. Run the project
+
+npm run prod
+
+5. Run the project in development environment.
+npm start
+
+
+## Author
+
+* **Hashmat Ali**
+
 
 
