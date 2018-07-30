@@ -2,7 +2,7 @@
 Web 201
 
 Ordering food Website "DINE TO DOOR"
-Welcome to Dine to Door.Order Your style food spice with less delivery time at your door step. Through the site you can:
+Welcome to Dine to Door.Order your food spiced with less delivery time at your door step. Through the site you can:
 1)Search interested item
 2)Filter your preferences
 3)Add Items to Cart
