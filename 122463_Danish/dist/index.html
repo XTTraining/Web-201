@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- fav icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- fav icons -->
+
+    <!-- SEO -->
+    <meta name="title" content="Cuisine of India, fine dining indian restaurant in NEW Delhi" />
+    <meta name="description" content="offering authentic indian food, catering, lunch buffet, dinner buffet, carry-outs, In-house parties, banquets, weddings and outdoor catering near NCR"
+    />
+    <meta name="keywords" content="fine dining indian restaurant in New Delhi,offering authentic indian food, catering, lunch buffet, dinner buffet, carry-outs"
+    />
+    <meta name="language" content="English" />
+    <meta name="robots" content="allow,follow" />
+    <!-- SEO -->
+    <title>Home</title>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="our restaurant logo" class="logo">
+            </a>
+            <a class="callnow" href="tel:5551234567">Order Online - 9899287597</a>
+        </header>
+
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="cart.html">My Cart</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <span class="ham">ham</span>
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <a href="http://google.com">
+                    <img src="images/header2.jpg" alt="header2" style="width:100%"> </a>
+                <div class="text">10% offer</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/header1.jpg" alt="header1" style="width:100%">
+                <div class="text">Meals</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/header3.jpg" alt="header3" style="width:100%">
+                <div class="text">Our Restaurant</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="content">
+            <nav class="sidebar">
+
+                <div class="section-search">
+                    <fieldset border="0">
+                        <legend>Search Filter</legend>
+                        <label for="search">
+                            <span class="section-search__heading">Search Filter</span>
+                        </label>
+                        <p>Enter the name the food/dish.</p>
+                        <input type="search" name="search" id="search" placeholder="Search" />
+                        <ul class="section-search__inlineList">
+                            <li>
+                                <input type="radio" name="option" id="option1" checked="checked" value="All" />
+                                <label for="option1"> All</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="option" id="option2" value="Main menu" />
+                                <label for="option2"> Main Menu</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="option" id="option3" value="snacks" />
+                                <label for="option3"> Snakes</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="option" id="option4" value="Beverages" />
+                                <label for="option4">Beverages</label>
+                            </li>
+                        </ul>
+
+                        <button class="green" id="btn_search">Search</button>
+                        <button class="green" id="btn_clear">Reset</button>
+                    </fieldset>
+                </div>
+
+            </nav>
+
+
+            <main class="main-section">
+                <div class="accordion">
+                </div>
+            </main>
+
+            <script id="tpl" type="text/template">
+
+                {{#each list}}
+
+                <h1>{{@key}}</h1>
+                <div>
+                    <section class="products">
+
+                        {{#each this}}
+
+                        <div class="product" data-id="{{ProductID}}" data-name="{{Name}}" data-price="{{Price}}" data-category="{{@key}}">
+
+                            <img src="images/{{ProductID}}.jpg" alt="{{Name}}" class="product__img">
+                            <h5 class="product__name">{{Name}}</h5>
+                            <div class="product__description">
+                                <p>{{Description}} </p>
+                            </div>
+                            <div class="product__price">
+                                <p>Price</p>
+                            </div>
+                            <div class="product__price">
+                                <p>₹{{Price}}</p>
+                            </div>
+
+                            <div class="product__qty">
+                                <label for="qty{{ProductID}}">
+                                    <p>Qty</p>
+                                </label>
+                            </div>
+                            <div class="product__qty">
+                                <div class="sp-quantity">
+                                    <div class="sp-quantity">
+                                        <button type="button" id="sub{{ProductID}}" data-multi="-1" class="plus-minus cssCircle minusSign">&#8211;</button>
+                                        <input type="text" id="qty{{ProductID}}" size="1" readonly class="quntity-input" value=1 />
+                                        <button type="button" id="add{{ProductID}}" data-multi="1" class="plus-minus cssCircle plusSign">&#43;</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn product__btn">Add to Cart</button>
+                        </div>
+                        {{/each}}
+                    </section>
+                </div>
+                {{/each}}
+
+            </script>
+        </div>
+        <footer class="footer">
+            © Copyright
+        </footer>
+    </div>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>
