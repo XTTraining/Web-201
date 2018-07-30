@@ -24,25 +24,21 @@ Steps:
 
 3. Open command prompt in admin mode and navigate to the root directory of the project.
 
-2. Initialize packages by below command
+4. Initialize packages by below command
 
 npm install
 
-3. Build the project
+5. Build the project
 
 npm run build
 
-4. Run the project
+6. Run the project
 
 npm run prod
 
-5. Run the project in development environment.
+7. Run the project in development environment.
 npm start
 
-
-## Author
-
-* **Hashmat Ali**
 
 
 
