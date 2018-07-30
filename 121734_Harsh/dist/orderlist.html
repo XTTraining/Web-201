@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Desi Dhaba | Kill your hunger online</title>
+    <meta name="description" content="Desi Dhaba | Kill your hunger online.">
+    <meta name="keywords" content="favicon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/lodash@4.16.6"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-search">
+            <label for="headersearch"></label>
+            <input id="headersearch" title="search item" class="header-search-textbox" type="text" name="search" placeholder="Search..">
+        </div>
+        <div class="header-logo">
+        </div>
+
+        <div class="header-menu">
+            <span class="cls"></span>
+            <span>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="/dist/home.html" title="Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="/dist/index.html" title="Orderlist">Orderlist</a>
+                    </li>
+                    <li>
+                        <a href="" title="About">About</a>
+                    </li>
+                </ul>
+            </span>
+            <span class="cls"></span>
+        </div>
+    </header>
+
+    <!-- Include Firebase Library and Config-->
+    <div class="orderlist">
+        <div class="orderlist-container">
+            <div class="orderlist-container-bradcrum">
+                <ul>
+                    <li>
+                        <a title="Menu" href="/home.html">Menu</a>
+                    </li>
+                    <li>
+                        &gt;
+                    </li>
+                    <li>
+                        <a title="Checkout" href="#">Checkout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="orderlist-item">
+                <div class="orderlist-mycart">
+                    <div class="orderlist-mycart-heading">
+                        <h3>My Cart</h3>
+                        <h4>Items</h4>
+                    </div>
+                    <div class="orderlist-mycart-quantitybox">
+                        <div class="orderlist-mycart-quantity">
+
+                        </div>
+                        <div class="orderlist-mycart-price">
+                            <ul>
+                                <li class="orderlist-mycart-price-order">Net Amount
+                                    <span>₹ 0</span>
+                                </li>
+                                <!-- <li class="orderlist-mycart-price-applycoupon">
+                                    <input type="text" name="coupon" id="coupon" placeholder="Apply Coupon code">
+                                </li>
+                                <li class="orderlist-mycart-price-discount">Discount (0%)
+                                    <span>₹ 0</span>
+                                </li> -->
+                                <li class="gst">SGST
+                                    <strong>(BEVERAGES / STARTERS 12% & Food 5%)</strong>
+                                    <span></span>
+                                </li>
+                                <li class="gst">CGST
+                                    <strong>(BEVERAGES / STARTERS 12% & Food 5%)</strong>
+                                    <span></span>
+                                </li>
+                                <li>Delivery Charge
+                                    <span>Free</span>
+                                </li>
+                                <li class="grand-total">GRAND TOTAL
+                                    <span></span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <strong>Note: </strong> Delivery is free charges</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="orderlist-checkout">
+                    <div class="orderlist-checkout-heading">
+                        <h3>Checkout</h3>
+                    </div>
+                    <div class="orderlist-revieworder">
+                        <p>Please check and review your order if you want to add more food item
+                            <a title="food menu" href="/dist/home.html">back</a>
+                        </p>
+
+                    </div>
+                    <div class="orderlist-checkout-user-info">
+                        <div class="orderlist-checkout-loginForm" id="loginForm">
+                            <div class="orderlist-checkout-loginForm-inner">
+                                <h4>Login if you have an account</h4>
+                                <label for="useremail"></label>
+                                <input type="text" name="email-id" id="useremail" placeholder="Email Id" value="">
+
+                                <label for="userpassword"></label>
+                                <input type="password" name="password" id="userpassword" placeholder="Password" value="">
+                                <a title="orderlist-checkout" class="orderlist-checkout-user-btn">Checkout</a>
+                            </div>
+                        </div>
+                        <div class="orderlist-checkout-orbtn">
+                            <span>OR</span>
+                        </div>
+                        <div class="orderlist-checkout-newuser">
+                            <h4>Create your account.</h4>
+                            <label for="name"></label>
+                            <input type="text" name="name" id="name" placeholder="Full Name" value="">
+
+                            <label for="newemailid"></label>
+                            <input type="text" name="newemailid" id="newemailid" placeholder="Email Id" value="">
+
+                            <label for="phonenumber"></label>
+                            <input type="text" name="phonenumber" id="phonenumber" placeholder="Phone" value="">
+
+                            <label for="password"></label>
+                            <input type="password" maxlength="10" name="password" id="password" placeholder="Password" value="">
+                            <a title="create new user" class="orderlist-checkout-newuser-btn">Create</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include Firebase Library and Config-->
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="main.js"></script></body>
+
+</html>

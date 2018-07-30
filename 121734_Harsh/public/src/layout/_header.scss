@@ -1,0 +1,162 @@
+.header {
+    height: 7rem;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgb(0, 0, 0);
+    background-color: $color-primary-dark;
+    &-search {
+        margin: auto 1rem;
+    }
+    &-search-textbox {
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 1.6rem;
+        background-color: white;
+        background-image: url('../img/_ionicons_svg_md-search.svg');
+        background-repeat: no-repeat;
+        padding: 14px 20px 14px 4.5rem;
+        transition: width 0.4s ease-in-out;
+        cursor: pointer;
+    }
+    &-menu {
+        z-index: 100;
+        position: fixed;
+        background-color: rgba(119, 109, 109, 0.815);
+        top: 3.5rem;
+        right: 4rem;
+        width: 6rem;
+        border-radius: 65%;
+        height: 6rem;
+        display: block;
+        cursor: pointer;
+        @include respond(tab-port) {
+            // width < 900?
+            right: 0;
+            top: 0;
+        }
+        transition: opacity 0.2s linear;
+        &:hover {
+            opacity: 0.8;
+        }
+        span {
+            display: block;
+            float: left;
+            clear: both;
+            height: 4px;
+            width: 3.2rem;
+            border-radius: 40px;
+            background-color: #fff;
+            position: absolute;
+            right: 1.3rem;
+            top: .6rem;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            @include respond(tab-port) {
+                // width < 900?
+                top: 0;
+            }
+            &:nth-child(1) {
+                margin-top: 10px;
+                z-index: 9;
+            }
+            &:nth-child(2) {
+                margin-top: 25px;
+            }
+            &:nth-child(3) {
+                margin-top: 40px;
+            }
+        }
+    }
+    /* When the input field gets focus, change its width to 100% */
+}
+
+.header-search input[type=text]:focus {
+    width: 100%;
+}
+
+.sub-menu {
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    height: 0;
+    width: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background-color: rgba(38, 84, 133, 0.54);
+    border-radius: 50%;
+    z-index: 18;
+    overflow: hidden;
+    li {
+        display: block;
+        float: right;
+        clear: both;
+        height: auto;
+        margin-right: -160px;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &:first-child {
+            margin-top: 18rem;
+        }
+        &:nth-child(1) {
+            transition-delay: 0.05s;
+        }
+        &:nth-child(2) {
+            transition-delay: 0.10s;
+        }
+        &:nth-child(3) {
+            transition-delay: 0.15s;
+        }
+        &:nth-child(4) {
+            transition-delay: 0.20s;
+        }
+        &:nth-child(5) {
+            transition-delay: 0.25s;
+        }
+        a {
+            color: #fff;
+            font-size: 1.6rem;
+            width: 100%;
+            display: block;
+            float: left;
+            line-height: 40px;
+            text-decoration: none;
+        }
+    }
+}
+
+.oppenned {
+    .sub-menu {
+        opacity: 1;
+        height: 415px;
+        width: 415px;
+    }
+    span:nth-child(2) {
+        overflow: visible;
+    }
+    span:nth-child(1),
+    span:nth-child(3) {
+        z-index: 100;
+        transform: rotate(45deg);
+    }
+    span:nth-child(1) {
+        transform: rotate(45deg) translateY(12px) translateX(12px);
+    }
+    span:nth-child(2) {
+        height: 415px;
+        width: 415px;
+        right: -160px;
+        top: -115px;
+        border-radius: 50%;
+        background-color: rgba(38, 84, 133, 0.54);
+    }
+    span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-10px) translateX(10px);
+    }
+    li {
+        margin-right: 17rem;
+        @include respond(tab-port) {
+            margin-right: 22rem;
+        }
+    }
+}

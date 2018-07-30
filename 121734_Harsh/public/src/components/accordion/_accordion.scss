@@ -1,0 +1,261 @@
+.restaurant {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: 1fr;
+    }
+    grid-template-rows: auto;
+    &-accordion {
+        margin: 0 1rem 1rem 0;
+        &-title {
+            background-color: $color-grey-dark-3;
+            color: $color-grey-dark;
+            cursor: pointer;
+            padding: 1.8rem;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.5rem;
+            transition: 0.4s;
+            text-transform: uppercase;
+            &:hover {
+                background-color: #ccc;
+            }
+            &:after {
+                content: '\002B';
+                color: $color-grey-dark;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+            &-container {
+                display: grid;
+                grid-template-columns: 100%;
+                justify-content: start;
+            }
+            &-active {
+                background-color: #ccc;
+            }
+        }
+        &-description {
+            background-color: white;
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            display: grid;
+            align-content: space-between;
+            grid-template-columns: 40% 60%;
+            grid-gap: 1rem;
+            font-size: 1.5rem;
+        }
+        &-right {
+            display: grid;
+            align-content: space-between;
+            grid-template-columns: 100%;
+        }
+    }
+}
+
+.restaurant-accordion>p {
+    color: #29502f;
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.accordion-action p {
+    font-size: 2rem;
+    color: #0f522f;
+    padding: 1rem;
+}
+
+.accordion-action {
+    display: grid;
+    align-content: space-between;
+    grid-template-columns: 60% 40%;
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: 40% 60%;
+        margin-top: 1rem;
+    }
+    & a {
+        background: #0f522f none repeat scroll 0 0;
+        border-radius: 1rem;
+        color: #fff;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        padding: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 1.1rem;
+        text-decoration: none;
+        width: 70%;
+        text-align: center;
+        @media only screen and (max-width: $bp-large) {
+            width: 90%;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.item-title {
+    display: grid;
+    align-content: space-between;
+    grid-template-columns: 80% 20%;
+}
+
+.item-title p {
+    color: $color-primary-dark;
+    font-size: 2.2rem;
+    padding-top: 1rem;
+}
+
+.veg {
+    background-image: url('../img/vegetarian-food-symbol.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    margin: 1rem 1.3rem;
+    height: 3rem;
+}
+
+.non-veg {
+    background-image: url('../img/non-vegetarian-food-symbol.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    margin: 1rem 1.3rem;
+    height: 3rem;
+}
+
+.restaurant-accordion-active:after {
+    content: "\2212";
+}
+
+.show {
+    max-height: 250px;
+    margin-bottom: 1rem;
+    outline: #54514e solid 2px;
+    @media only screen and (max-width: $bp-large) {
+        margin: 1rem;
+    }
+}
+
+.mycart {
+    background-color: #eee;
+    padding-bottom: 2.5rem;
+    z-index: 99999;
+    &-heading {
+        background: $color-primary-dark none repeat scroll 0 0;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    &-quantity {
+        & p {
+            font-size: 2.5rem;
+            text-align: center;
+            padding: 9rem 0 3rem 0;
+        }
+        &-detail {
+            padding: 2rem;
+            & h3 {
+                font-size: 1.5rem;
+            }
+        }
+        &-item {
+            border-bottom: 1px solid #e6e6e6;
+            padding: 2rem 0;
+            &-detail {
+                display: grid;
+                align-content: space-between;
+                grid-template-columns: 94% 6%;
+                align-items: center;
+            }
+            &-delete {
+                background: #cd7327 none repeat scroll 0 0;
+                border-radius: 5rem;
+                color: #fff;
+                display: inline-block;
+                font-size: 1.2rem;
+                height: 1.6rem;
+                line-height: 1.5rem;
+                right: 0;
+                text-align: center;
+                top: 1.5rem;
+                width: 1.6rem; // padding: 0.4rem;
+                padding-top: .1rem;
+                cursor: pointer;
+            }
+            &-total {
+                margin-top: 2rem;
+                display: grid;
+                grid-template-columns: 80% 20%;
+                align-items: center;
+            }
+            &-selction {
+                display: grid;
+                padding: 0 1rem;
+                grid-template-columns: auto auto auto;
+                width: 40%;
+                & span {
+                    list-style: none;
+                }
+            }
+            &-remove {
+                background: #cd7327 none repeat scroll 0 0;
+                border: 1px solid #cd7327;
+                border-bottom-left-radius: 1rem;
+                border-top-left-radius: 1rem;
+                color: #fff;
+                font-size: 2rem;
+                padding: .3rem 1rem;
+                cursor: pointer;
+            }
+            &-add {
+                background: #cd7327 none repeat scroll 0 0;
+                border: 1px solid #cd7327;
+                border-bottom-right-radius: 1rem;
+                border-top-right-radius: 1rem;
+                color: #fff;
+                font-size: 2rem;
+                padding: .3rem 1rem;
+                cursor: pointer;
+            }
+            &-price {
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+            &-selected {
+                padding: .7rem 2rem;
+                color: #000;
+                border-bottom: 1px solid #ddd;
+                border-top: 1px solid #ddd;
+            }
+        }
+    }
+    &-checkout-btn {
+        background: $color-primary-dark none repeat scroll 0 0;
+        border-radius: .5rem;
+        cursor: pointer;
+        color: $color-grey-light-1;
+        font-size: 2.1rem;
+        margin: 2rem 0 1rem;
+        padding: 1.2rem 2rem;
+        float: right;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        display: none;
+    }
+    &-checkout-btn:hover {
+        text-decoration: underline;
+        font-size: 2.3rem;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.mycart-heading>h3 {
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    color: $color-grey-light-1;
+}
