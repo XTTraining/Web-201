@@ -1,0 +1,30 @@
+.header {
+    font-size: 1.4rem;
+    height: 10rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 11rem;
+    }
+}
+
+.callnow
+{
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    color: darkgreen;
+    text-shadow: 0px 0px 3px red;
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 2rem;
+        padding: .5rem 1rem;
+    }
+}

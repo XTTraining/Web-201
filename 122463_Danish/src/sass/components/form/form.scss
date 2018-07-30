@@ -1,0 +1,37 @@
+input[class=form-element], select, textarea, radio {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[id=form-submit] {
+    background-color: var(--color-primary-light);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[id=form-submit]:hover {
+    background-color: var(--color-primary-light);;
+}
+
+.form-container {
+    margin: 2rem 2rem;   
+    width: 90%;
+    border-radius: 5px;
+    background-color: var(--color-grey-light-5);
+    padding: 20px;
+}
+
+.radio{
+    display: inline;
+}
+
+

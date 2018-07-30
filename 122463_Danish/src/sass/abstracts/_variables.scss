@@ -1,0 +1,28 @@
+:root {
+    --color-primary: #7E9349;
+    --color-primary-light: rgb(169, 197, 100);
+    --color-primary-dark: rgb(94, 109, 55);
+    --color-primary-darker: rgb(58, 68, 34);
+    --color-primary-lighter:rgb(222, 243, 169);
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #cfdea8;
+    --color-grey-light-4: #ccc;
+    --color-grey-light-5:rgb(236, 248, 206);
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;    
+    --color-red:rgb(196, 1, 9);
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+    
+    --line: 1px solid var(--color-grey-light-2);
+}
+
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px

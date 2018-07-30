@@ -1,0 +1,165 @@
+
+button.green {
+    outline:none;
+    padding: .5rem 1.5rem;
+    color: var(--color-grey-light-1);
+    border: 1px solid var(--color-primary-darker); 
+    background: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+  //  background: -moz-linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+   // background: -ms-linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+}
+
+button.green:hover {
+    cursor:pointer;    
+    border: 1px solid var(--color-black);
+    background: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark)); 
+   // background: -moz-linear-gradient(top, #FD924C, #F9760B); 
+  //  background: -ms-linear-gradient(top, #FD924C, #F9760B); 
+    //box-shadow: 0 1px var(--color-primary-light);;
+}
+
+button.green:active {
+    box-shadow: inset 0 1px 1px  var(--color-black);
+}
+
+
+.btn {
+    
+    font-size: 1.2rem;
+    font-weight: 400;    
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+  
+    &__visible {
+        padding: 2rem 7.5rem;
+    }
+  
+    &__invisible {
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+    }
+  
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+  
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+  
+    &:hover &__invisible {
+        top: 0;
+    }
+  
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+  }
+
+
+
+
+.cssCircle {
+    padding-top:00px;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    //behavior: url(PIE.htc);
+    
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 1px;
+    
+    background: var(--color-primary-lighter);
+    border: 1px solid var(--color-primary-darker);
+    color: var(--color-primary-dark);
+    text-align: center;
+    -webkit-transition: background 0.2s linear;
+    -moz-transition: background 0.2s linear;
+    -ms-transition: background 0.2s linear;
+    -o-transition: background 0.2s linear;
+    transition: background 0.2s linear;
+    transition: color 0.2s linear;
+    outline: none;
+  //  font: 1.6rem Arial, sans-serif
+  }
+  
+  .cssCircle:hover {
+    background: var(--color-primary-dark);;
+    cursor: pointer;
+  }
+  
+  .minusSign {
+    line-height: 0.9em;
+    margin-bottom: 1px;
+  }
+  
+  .plusSign {
+    line-height: 1.1em;
+  }
+  
+  .minusSign:hover,
+  .plusSign:hover {
+    color: white;
+  }
+
+  .quntity-input
+  {
+      text-align: center;
+      width:3rem;
+  }
+
+
+  // flat button
+
+  .flat-button {
+	margin-top: .5rem;
+	margin-right: 1rem;
+	padding: 1rem 2rem;
+	font-size: 14px;
+	line-height: 1em;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+	color: white;
+	display:inline-block;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	transition: background 0.1s ease-in-out;
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+	-ms-transition: background 0.1s ease-in-out;
+	-o-transition: background 0.1s ease-in-out;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	color: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: var(--color-primary-dark);
+	box-shadow: 0px 3px 0px 0px var(--color-primary-light);
+    text-decoration: none;
+}
+
+.flat-button:hover {
+	background-color: var(--color-primary);
+}
+.flat-button:active {
+	box-shadow: 0px 1px 0px 0px var(--color-primary);
+}

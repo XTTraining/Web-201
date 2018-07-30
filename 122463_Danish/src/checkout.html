@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
+    <!-- fav icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- fav icons -->
+
+    <!-- SEO -->
+    <meta name="title" content="Cuisine of India, fine dining indian restaurant in NEW Delhi" />
+    <meta name="description" content="offering authentic indian food, catering, lunch buffet, dinner buffet, carry-outs, In-house parties, banquets, weddings and outdoor catering near NCR"
+    />
+    <meta name="keywords" content="fine dining indian restaurant in New Delhi,offering authentic indian food, catering, lunch buffet, dinner buffet, carry-outs"
+    />
+    <meta name="language" content="English" />
+    <meta name="robots" content="allow,follow" />
+    <!-- SEO -->
+
+    <title>Checkout - Payment</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="logo" class="logo">
+            </a>
+            <a class="callnow" href="tel:5551234567">Order Online - 9899287597</a>
+        </header>
+
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="cart.html">My Cart</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <span class="ham">ham</span>
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+
+
+        <div class="slideshow-container">
+            <!-- header image-->
+            <div class="mySlides fade">
+                <img src="images/header2.jpg" alt="header image" style="width:100%">
+            </div>
+        </div>
+
+        <div class="flex-content">
+            <nav class="flex-sidebar">
+            </nav>
+
+
+            <main class="flex-main-section">
+
+                <h1 class="my-cart">Checkout - Payment</h1>
+
+                <div class="cart-list">
+                </div>
+
+                <script id="tpl-cart" type="text/template">
+                    <div>
+                        <section class="cart-products">
+                            {{#if products}}
+                            <div class="cart-product head">
+                                <div class="cart-product__image">Image</div>
+                                <div class="cart-product__name">Product Name</div>
+                                <div class="cart-product__price">Price</div>
+                                <div class="cart-product__qty">Qty</div>
+                                <div class="cart-product__vat">VAT </div>
+                                <div class="cart-product__total">Total </div>
+                            </div>
+                            {{/if}} {{#each products}}
+                            <div class="cart-product" data-id="{{id}}">
+                                <div class="cart-product__image">
+                                    <img src="images/{{id}}.jpg" alt="{{name}}" class="cart-product__img">
+                                </div>
+                                <div class="cart-product__name">{{name}}</div>
+                                <div class="cart-product__price">
+                                    <p>₹{{price}}</p>
+                                </div>
+                                <div class="cart-product__qty">
+                                    {{quantity}}
+                                </div>
+                                <div class="cart-product__vat">{{vat}}% </div>
+                                <div class="cart-product__total">₹{{total}} </div>
+
+                            </div>
+
+                            {{else}}
+                            <div class="cart-empty">
+                                <div class="cart-empty">Cart is empty!</div>
+                            </div>
+                            {{/each}} {{#if products}}
+                            <div class="cart-product head">
+                                <div class="cart-product__image">&nbsp;</div>
+                                <div class="cart-product__name">&nbsp;</div>
+                                <div class="cart-product__price">&nbsp;</div>
+                                <div class="cart-product__qty">&nbsp;</div>
+                                <div class="cart-product__btn">&nbsp; </div>
+                                <div class="cart-product__vat">Grand Total</div>
+                                <div id="grand-total" class="cart-product__total">0</div>
+                                
+                            </div>
+                            {{/if}}
+                        </section>
+                    </div>
+                </script>
+
+
+                <h1 class="my-cart">Order Form</h1>
+
+                <div class="form-container">
+                    <form action="https://www.paypal.com/cgi-bin/webscr">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" class="form-element" placeholder="Your name..">
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" class="form-element" placeholder="Your last name..">
+
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" class="form-element" placeholder="Your email..">
+
+
+                        <label for="payment">Payment Option</label>
+                        <input class="radio" type="radio" name="payment" id="cash" value="cash"  />
+                        <label for="cash">Cash</label>
+                        <input class="radio" type="radio" name="payment" id="paypal" checked value="ppal" />
+                        <label for="paypal">Paypal</label>
+                        <input class="radio" type="radio" name="payment" id="PayTM" value="PayTM" />
+                        <label for="PayTM">PayTM</label>
+                        </br>
+                        </br>
+                        <input id="form-submit" type="submit" value="Place your Order!">
+                    </form>
+                </div>
+
+
+                <div class="cart-nav">
+
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            © Copyright
+        </footer>
+
+
+
+
+
+
+</body>
+
+
+<script src="sass/components/carousel/carousel.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/common.js"></script>
+<script src="sass/components/accordian/accordion.js"></script>
+<script>
+</script>
+
+</html>
