@@ -20,9 +20,6 @@ const markup = `
                                 
             <div class="shopping__cart">
                 <a class="shopping__cart__cart navigation__link" href="/cart.html">Cart</a>
-                <div class="shop__qun">
-                    <span class="cart-count">${count}</span>
-                </div>
             </div>
 
 </header>
