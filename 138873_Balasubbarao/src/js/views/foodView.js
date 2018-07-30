@@ -9,7 +9,7 @@ export const renderCategory = (data, element) => {
         <label for="tab-${doc.data.id}" class="tab-title"  data-category-doc-id="${doc.docId}">${doc.data.name}</label>
         <div class="tab-content">
             <ul class="filter" >
-                <div class="foodie-loader foodie-loader-small">Loading...</div>
+                <li class="foodie-loader foodie-loader-small">Loading...</li>
             </ul>
         </div>
         </div>`;
@@ -32,6 +32,7 @@ export const renderSubCategory = (data, element) => {
 
 export const renderFood = (data, element, filterList) => {
 
+
     element.innerHTML = '';
     data.forEach((doc) => {
         let found = true;
@@ -48,7 +49,7 @@ export const renderFood = (data, element, filterList) => {
                             
                             <div class="product__content-control">
                                 <a href="javascript:void(0)" class="product__content-control-add" data-price="${doc.data.price}" data-id="${doc.docId}">+</a>
-                                    <span class="product__content-control-text" data-id="${doc.docId}">${doc.data.qty}</span>
+                                    <span class="product__content-control-text" data-id="${doc.docId}">0</span>
                                 <a href="javascript:void(0)" class="product__content-control-remove" data-price="${doc.data.price}" data-id="${doc.docId}">-</a>
                             </div>
                         </div>

@@ -58,14 +58,14 @@
                 height: 35px;
                 border-top: 1px solid $color-secondary;
                 border-bottom: 1px solid $color-secondary;
-                font-size: .8em;
+                font-size: 1em;
                 font-weight: 400;
             }
             &-row {
                 @include flexcontainer('', space-around);
                 flex-wrap: nowrap;
                 border-bottom: 1px solid $color-clean;
-                font-size: 13px;
+                font-size: 16px;
                 font-weight: 300;
                 &:nth-of-type(odd) {
                     background-color: rgba($color-clean, .2);

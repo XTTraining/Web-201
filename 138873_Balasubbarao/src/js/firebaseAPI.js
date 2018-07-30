@@ -77,6 +77,26 @@ export default class FirestoreAPI {
 
         return result;
     }
+
+    //LIST METHOD.
+    //collectionName - FIRESTORE COLLECTION NAME.
+    async foodList(collectionName) {
+        let result = [];
+        await this._db.collection(collectionName).get().then((querySnapshot) => {
+
+            querySnapshot.forEach((doc) => {
+                //this._db.collection("Orders").doc(doc.id).get().then(function (orderDoc) {
+                result.push({ "docId": doc.id, "data": doc.data(), 'qty': 0 });
+
+                //}).catch(function (error) {
+                //  console.log(error);
+                //});
+
+            });
+        });
+
+        return result;
+    }
 }
 
 

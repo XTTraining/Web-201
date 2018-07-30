@@ -18,19 +18,8 @@ export default class category {
     }
 
     //GET ALL FOOD LIST ITEMS.
-    async getFoodList(order) {
-
-        let fooditems = await this._api.list(collections.food);
-
-        await fooditems.forEach((doc) => {
-
-            order.getOrderItem(doc.docId).then(function (order) {
-                if (order.data !== undefined) {
-                    doc.data.qty = order.data.qty;
-                }
-            });
-        });
-        return fooditems;
+    getFoodList() {
+        return this._api.foodList(collections.food);       
     }
 
 }

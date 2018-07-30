@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>foodie- Online Food Delivery</title>
+    <meta name="description" content="foodie">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
     <!-- light-300,regular-400, semi bold - 600, bold -700, extra bold -800 -->
 
@@ -92,7 +93,7 @@
                                 <div class="order__list-table-col">Tax</div>
                                 <div class="order__list-table-col">Total</div>
                             </div>
-                            <div class="order__list-table-row">
+                            <!-- <div class="order__list-table-row">
                                 <div class="order__list-table-col order__list-table-col-content">
                                     <img src="img/food/1.jpg" alt="food" class="order__list-table-col-content--image">
                                 </div>
@@ -111,27 +112,7 @@
                                 <div class="order__list-table-col order__list-table-col-content">
                                     $1.05
                                 </div>
-                            </div>
-                            <div class="order__list-table-row">
-                                <div class="order__list-table-col order__list-table-col-content">
-                                    <img src="img/food/1.jpg" alt="food" class="order__list-table-col-content--image">
-                                </div>
-                                <div class="order__list-table-col order__list-table-col-content hide-mobile">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                </div>
-                                <div class="order__list-table-col order__list-table-col-content">
-                                    <input type="text" id="Quntity" value="1" class="order__list-table-col-content--qty">
-                                </div>
-                                <div class="order__list-table-col order__list-table-col-content">
-                                    $1
-                                </div>
-                                <div class="order__list-table-col order__list-table-col-content">
-                                    $.05
-                                </div>
-                                <div class="order__list-table-col order__list-table-col-content">
-                                    $1.05
-                                </div>
-                            </div>
+                            </div>                            -->
                             <div class="order__list-table-footer">
                                 <div class="order__list-table-footer-discount order__list-table-footer-col">
                                     <div class="discount-box">
@@ -151,13 +132,13 @@
                                 </div>
                                 <div class="order__list-table-footer-checkout order__list-table-footer-col">
                                     <div class="order__list-table-footer-checkout-summary">
-                                        <div class="order__list-table-footer-checkout-summary-box">
+                                        <!-- <div class="order__list-table-footer-checkout-summary-box">
                                             <div class="order__list-table-footer-checkout-summary-box-label">Sub Total</div>
-                                            <div class="order__list-table-footer-checkout-summary-box-value">$12</div>
-                                        </div>
+                                            <div class="order__list-table-footer-checkout-summary-box-value" id="order-sub-total">$0</div>
+                                        </div> -->
                                         <div class="order__list-table-footer-checkout-summary-box">
                                             <div class="order__list-table-footer-checkout-summary-box-label">Delivery</div>
-                                            <div class="order__list-table-footer-checkout-summary-box-value">Country</div>
+                                            <div class="order__list-table-footer-checkout-summary-box-value">India</div>
                                         </div>
                                         <div class="order__list-table-footer-checkout-summary-box">
                                             <div class="order__list-table-footer-checkout-summary-box-label">Shipping Method</div>
@@ -166,11 +147,11 @@
                                         <hr>
                                         <div class="order__list-table-footer-checkout-summary-box">
                                             <div class="order__list-table-footer-checkout-summary-box-label">Tax</div>
-                                            <div class="order__list-table-footer-checkout-summary-box-value">$1</div>
+                                            <div class="order__list-table-footer-checkout-summary-box-value" id="order-total-tax">$.5</div>
                                         </div>
                                         <div class="order__list-table-footer-checkout-summary-box">
                                             <div class="order__list-table-footer-checkout-summary-box-label large-font">Total</div>
-                                            <div class="order__list-table-footer-checkout-summary-box-value">$12</div>
+                                            <div class="order__list-table-footer-checkout-summary-box-value" id="order-total">$0</div>
                                         </div>
                                     </div>
                                     <div class="order__list-table-footer-checkout-controls">

@@ -21,14 +21,14 @@ if (localStorage['-orderid-'] == undefined) {
 const controlCategory = async () => {
 
     //GET THE LIST OF CATEGORIES.
-    food.getCategroyList().then(function (categoryList) {
+    food.getCategroyList().then((categoryList) => {
         //RENDER THE CATEGORIES.
         FoodView.renderCategory(categoryList, elements.category);
     });
 
     //LIST FOOD ITEMS BASED ON CATEGORY SELECTION.
-    food.getFoodList(order).then(function (foodList) {
-        //RENDER FOOD ITEMS        
+    food.getFoodList(order).then((foodList) => {
+        //RENDER FOOD ITEMS                
         FoodView.renderFood(foodList, elements.foodList);
     });
     setupEventListener();
@@ -38,7 +38,7 @@ const setupEventListener = () => {
 
     if (elements.category !== undefined && elements.category !== null) {
         //SETUP EVENT LISTNER FOR CATEGORY EXPAND TO LIST THE SUBCATEGORY AND TO FILTER THE FOOD ITEMS BASES ON SUBCATEGORY SELECTION
-        elements.category.addEventListener('click', function (event) {
+        elements.category.addEventListener('click', (event) => {
 
             //GET CATEGORY DOCUMENT ID.
             const categoryDoc = event.target.getAttribute('data-category-doc-id');
@@ -53,7 +53,7 @@ const setupEventListener = () => {
                 let collectionName = `/${collections.category}/${categoryDoc}/${collections.subCategory}`;
 
                 //GET THE SUBCATEGORIES        
-                food.getSubCategroyList(collectionName).then(function (subCategoryList) {
+                food.getSubCategroyList(collectionName).then((subCategoryList) => {
                     //RENDER SUBCATEGORIES
                     FoodView.renderSubCategory(subCategoryList, tabContentElement);
                 });
@@ -66,7 +66,7 @@ const setupEventListener = () => {
                     if (ele.checked) filerSubCategories.push(ele.id.split('__')[1]);
                 });
                 //FILTER FOOD ITEMS.
-                food.getFoodList().then(function (foodList) {
+                food.getFoodList().then((foodList) => {
                     //RENDER FOOD ITEMS
                     FoodView.renderFood(foodList, elements.foodList, filerSubCategories);
                 });
@@ -110,7 +110,7 @@ const addRemoveCart = () => {
 
 
 const addRemoveCartCategory = () => {
-    elements.foodList.addEventListener('click', function (event) {
+    elements.foodList.addEventListener('click', (event) => {
         addRemoveCart();
     });
 }
@@ -126,7 +126,7 @@ if (elements.category !== undefined && elements.category !== null) {
 /// ORDER CONTROLLER
 const controlOrder = () => {
     //GET THE LIST OF CATEGORIES.
-    order.getOrderList().then(function (orderList) {
+    order.getOrderList().then((orderList) => {
         //RENDER THE CATEGORIES.
         OrderView.renderOrders(orderList, elements.orderListFooter);
         //RENDER ORDER SUMMARY
@@ -137,11 +137,11 @@ const controlOrder = () => {
 
 
 const addRemoveCartOrder = () => {
-    elements.orderList.addEventListener('click', function (event) {
+    elements.orderList.addEventListener('click', (event) => {
         const currentOrder = addRemoveCart();
         //REFRESH THE UPDATED VALUES        
         if (currentOrder !== undefined && currentOrder !== null) {
-            order.getOrderItem(currentOrder.id).then(function (order) {
+            order.getOrderItem(currentOrder.id).then((order) => {
                 OrderView.renderOrder(order, currentOrder.element);
             });
         }
