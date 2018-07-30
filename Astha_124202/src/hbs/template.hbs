@@ -1,0 +1,26 @@
+<div class="categories__accordian--product">
+    <a href="#" title="Rajma with lachcha Paranthas ">
+        <img class="categories__accordian-content-card" src="img/{{image}}" alt="itemImge">
+    </a>
+    <div class="card-title">{{title}}
+        <img class="card-icon" alt="veg" src="{{sImg}}">
+    </div>
+    <div class="card-shortDesc">{{shortDescription}}</div>
+    <div class="card-priceDesc">
+        <div class="card-price">₹{{price}}</div>
+        <div class="card-button" id="card-button-{{id}}">
+           <a  id="{{id}}" class="card-addToCart">Add To Cart</a>
+        </div>
+         <div class="card-quantity" id="card-quantity-{{id}}">
+            <button class="card-add" >
+               +
+            </button>
+            <label for="cardInput-{{id}}" class="hide">Card Input</label> 
+            <input class="card-input"  aria-label="cardQuantity" id="cardInput-{{id}}" name="cartInput" type="text" placeholder="1">
+            <button class="card-remove" id="card-remove-{{id}}">
+              ‒  
+            </button>
+            
+        </div>
+    </div>
+</div>
