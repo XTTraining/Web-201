@@ -10,8 +10,7 @@
         "devpro": "webpack-dev-server --mode production --open",
         "sass": "node-sass src/styles/main.scss dist/min.css --watch",
         "serve": "webpack-serve ./webpack.config.js --no-reload",
-        "test": "jasmine JASMINE_CONFIG_PATH=test/unit/jasmine.json",
-        "test1": "babel-node src/index.js"
+        "test": "jasmine JASMINE_CONFIG_PATH=test/unit/jasmine.json"
     },
     "keywords": [],
     "author": "",
