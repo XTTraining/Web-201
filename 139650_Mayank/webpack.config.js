@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: ['babel-polyfill', './src/js/index.js'],
@@ -29,7 +30,13 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        })
+        }),
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, 'src/img'),
+                to: path.resolve(__dirname, 'dist/img')
+            }
+        ])
     ],
     module: {
         rules: [
@@ -48,12 +55,12 @@ module.exports = {
                 })
             },
             {
-                test:  /\.handlebars$/,
-                exclude:  /node_modules/,
-                include:  [
-                    path.resolve(__dirname,  'src/templates')
+                test: /\.handlebars$/,
+                exclude: /node_modules/,
+                include: [
+                    path.resolve(__dirname, 'src/templates')
                 ],
-                loader:  "handlebars-loader"
+                loader: "handlebars-loader"
             }
         ]
     }
