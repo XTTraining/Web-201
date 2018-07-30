@@ -1,7 +1,7 @@
 
 +Taste Onway
 
-+The application has been built using HTML5, SASS, ES6, npm
++The application has been built using HTML5, SASS, ES6, npm, Firebase
 
 +Loads a reponsive application with food categories, filters base on food type and categories, search foods
 
