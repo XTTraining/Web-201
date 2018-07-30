@@ -8,8 +8,11 @@ import Menu, * as model from './Menu';
 export default class menuController {
 
     constructor() { 
+
     }
-    
+    display(){
+        console.log('display called');
+    }
     init() {
         console.log('--------init in menuController-----------')
 
@@ -49,6 +52,7 @@ export default class menuController {
         }
         else {
 
+            console.log('loading the menu from else');
             this.loadmenu(menuData,false);
 
         }

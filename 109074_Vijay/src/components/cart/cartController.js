@@ -17,7 +17,7 @@ export default class CartController {
     init(readonly) {
 
 
-        if (this.cart && this.cart.cartItems) {
+        if (this.cart && this.cart.cartItems && this.cart.cartItems.length >0) {
             cartView.renderCart(this.cart,readonly);
             Window.foodApp.listeners.bindCartControls();
 
