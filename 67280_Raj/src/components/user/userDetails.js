@@ -62,7 +62,9 @@ renderUserData(parentElement){
                    <div id="bt-dropin"></div>
         </div>
                <input id="nonce" name="payment_method_nonce" type="hidden" />
+               <div>
                <button class="food__btn" type="submit" name="submit">confirm order</button>
+               </div>
             </form>
   </div>
 
@@ -70,7 +72,12 @@ renderUserData(parentElement){
 
 parentElement.insertAdjacentHTML('beforeend', markup);
 const radioInput = parentElement.querySelectorAll('input');
-radioInput.forEach(item=>item.onclick=this.clickHandler);
+
+for (let i = 0; i < radioInput.length; i++) {
+    radioInput[i].onclick=this.clickHandler;
+}
+
+//radioInput.forEach(item=>item.onclick=this.clickHandler);
 }
 clickHandler(event)
 {
