@@ -26,13 +26,13 @@ Data is coming from firebase and can be pushed to firebase using DATA.txt presen
 To Set Up project:</br>
 1)Download Src Code.</br>
 2)Install node modules:</br>
-  npm install</br>
+ ``` npm install ```</br>
 3)move ther code to production </br>
-  npm run build</br>
+ ``` npm run build ```</br>
 4)To open live server</br>
-  npm run start</br>
+  ```npm run start```</br>
 
 Unit Testing:</br>
 Unit test cases have been written to check if specific components is present on the page:</br>
 Run unit test in project folder:</br>
-npm run test</br>
+```npm run test```</br>
