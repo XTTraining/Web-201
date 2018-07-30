@@ -11,6 +11,7 @@ module.exports = {
     filename: "bundle.js",
     publicPath: "/dist"
   },
+  mode: 'development',
   devServer: {
     contentBase: './dist'
   },

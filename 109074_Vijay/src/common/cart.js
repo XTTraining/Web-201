@@ -83,6 +83,8 @@ export default class cart {
                     this.cartItems[i].subtotal = this.getSubtotalIncludingGST(this.cartItems[i]);
                     this.cartValue = this.cartItems.sum('subtotal');
                     this.updateCartStore();
+                    console.log('value of cart is after del');
+
                     return this.cartItems[i];
                 }
                 break;
@@ -90,6 +92,7 @@ export default class cart {
             }
         }
         this.cartItems.splice(i, 1);
+        this.cartValue = this.cartItems.sum('subtotal');
         this.updateCartStore();
         return null;
 

@@ -101,6 +101,7 @@ export const bindDomReadyEvents = () => {
         }
 
 
+        console.log('filter called');
         menuCtrl.filterkey(filterOptions);
     });
 
@@ -129,6 +130,7 @@ export const bindDomReadyEvents = () => {
     //alert('search called'); 
     $('.search__button').unbind().on('click', function (event) {
 
+        console.log('search called');
         event.preventDefault();
         let searchKeyWord = $('.search__input').val();
         if (searchKeyWord.length > 2) {

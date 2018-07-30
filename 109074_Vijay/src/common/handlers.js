@@ -68,32 +68,50 @@ export const removefromcartHandler = (el) => {
 export const updateQuantityInCart = (id, op) => {
     var cart = Window.foodApp.cart;
     if (op === '+') {
-        console.log('cart add updateQuantityInCart called');         
+        console.log('cart add updateQuantityInCart called');
         let item = cart.add(id);
-        if(item){
+        if (item) {
             console.log('cart add count is ');
-        console.log(item.count);
-        $('#cartItemtotal-' + id).html(item.subtotal.toFixed(2));
-        $('#cartItem-' + id).html(item.count);
-        $('.cart__rowblack-totalamount').html('₹ ' + cart.cartValue.toFixed(2));
+            console.log(item.count);
+            $('#cartItemtotal-' + id).html(item.subtotal.toFixed(2));
+            $('#cartItem-' + id).html(item.count);
+            $('.cart__rowblack-totalamount').html('₹ ' + cart.cartValue.toFixed(2));
 
         }
         // class="cart__rowblack-totalamount">
         //                             ₹ ${cart.cartValue} 
 
-    }else{
-        console.log('cart add updateQuantityInCart called');        
+    } else {
+        console.log('cart del updateQuantityInCart called');
         let item = cart.delete(id);
-        if(item){
+        if (item) {
             console.log('cart add count is ');
-        console.log(item.count);
-        $('#cartItemtotal-' + id).html(item.subtotal);
-        $('#cartItem-' + id).html(item.count);
+            console.log(item.count);
+            $('#cartItemtotal-' + id).html(item.subtotal);
+            $('#cartItem-' + id).html(item.count);
+            $('.cart__rowblack-totalamount').html('₹ ' + cart.cartValue.toFixed(2));
+            console.log('cart minus count is ');
+            console.log(item.count);
+
+        } else {
+            //alert('called');
+            $('#cartItemRow-' + id).remove();
+            $('.cart__rowblack-totalamount').html('₹ ' + cart.cartValue.toFixed(2));
+
+            if (cart && cart.cartItems.length == 0) {
+                $('.cart__rowblack').remove();
+                $('.cart__body').html(`<div class="cart__row">
+                <span class="align--center u-padding--3">
+                        You cart is empty
+                </span>
+        </div>`);
+            }
+            //$(this).parent().parent().parent().parent().remove();
+            //if(cart.cartValue)
 
         }
-        console.log('cart minus count is ');
-        console.log(item.count);
-         
+
+
 
     }
 

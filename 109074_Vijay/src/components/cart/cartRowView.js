@@ -3,7 +3,7 @@ export const renderCartRow = (item,readonly) => {
 
     console.log('ready only value id');
     console.log(readonly);
-    let cartRowMarkup = `<div class="cart__row">
+    let cartRowMarkup = `<div class="cart__row" id="cartItemRow-${item.id}">
     <div class="cart__row-itemname">
     ${item.name}
     </div>

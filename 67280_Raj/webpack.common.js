@@ -17,10 +17,10 @@ module.exports = {
   //     filename: 'bundled.js',
   //     path: path.resolve(__dirname, 'dist'),
   entry: {
-    home: "./src/index.js",
-    payment: "./src/payment.js",
-    cart: "./src/cartPage.js",
-    vendor:["babel-polyfill"]
+    home: ["babel-polyfill","./src/js/index.js"],
+    payment: ["babel-polyfill","./src/js/payment.js"],
+    cart: ["babel-polyfill","./src/js/cartPage.js"]
+    //vendor:["babel-polyfill"]
     // pageThree: './src/pageThree/index.js'
   },
   output: {
