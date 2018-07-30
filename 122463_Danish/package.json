@@ -27,12 +27,12 @@
     "webpack-cli": "^3.0.8"
   },
   "scripts": {
-    "webpack-dev-build": "webpack --config webpack.config.js --display-error-details",
-    "webpack-prod-build": "webpack --config webpack.config.js --display-error-details",
+    "webpack-dev-build": "webpack --config webpack.config.js",
+    "webpack-prod-build": "webpack --config webpack-prod.config.js",
     "sass": "node-sass src/sass/main.scss dist/css/style.css -w",
     "build": "webpack -p ./src/js/app.js ./dist/bundle.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Danish Miyan",
   "license": "ISC"
 }
