@@ -8,9 +8,6 @@
 - User can pay through CASH, PayTM and PayPal.
 
 
-
-
-
 To setup the project:
 ----------------------------------------------------
 1. node prompt  => npm install
@@ -25,10 +22,13 @@ Configurations:
 Build:
 ----------------------------------------------------
 node prompt -> npm run webpack-dev-build
-               npm run webpack-prod-build 
+
+node prompt -> npm run webpack-prod-build 
+               
 
 
 Jasmine UNIT Test Suite:
 -------------------------------------------------
-node prompt -> cd src 
-               Jasmine
+node prompt ->src/Jasmine 
+
+               
