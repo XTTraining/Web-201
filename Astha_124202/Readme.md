@@ -1,6 +1,6 @@
 Web 201
 
-# Ordering food Website "DINE TO DOOR"</br>
+## Ordering food Website "DINE TO DOOR"</br>
 Welcome to Dine to Door.Order your food spiced with less delivery time at your door step. Through the site you can:</br>
 1)Search interested item</br>
 2)Filter your preferences</br>
@@ -14,7 +14,7 @@ FrontEnd: Sass,Grid-css Layout,flexbox,</br>
 Backend:ES6,Jquery</br>
 Database:Firebase</br>
 
-# Getting Started:</br>
+## Getting Started:</br>
 
 # Pre-requisite:</br>
 1)npm (https://nodejs.org/en/download/)</br>
