@@ -5,6 +5,6 @@
 
 +Loads a reponsive application with food categories, filters base on food type and categories, search foods
 
-+Once restored run npm install and npm run start.
-
 +List and display selected food in the cart with the payment details
+
++Once restored run npm install and npm run start.
