@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack'); 
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: ['babel-polyfill', './src/js/index.js'],
     output: {
@@ -25,10 +26,17 @@ module.exports = {
             template: './src/checkout.html'
         }),
         new ExtractTextPlugin('./css/bundle.css'),
+       
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, 'src/img'),
+                to: path.resolve(__dirname, 'dist/img')
+            }
+        ]),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        }) 
+        })    
     ],
     module: {
         rules: [

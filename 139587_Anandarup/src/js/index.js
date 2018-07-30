@@ -26,7 +26,8 @@ $(document).ready(function () {
         speed: 4000,
         arrows: false
     });
-    //$(document).on('keypress', '[role="button"]', null, onKeypressRoleButton, false);
+    
+    $(document).on('keypress', '[role="button"]', null, onKeypressRoleButton, false);
     InitiateProductLoad();
     // 
     if (elements.cartWrapper.length) {
@@ -266,6 +267,7 @@ $(document).on('click', '.btn-increment__minus', function (e) {
     }
 
     if (quantity === 0) {
+        hideShowAddButton(e, quantity);
         if ($(this).parents('.cart__button')) {
             removeProductRowFromUI($(this));
         }
@@ -293,16 +295,18 @@ $(document).on('click', '.horizontal-scroll__nav-item', function () {
 
 const hideShowAddButton = (element, quantity) => {
     const opacityValue = quantity === 0 ? 0 : 1;
-    const elementList = element.target.offsetParent.children;
-    $.each(elementList, (i, val) => {
-        val.style.opacity = opacityValue;
-        if (quantity === 0 && val.className === 'btn-increment__add') {
-            val.style.opacity = 1;
-        }
-        else if (val.className === 'btn-increment__quantity') {
-            val.textContent = 1;
-        }
-    });
+    if(element.target.offsetParent !== null) {
+        const elementList = element.target.offsetParent.children;
+        $.each(elementList, (i, val) => {
+            val.style.opacity = opacityValue;
+            if (quantity === 0 && val.className === 'btn-increment__add') {
+                val.style.opacity = 1;
+            }
+            else if (val.className === 'btn-increment__quantity') {
+                val.textContent = 1;
+            }
+        });
+    }
     if (quantity !== 0) {
         element.target.style.opacity = 0;
     }
