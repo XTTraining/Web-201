@@ -1,0 +1,238 @@
+.products {
+    width: 100%;
+    box-shadow: 0 .1rem .3rem rgba($color-black, .1);
+    margin-top: .5px;
+    &__list {
+        margin-left: $left-right-margin;
+        margin-right: $left-right-margin;
+        @include responsive(phone) {
+            margin-left: $left-right-margin-phone;
+            margin-right: $left-right-margin-phone;
+        }
+        @include responsive(tab-port) {
+            margin-left: $left-right-margin-tab;
+            margin-right: $left-right-margin-tab;
+        }
+        background: linear-gradient(to bottom, rgba($color-clean, .3), rgba($color-clean, .7));
+        box-shadow: 0px -3px 1px 0px rgba($color-black, .1);
+        position: relative;
+        @include clearfix;
+        &-category {
+            float: left;
+            height: auto;
+            width: 20%;
+            @include responsive(phone) {
+                display: inline-block;
+                width: 100%;
+            }
+            @include responsive(tab-port) {
+                width: 25%;
+            }
+        }
+        &-items {
+            float: right;
+            min-height: 500px;
+            width: 75%;
+            margin: 0 11px 10px 30px;
+            @include responsive(phone) {
+                width: 100%;
+            }
+            @include responsive(tab-port) {
+                width: 65%;
+                margin: 0 30px 10px 30px;
+            }
+            @include responsive(tab-land) {
+                width: 69%;
+                margin: 0 20px 10px 20px;
+            }
+            &-search {
+                display: block;
+                float: right;
+                @include responsive(phone) {
+                    position: relative;
+                }
+                &-input {
+                    font-family: inherit;
+                    font-weight: 400;
+                    color: $color-white;
+                    background: rgba($color-secondary, .4);
+                    position: relative;
+                    display: inline-block;
+                    width: 215px;
+                    padding: 10px 0 10px 15px;
+                    border: 0;
+                    border-radius: 3px;
+                    outline: 0;
+                    text-indent: 60px;
+                    transition: all .3s ease-in-out;
+                    @include responsive(phone) {
+                        width: 193px
+                    }
+                    &::-webkit-input-placeholder {
+                        color: transparent;
+                        text-indent: 0;
+                        font-weight: 300;
+                    }
+                    +label {
+                        display: inline-block;
+                        position: absolute;
+                        transform: translateX(0);
+                        top: 13px;
+                        right: 150px;
+                        padding: 13px 15px;
+                        font-size: 11px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: $color-black;
+                        text-align: left;
+                        text-shadow: 0 1px 0 rgba($color-white-2, .4);
+                        transition: all .3s ease-in-out, color .3s ease-out;
+                        border-top-left-radius: 3px;
+                        border-bottom-left-radius: 3px;
+                        overflow: hidden;
+                        @include responsive(phone) {
+                            top: -2px;
+                            right: 118px;
+                        }
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 3px;
+                            right: 100%;
+                            bottom: 0;
+                            width: 100%;
+                            background: $color-primary;
+                            z-index: -1;
+                            transform: translate(0);
+                            transition: all .3s ease-in-out;
+                            border-top-left-radius: 3px;
+                            border-bottom-left-radius: 3px;
+                        }
+                    }
+                    &:focus,
+                    &:active {
+                        color: $color-black;
+                        text-indent: 0;
+                        background: $color-white;
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                        border: .5px solid $color-primary;
+                        &::-webkit-input-placeholder {
+                            color: $color-white-2;
+                        }
+                        +label {
+                            color: $color-white;
+                            text-shadow: 0 1px 0 rgba($color-secondary, .4);
+                            transform: translateX(-100%);
+                            &:after {
+                                transform: translate(100%);
+                            }
+                        }
+                    }
+                }
+            }
+            &-col {
+                margin-bottom: 15px;
+                margin-right: 35px !important;
+                @include responsive(phone) {
+                    margin-right: 12px !important;
+                    width: 100% !important;
+                }
+                @include responsive(tab-port) {
+                    margin-right: 30px !important;
+                }
+            }
+        }
+    }
+}
+
+// Filter
+.filter {
+    padding: .05rem 0rem;
+    list-style: none;
+    &-type-label {
+        padding: 0 2px;
+        font-size: .14rem;
+        font-weight: 300;
+        cursor: pointer;
+    }
+    &-type-label::before {
+        content: '\25CE';
+        font-size: .18rem;
+        color: $color-secondary;
+    }
+    &-type-control {
+        visibility: hidden;
+    }
+    &-type {
+        &-control[type=checkbox]:checked+label::before {
+            content: '\25C9';
+        }
+    }
+}
+
+// product list view
+.product {
+    text-align: center;
+    background-color: rgba($color-secondary, .3);
+    @include responsive(phone) {
+        margin-left: 2.03em;
+        margin-right: 1em;
+    }
+    &-image-warpper {
+        display: inline-block;
+        overflow: hidden;
+    }
+    &-img {
+        transition: transform .2s ease-in;
+        height: 245px;
+        @include responsive(tab-land) {
+            height: 219px;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__content {
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-size: .12rem;
+        font-weight: 400;
+        background: linear-gradient( to bottom, rgba($color-secondary, .5), rgba($color-secondary, .1));
+        &-price {
+            margin-right: 50px;
+        }
+        &-addtocart {
+            text-decoration: none;
+            color: $color-primary;
+            font-weight: 700;
+        }
+        &-control {
+            display: inline-block;
+            border: 1px solid $color-primary;
+            background-color: $color-white;
+            border-radius: 4px;
+            &-add,
+            &-remove {
+                &:link,
+                &:visited {
+                    text-decoration: none;
+                    color: $color-primary;
+                    font-size: 20px;
+                    padding: 0 3px;
+                    font-weight: 700;
+                    padding-bottom: 1px;
+                }
+                &:hover {
+                    background-color: rgba($color-primary, .4);
+                }
+            }
+            &-text {
+                font-size: 20px;
+                padding: 0 4px;
+                background-color: $color-primary;
+                color: $color-white;
+            }
+        }
+    }
+}

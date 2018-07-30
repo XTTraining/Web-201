@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="We deliver you food faster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <meta http-equiv="Cache-control" content="no-cache"> -->
+    <!--    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,400,600" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Castle</title>
+</head>
+
+<body>
+    <div class="content home">
+        <header class="header">
+            <input class="header__burger-btn" type="checkbox" id="header__burger-btn">
+            <label class="header__burger" for="header__burger-btn"><span class="header__burger-ico"></span></label>
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="logo" class="header__logo--img">
+                <h2 class="header__logo--text">Castle <span>Restaurent</span></h2>
+            </div>
+            <div class="header__menu">
+                <span class="header__menu--close">X</span>
+                <ul class="header__ul">
+                    <li class="header__ul--item active"><a class="header__link" href="/index.html">Home</a></li>
+                    <li class="header__ul--item"><a class="header__link" href="#">Offers</a>
+                        <ul class="hidden header__ul--sub1">
+                            <li>Paytm</li>
+                            <li>Freecharge</li>
+                            <li>AmazonPay</li>
+                            <li>Debit Card</li>
+                        </ul>
+                    </li>
+                    <li class="header__ul--item"><a class="header__link" href="#">About</a>
+                        <ul class="hidden header__ul--sub1">
+                            <li>We believe in good</li>
+                        </ul>
+                    </li>
+                    <li class="header__ul--item"><a class="header__link" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="header__filter">
+                <svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-filter"></use>
+            </svg>
+                <!----Filter section---->
+                <div class="filter">
+                </div>
+                <!----Filter section end---->
+            </div>
+            <div class="header__cart"><svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+                <span class="header__cart--count">0</span>
+            </div>
+
+
+        </header>
+        <section class="f-carousel">
+
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="img/c1.jpg" alt="New York">
+                        <div class="carousel-caption">
+                            <h2 class="carousel-caption-head">Go Combo</h2>
+                            <p class="carousel-caption-body">Only for <span>&#x20B9; </span>70/-</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/c2.jpg" alt="New York">
+                        <div class="carousel-caption">
+                            <h2 class="carousel-caption-head">10% Off</h2>
+                            <p class="carousel-caption-body">On <span>&#x20B9; </span>250/- and more..</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/c3.jpg" alt="New York">
+                        <div class="carousel-caption">
+
+                            <h2 class="carousel-caption-head">Only at <span>&#x20B9; </span> 99/-</h2>
+                            <p class="carousel-caption-body">Chicken with Peruvian Chile Sauce</p>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="checkout">
+            <button class="btn btn-blue">checkout</button>
+        </section>
+        <section class="food">
+            <div class="food__search">
+
+                <input type="text" placeholder="Find your food.." />
+                <svg class="icon icon__search">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+                <svg class="icon icon__cross hidden">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+                </svg>
+            </div>
+            <button class="accordion" data-type="starter">Starter</button>
+            <button class="accordion" data-type="main">Main Course</button>
+            <button class="accordion" data-type="beverages">Beverages</button>
+        </section>
+        <section class="checkout">
+            <button class="btn btn-blue">checkout</button>
+        </section>
+        <footer class="footer">
+            <!--           scroll to top-->
+            <div class="scroll-top-wrapper">
+                ^
+            </div>
+            <!--          scroll to top end-->
+
+            <div class="footer__img">
+                <img src="img/logo.svg" alt="footer-Logo">
+            </div>
+            <div class="footer__links">
+                <ul class="footer__links--ul">
+                    <li class="footer__links--link">Privacy</li>
+                    <li class="footer__links--link">Terms</li>
+                    <li class="footer__links--link">Sitemap</li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <svg class="icon icon__facebook">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+                <svg class="icon icon__instagram">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+                <svg class="icon icon__whatsapp">
+                <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+            </svg>
+                <svg class="icon icon__twitter">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__bottom--text">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. © 2008-2018 - Castle™ Media Pvt Ltd. All rights reserved.</p>
+            </div>
+        </footer>
+
+        </div>
+
+<!--                wait loader for page load-->
+        <div class="loader"></div>
+
+
+</body>
+
+</html>

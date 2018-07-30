@@ -1,0 +1,42 @@
+.promo-carousel {
+    grid-column: full-start / full-end;
+    margin-bottom: 5rem;
+    @include respond(tab-land) {
+        margin-bottom:0;
+      }
+
+    &__item {
+        height: 100vh; 
+        position: relative;
+        width: 100%;
+        @include respond(tab-port) {
+            height: auto;
+        }        
+        
+    }
+
+    &__link {
+        position: absolute;
+        text-decoration: none;
+        bottom: 10rem;
+        left: 5rem;
+        border: 2px dotted $color-white;
+        padding: 2rem;
+        width: 50%;
+        @include respond(phone) {
+            bottom: 1rem;
+            width: 100%;
+            left: 1rem;
+        }
+        span {
+            font-size: 2.2rem;
+            text-align: center;
+            text-decoration: none;
+            color: $color-white;
+            @include respond(phone) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,41 @@
+.foodie-loader,
+.foodie-loader:before,
+.foodie-loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation-fill-mode: both;
+    animation: foodieLoader 1.8s infinite ease-in-out;
+}
+
+.foodie-loader {
+    color: $color-secondary;
+    font-size: 10px;
+    margin: auto auto;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+}
+
+.foodie-loader-small {
+    margin: auto auto;
+    margin-bottom: 10px;
+    font-size: 5px;
+}
+
+.foodie-loader:before,
+.foodie-loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+
+.foodie-loader:before {
+    left: -3.5em;
+    animation-delay: -0.32s;
+}
+
+.foodie-loader:after {
+    left: 3.5em;
+}

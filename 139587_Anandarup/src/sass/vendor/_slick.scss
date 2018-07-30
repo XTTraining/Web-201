@@ -1,0 +1,29 @@
+.slider {
+    width: 50%;
+    margin: 100px auto;
+}
+
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev,
+.slick-next {
+  position: relative;
+}
+
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+}
+
+.slick-dots {
+    bottom: -2.5rem;
+  li {
+    button:before {
+      font-size: 6rem;
+      opacity:.5;
+    }
+  }
+}

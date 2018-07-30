@@ -1,0 +1,51 @@
+//DEFAULT BUTTON 
+.btn {
+    &:link,
+    &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        padding: .1rem;
+        display: inline-block;
+        color: $color-white;
+        width: 100px;
+        vertical-align: top;
+        font-size: .13rem;
+        background-color: $color-primary;
+        border-radius: 4px;
+        position: relative;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: #2098d1;
+        transform: scaleY(0);
+        transition-property: transform;
+        transform-origin: 50% 0%;
+        transition: 300ms ease-out;
+        border-radius: 4px;
+        opacity: .25;
+    }
+    &:hover:before {
+        transform: scaleY(1);
+        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+    &__left-arrow {
+        font-size: .13rem;
+    }
+}
+//DEFAULT BUTTON SMALL
+.btn-small {
+    &:link,
+    &:visited {     
+        width: 79px;   
+        font-size: .11rem;    
+    }
+    &__left-arrow {
+        font-size: .11rem;
+    }
+}

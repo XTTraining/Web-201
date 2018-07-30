@@ -1,0 +1,22 @@
+/////*********Overlay used throughout the application*******////////////////
+///////////////////////////////////////////////////////////////////////////
+#overlay {
+    @include overlay;
+ }
+ 
+ #popup-overlay {
+     @include overlay;
+     z-index: 1000;
+     background-color: rgba($color-grey-light-2,0.6);
+ 
+     & img{
+         width: 55px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+     }
+ }
+ 
+ .hidden-overflow{
+     overflow-y: hidden;
+ }

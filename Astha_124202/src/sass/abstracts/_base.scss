@@ -1,0 +1,84 @@
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 78em;   // 1250px
+$bp-large: 64em;   // 1024px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+$bp-smallest:23.4em; // 375px
+
+@mixin buttons() {
+    border: none;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    margin-left:5px;
+    font-size: 3rem;
+  }
+
+@mixin input(){
+    padding-top: 8px;
+    width: 4rem;
+    padding-left: 7px;
+    padding-bottom: 2px;
+    font-size: 24px;
+    border-radius: 5px;
+    margin-left:7px;
+    border:none;
+    color:#1c4908e8;;
+    margin-left: 11px;
+} 
+
+
+@mixin quantity(){
+    height: 3.8rem;
+    float: right;
+    margin-right: 5px;
+    border-radius:5px;
+    width:10.7rem;
+}
+
+@mixin content(){
+    margin-top: 2rem;
+    font-size: 2rem;
+    
+}
+
+@mixin buttonBig(){
+    padding: 16px;
+    color:$color-white;
+    text-decoration: none;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+}
+
+@mixin orderList(){
+    background-color:$color-white;
+    height:75%;  
+    z-index:30;
+    position:absolute;
+    right:10rem;
+    color:$color-black;
+}
+
+
+@mixin icon {
+    height:2rem;
+    width:2rem;
+}
+
+@mixin cartHeading{
+    display: flex;
+    color: $color-white;
+    background-color: #9d82ba;
+    justify-content: space-between;
+    font-size: 4rem;
+}

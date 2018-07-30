@@ -1,0 +1,115 @@
+.features {
+    font-size: 2rem;
+    grid-column: 2 / 12;
+    grid-row: features-start / features-end;
+
+    display: grid;
+    grid-template-columns: [result-start] repeat(3, 1fr) [result-end] ;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+
+    @include respond(tab-land) {
+        grid-template-columns: [result-start] repeat(2, 1fr) [result-end] ;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: [result-start] repeat(1, 1fr) [result-end] ;
+    }
+
+    &__row {
+        grid-column: 1 / -1;
+        width: 100%;
+        padding: 1rem;  
+        font-style: italic;
+
+        @include respond(tab-port) {
+            width: 97%;
+            margin-left: 1rem;
+        }
+    }
+
+    &__cell {
+        border-radius: 5px;       
+        box-shadow: outset 0 2px 2px 5px black;
+        border: 4px solid rgba(253, 170, 198, 0.575);
+        font-size: 1.5rem;
+        height: 35vh;
+        text-align: center;  
+        overflow: hidden;
+
+        &-wide {
+            grid-column: 1 /span 3;
+
+            @include respond(tab-port) {
+                grid-column: 1 / span 2;
+            }
+        
+            @include respond(phone) {
+                grid-column: 1 / span 1;
+            }
+        }
+    }
+}
+
+.filter {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(rgba(236, 236, 236, 0.123), rgba(236, 236, 236, 0.8));
+
+    &-button {
+        font-size: inherit;
+        @include btnBox(var(--color-primary));
+
+        &:hover, &:active {
+            background-color: var(--color-secondary);
+        }
+    }
+
+    &-buttonSubmit {
+        background: none;
+        font-size: inherit;
+        @include btnBlock();
+        background-color: var(--color-primary);
+        color: black;
+
+        &:hover, &:active {
+            background-color: var(--color-primary);
+        }
+    }
+
+    &-box {
+        font-style: normal;
+        
+        background: linear-gradient(rgba(236, 236, 236, 0.123), rgba(236, 236, 236, 0.8));
+        height: 4rem;
+        margin-left: 2rem;
+        padding: 1rem 2rem;
+        align-self: center;
+        vertical-align: middle;
+        cursor: pointer;
+
+        :hover {
+            @include hoverEffect;
+        }
+    }
+
+    &-box-item {
+        border-radius: 5px;       
+        border: 4px solid rgba(228, 227, 227, 0.575);
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        
+    }
+
+    &-row {
+        display: flex;
+        flex-direction: row;
+        flex-flow: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

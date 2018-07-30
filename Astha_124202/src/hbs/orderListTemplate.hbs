@@ -1,0 +1,25 @@
+<div class="cartItem">
+
+    <div class="cartItem__quantity" id="cartItem-quantity-{{id}}">
+        <button class="card-add">
+            +
+        </button>
+        <input class="card-input" aria-label="Quantity" id="cardInput-{{id}}" name="cartInput" type="text" placeholder="1">
+        <button class="card-remove">
+            ‒
+        </button>
+
+    </div>
+    <div class="cartItem__image">
+        <img class="cartItem__image" src="img/{{img}}" alt="ItemImage">
+    </div>
+    <div class="cartItem__content">{{title}}</div>
+    <div class="cartItem__content">₹{{price}}</div>
+    <div class="cartItem__content">₹{{gst}}(GST)</div>
+    <div class="cart__cancel" id="{{id}}">
+        <svg class="cart__icon">
+            <use xlink:href="img/sprite.svg#icon-cancel"></use>
+        </svg>
+    </div>
+
+</div>

@@ -1,0 +1,148 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.4rem;
+        color: #fff;
+        //change for the button element
+        border:none;
+        cursor: pointer; 
+        @include respond(phone) {
+            padding: 1.5rem 2rem;
+        }
+        @media only screen and(max-width: 23.4375em) {
+            padding: 1.5rem 1rem;
+        }
+
+    }
+    &:hover,
+    &:active {
+        background-color: $color-orange-secondary;
+        transform: scale(1.1) translateY(2px);
+    }
+
+    &-checkout {
+        background-color: $color-primary-orange;
+        font-size: 1.6rem;
+        &--mobile {
+            &:link,
+            &:visited {
+                @include respond(tab-port) {
+                    padding: 2.5rem 15rem ;
+                    font-size: 2rem;
+                 }
+                 @include respond(phone) {
+                    padding: 2rem 10rem;
+                    font-size: 2rem;
+                 }
+                 @media only screen and(max-width: 23.4375em) {
+                    padding: 1.5rem 7rem;
+                }
+            }
+            
+        }
+    }
+
+    &-full {
+        border-bottom: 1px solid $color-primary-orange;
+        border-radius: 100%;
+        background-color: $color-primary-orange;
+    }
+    &-grey{
+        &:link,
+        &:visited {
+            background-color: $color-grey-dark-1;
+            transition:  all .2s;
+            @media only screen and(max-width: 23.4375em) {
+                padding: 1.5rem 1rem;
+            }
+        }
+        &:active,
+        &:hover {
+            transform: scale(1.1);
+        }
+
+    }
+    &-payment {
+  
+        background-color: $color-green;
+        text-transform: uppercase;
+        transition: all .2s; 
+        border-radius: 0;
+        &:hover {
+            box-shadow: 0 4px 1.4rem rgba(0,0,0,.2);
+            background-color: $color-green;
+        }
+        &--big {
+            width: 100%;
+        }
+       
+    }
+    &-empty {
+        &:link,
+        &:visited {
+            text-transform: uppercase;
+            background-color: $color-primary-orange;
+            margin-bottom: 2rem;
+            padding: 1.5rem 8rem;
+        }
+    }
+}
+
+.btn-increment {
+   position: relative;
+   color: $color-primary-orange;
+   cursor: pointer;
+   margin-right: 2rem;
+    &__add {
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        font-size: 1.4rem;
+        font-weight: 400;
+        
+        border: 1px solid $color-primary-orange;
+        width: 10rem;
+        text-align: center;
+        opacity: 1;
+    }
+    &__add:hover {
+        box-shadow: 0 2px 8px #d4d5d9;
+    }
+
+    &__plus {
+        font-size: 2.2rem;
+        position: absolute;
+        top: -1.6rem;
+        right: 2px;
+        opacity: 0;
+    }
+    &__minus {
+        position: absolute;
+        top: -.7rem;
+        right: 5rem;
+        opacity: 0; 
+    }
+    &__minus:before {
+        content: "";
+        display: inline-block;
+        height: 2px;
+        width: 15px;
+        background-color: #bebfc5;
+    }
+    &__quantity {
+        position: absolute;
+        top: -1.4rem;
+        right: 2.6rem;
+        opacity: 0;
+        font-size: 2rem;
+    }
+}

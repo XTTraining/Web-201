@@ -1,0 +1,36 @@
+.footer {
+    background-image: linear-gradient(to bottom, (var(--color-primary-dark) 50%), var(--color-primary-dark));
+    font-size: 1.6rem;
+
+    grid-column: 1 / 13;
+    grid-row: footer-start / footer-end;
+    text-align: center;
+    
+    color: #fff;
+
+    &__menu {
+        list-style: none;
+        text-decoration: none;
+        color: currentColor;
+        text-align: center;
+
+        &-ul {            
+            list-style: none;
+            text-decoration: none;
+            display: grid;
+            grid-template-columns: repeat(5, max-content);
+            grid-template-rows: 1fr max-content;
+            justify-content: center;
+            align-content: space-between;
+            grid-row-gap: 6rem;
+        }
+
+        &-a {
+            color: #fff;
+
+            &:hover, &:active {
+                color: var(--color-secondary);
+            }
+        }
+    }
+}

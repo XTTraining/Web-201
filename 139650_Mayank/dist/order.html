@@ -1,0 +1,241 @@
+<!DocTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Best foo delivery website in town, just order your yummy food in few clicks." />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <link href="css/carousel.css" rel="stylesheet" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+
+    <title>My Cart | Tasty food service</title>
+<link href="./css/style.css" rel="stylesheet"></head>
+
+<body class="container">
+    <a class="skip-main" href="#content">Skip to main content</a>
+    <header class="header">
+        <a href="index.html" class="header__link">
+            <img src="img/logo.png" alt="Yummiz Logo" class="header__logo">
+        </a>
+        <span>&nbsp;</span>
+        <nav class="header-nav">
+            <ul class="header-menu">
+                <li class="header-menu__item">
+                    <a href="index.html" class="header-menu__link">Home</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">Services</a>
+                    <ul class="header-submenu">
+                        <li class="header-submenu__item">
+                            <a href="#" class="header-submenu__link">Food delivery</a>
+                        </li>
+                        <li class="header-submenu__item">
+                            <a href="#" class="header-submenu__link">Pick up store</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">About</a>
+                    <ul class="header-submenu">
+                        <li class="header-submenu__item">
+                            <a href="#" class="header-submenu__link">Who we are</a>
+                        </li>
+                        <li class="header-submenu__item">
+                            <a href="#" class="header-submenu__link">History</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">Contact</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="cart.html" class="header-menu__link">
+                        <svg class="header-menu__icon">
+                            <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                        </svg>
+                        <span class="header-menu__notification hide">7</span>
+                        Cart</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <header class="mobile-header">
+        <label class="mobile-header__button" tabindex="0">
+            <span class="mobile-header__icon">&nbsp;</span>
+        </label>
+
+        <nav id="mobile-nav" class="sidebar">
+            <div class="mobile-nav__logocontainer">
+                <img src="img/logo.png" alt="Yummiz Logo" class="header__logo">
+                <span class="mobile-nav__logocontainer--heading">Yummies - The taste hub</span>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-home"></use>
+                    </svg>
+                    <a href="index.html" class="sidebar-menu__link">Home</a>
+                </li>
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-lifebuoy"></use>
+                    </svg>
+                    <div class="sidebar-menu__link sidebar-menu__link--accordion-up">Services
+                        <ul class="sidebar-submenu">
+                            <li class="sidebar-submenu__item">
+                                <a href="#" class="sidebar-submenu__link">- Food delivery</a>
+                            </li>
+                            <li class="sidebar-submenu__item">
+                                <a href="#" class="sidebar-submenu__link">- Pick up store</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-info-with-circle"></use>
+                    </svg>
+                    <div class="sidebar-menu__link sidebar-menu__link--accordion-up">About us
+                        <ul class="sidebar-submenu">
+                            <li class="sidebar-submenu__item">
+                                <a href="#" class="sidebar-submenu__link">- Who we are</a>
+                            </li>
+                            <li class="sidebar-submenu__item">
+                                <a href="#" class="sidebar-submenu__link">- History</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-old-mobile"></use>
+                    </svg>
+                    <a href="#" class="sidebar-menu__link">Contact us</a>
+                </li>
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                    </svg>
+                    <a href="cart.html" class="sidebar-menu__link">Cart</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="content" class="payment-section">
+        <div class="payment-container">
+            <div class="payment-method">
+                <h2 class="payment-method__label">Select a Payment Method</h2>
+                <ul class="payment-type" >
+                    <li class="payment-type__item">
+                        <input id="walletPayment" class="payment-type__item--radio" aria-label="Wallet" type="radio" name="paymentType" aria-checked='true'
+                            checked="checked">
+                        <label class="payment-type__item--text" for="walletPayment"> Wallet</label>
+                        <ul class="payment-wallet">
+                            <li class="payment-wallet__item pay-selected" tabindex="0">
+                                <div class="payment-wallet__type">
+                                    <img class="payment-wallet__type--icon" alt="paytm" src="img/paytm.png">
+                                    <div class="payment-wallet__type--name" aria-label="Pay via Paytm">Paytm</div>
+                                    <div class="payment-wallet__type--link">₹525.31</div>
+                                </div>
+                            </li>
+                            <li class="payment-wallet__item" tabindex="0">
+                                <div class="payment-wallet__type">
+                                    <img class="payment-wallet__type--icon" alt="mobikwik" src="img/mobikwik.png">
+                                    <div class="payment-wallet__type--name" aria-label="Pay via Mobikwik">Mobikwik</div>
+                                    <div class="payment-wallet__type--link">Link</div>
+                                </div>
+                            </li>
+                            <li class="payment-wallet__item"  tabindex="0">
+                                <div class="payment-wallet__type">
+                                    <img class="payment-wallet__type--icon" alt="freecharge" src="img/freecharge.png">
+                                    <div class="payment-wallet__type--name" aria-label="Pay via FreeCharge">FreeCharge</div>
+                                    <div class="payment-wallet__type--link">Link</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="payment-type__item">
+                        <input id="cardPayment" class="payment-type__item--radio" aria-label="Credit/Debit Cards" type="radio" name="paymentType"
+                            aria-checked='false'>
+                        <label class="payment-type__item--text" for="cardPayment" aria-label="Pay via Card">Credit/Debit Cards</label>
+
+                    </li>
+                    <li class="payment-type__item">
+                        <input id="cod" class="payment-type__item--radio" aria-label="Cash on Delivery" type="radio" name="paymentType" aria-checked='false'>
+                        <label class="payment-type__item--text" for="cod" aria-label="Pay via COD">Cash on Delivery</label>
+
+                    </li>
+                    <li class="payment-type__item">
+                        <input id="netBanking" class="payment-type__item--radio" aria-label="Netbanking" type="radio" name="paymentType" aria-checked="false">
+
+                        <label class="payment-type__item--text" for="netBanking">Netbanking</label>
+                        <ul class="payment-netbanking hide">
+                            <li class="payment-netbanking__item"  tabindex="0">
+                                <div data-bank_id="1" class="payment-netbanking__type">
+                                    <img class="payment-netbanking__type--icon" alt="kotak mahindra bank" src="img/kotak.png">
+                                    <div class="payment-netbanking__type--name" aria-label="Pay via Kotak">Kotak Mahindra Bank</div>
+                                </div>
+                            </li>
+                            <li class="payment-netbanking__item"  tabindex="0">
+                                <div data-bank_id="2" class="payment-netbanking__type">
+                                    <img class="payment-netbanking__type--icon" alt="hdfc" src="img/hdfc.png">
+                                    <div class="payment-netbanking__type--name" aria-label="Pay via HDFC">HDFC Bank</div>
+                                </div>
+                            </li>
+
+                            <li class="payment-netbanking__item"  tabindex="0">
+                                <div data-bank_id="3" class="payment-netbanking__type">
+                                    <img class="payment-netbanking__type--icon" alt="icici" src="img/icici.png">
+                                    <div class="payment-netbanking__type--name" aria-label="Pay via ICICI">ICICI NetBanking</div>
+                                </div>
+                            </li>
+
+                            <li class="payment-netbanking__item" tabindex="0">
+                                <div data-bank_id="4" class="payment-netbanking__type">
+                                    <img class="payment-netbanking__type--icon" alt="axis" src="img/axis.png">
+                                    <div class="payment-netbanking__type--name" aria-label="Pay via FreeCharge">Axis Bank NetBanking</div>
+                                </div>
+                            </li>
+                            <li class="payment-netbanking__item" tabindex="0">
+                                <div data-bank_id="5" class="payment-netbanking__type">
+                                    <img class="payment-netbanking__type--icon" alt="StateBank" src="img/sbi.png">
+                                    <div class="payment-netbanking__type--name" aria-label="Pay via State Bank">State Bank of India</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="payment-netbanking-banks hide">
+                            <label for="banks--select">All Banks:</label>
+                            <select size="1" id="banks--select">
+                                <option data-bank_id="1" value="1" selected="selected">Kotak Mahindra Bank</option>
+                                <option data-bank_id="2" value="2">HDFC Bank</option>
+                                <option data-bank_id="3" value="3">ICICI Netbanking</option>
+                                <option data-bank_id="4" value="4">AXIS Bank NetBanking</option>
+                                <option data-bank_id="5" value="5">State Bank of India</option>
+                                <option data-bank_id="6" value="6">Central Bank Of India</option>
+                                <option data-bank_id="7" value="7">Yes Bank</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="order-details">
+                <div id="cart-summary">
+                </div>
+                <div id="payment-details-tax">
+                </div>
+                <div class="pay-now">
+                    <a href="#" role="button" class="btn pay-now__link">Place Your Order</a>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+    </section>
+<script type="text/javascript" src="js/bundle.js"></script></body>

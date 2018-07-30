@@ -1,0 +1,74 @@
+@import 'common';
+
+$headerheight_l: 15;
+$headerheight_s: 8;
+
+header {
+    width: 100%;
+
+    background: #fff;
+    box-shadow: 2px 5px 8px #9998a2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    z-index: 1000;
+    nav {
+        width: 100%;
+        text-align: right;
+        align-self: center;
+    }
+    ul {
+        display: inline-flex;
+        list-style: none;
+        li {
+            padding-right: 50px;
+        }
+    }
+    .logo {
+        img {
+            height: 100%;
+        }
+    }
+}
+
+.header-height-l {
+    @include xheight($headerheight_l);
+}
+
+.header-height-s {
+    @include xheight($headerheight_s);
+}
+
+.cart-link {
+    display: inline-block;
+    animation: shake .7s 1;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-30%);
+        color: red;
+    }
+    50% {
+        transform: translateX(60%);
+        color: red;
+    }
+    75% {
+        transform: translateX(-60%);
+        color: red;
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+@media(max-width:1000px) {
+    .header-height-l {
+        @include xheight($headerheight_s);
+    }
+}

@@ -1,0 +1,38 @@
+//MARGIN CLASS TO RESUSE ACROSS THE PAGES
+.margin-top {
+    margin-top: .80rem !important;
+}
+
+.margin-top-medium {
+    margin-top: .20rem;
+}
+
+.margin-top-small {
+    margin-top: .15rem;
+}
+
+.margin-bottom-medium {
+    margin-bottom: .20rem;
+}
+
+.margin-bottom-small {
+    margin-bottom: .10rem;
+}
+// LINE STYLE
+hr {
+    margin: 26px auto;
+    @include responsive(phone) {
+        margin: 7px auto;
+    }
+}
+// LARGE FONT
+.large-font {
+    font-size: 15px;
+}
+
+// TO HIDE THE ELEMENT IN MOBILE VIEW.
+.hide-mobile {
+    @include responsive(phone) {
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/base";
+@import "base/typography";
+
+// importing components
+@import "components/search";
+@import "components/carousel";
+@import "components/products";
+@import "components/button";
+@import "components/categories";
+@import "components/cart";
+@import "components/loader";
+
+// importing layouts
+@import "layout/header";
+@import "layout/footer";
+
+// importing pages
+@import "pages/home";
+@import "pages/cart";
+@import "pages/payment";
+
+
+
+
+

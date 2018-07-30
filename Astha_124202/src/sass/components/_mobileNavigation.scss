@@ -1,0 +1,129 @@
+
+.header{
+    @media only screen and (max-width:$bp-small){
+        display:none;
+        }
+}
+.mobileHeader{
+    @media only screen and (min-width:$bp-small){
+        display:none;
+        }
+     
+}
+
+.mobileNavigation{
+       
+    &__button{
+    background-color: $color-white;
+    height:7rem;
+    width:7rem;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:12;
+    color:black;
+    box-shadow:0 1rem 3rem rgba($color-black,.1);
+    text-align:center;
+    cursor: pointer;
+    }
+
+    &__background{
+    height:75rem;
+    width:0;
+    top:-0.5rem;
+    background-image:radial-gradient(#7ed56f, #28b485);
+    position:fixed;
+    z-index:10;
+    transition: transform .8s;
+    }
+
+    &__nav{
+     height:53vh;
+     width:2rem;
+     position:fixed;
+     top:0;
+     z-index:8;
+     opacity:0;
+     transition:all .8s;
+     
+    }
+
+    &__list{
+    position:absolute;
+    top:27%;
+    left:10%;
+    list-style:none;
+    }
+
+    &__item{
+    margin-bottom:3rem;
+
+    }
+
+    &__link{
+    text-decoration: none;
+    list-style: none;
+    color:black;
+    }
+
+    &__checkbox:checked ~ &__background{
+    transform:scaleX(50);
+    }
+
+    &__checkbox:checked ~ &__nav{
+        opacity:1;
+        width:62rem;
+        background-color:#ebdfdf;;
+        }
+
+   &__icon{
+       position:relative;
+       margin-top:3.5rem;
+       &,
+       &::before,
+       &::after{
+        width:3rem; 
+        height:2px;
+        background-color:$color-black;
+        display:inline-block;
+
+       }
+       &::before,
+       &::after{
+        content:"";
+        position:absolute;
+        left:0;
+        transition:all .2s;
+       }
+      
+       &::before {top:-.8rem;}
+       &::after {top: .8rem;}
+
+
+
+   }   
+   
+  &__button:hover &__icon::before{
+      top: -1rem;
+  } 
+
+  &__button:hover &__icon::after{
+    top: 1rem;
+  } 
+
+  &__checkbox:checked + &__button &__icon{
+      background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before{
+    top:0;
+    transform:rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after{
+    top:0;
+    transform:rotate(-135deg);
+  }
+}
+
+

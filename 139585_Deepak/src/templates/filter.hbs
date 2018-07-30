@@ -1,0 +1,23 @@
+<div class="filter__header">
+    <h3 class="filter__header--title">FILTERS</h3>
+    <label class="filter__header--reset">Reset All Filters</label>
+</div>
+
+
+
+<div class="filter__body">
+    <h3 class="filter__body--h">Food Preference</h3>
+    {{#each_upto this.category 2}}
+    <label class="filter__body--item pref" data-filter1id="{{this.id}}">{{this.value}}</label>
+    {{/each_upto}}
+    <h3 class="filter__body--h">Cuisine</h3>
+    {{#each this.cuisine}}
+    <label class="filter__body--item cuisine"  data-filter2id="{{this.id}}">{{this.value}}</label>
+    {{/each}}
+</div>
+
+
+
+<div class="filter__footer">
+    <span class="food-count">0</span> DISHES AVAILABLE
+</div>

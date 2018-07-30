@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+.content {
+    display: grid;
+    grid-template-columns: [full-start] 5vw [main-start] 1fr [main-end] 5vw [full-end];
+    @include respond(phone) {
+        transition: margin-left .2s;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden2 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hidden3 {
+    max-height: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+
+//MEDIA TEST

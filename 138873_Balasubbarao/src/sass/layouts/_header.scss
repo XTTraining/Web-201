@@ -1,0 +1,130 @@
+.header {
+    position: relative;
+    margin: 0 auto;
+    padding: .2rem .4rem;
+    height: .6rem;
+    @include responsive(phone) {
+        height: .2rem;
+        padding: .2rem;
+    }
+    background-color: $color-white;
+    box-shadow: 0 .1rem .3rem rgba($color-black, .1);
+    &__logo {
+        position: absolute;
+        left: $left-right-margin;
+        @include responsive(phone) {
+            left: $left-right-margin-phone;
+            top: 3px;
+        }
+        @include responsive(tab-port) {
+            left: $left-right-margin-tab;            
+        }
+        cursor: pointer;
+        &-image {
+            height: 70px;
+            @include responsive(phone) {
+                height: 40px;
+            }
+        }
+    }
+    &__navigation {
+        position: absolute;
+        right: $left-right-margin;
+        bottom: 11px;
+        height: .6rem;
+        text-transform: uppercase;
+        font-size: .14rem;
+        @include responsive(phone) {                   
+            visibility: hidden;
+            width: 0px;            
+            transition: width 2s;
+            transform: translateX(100%);            
+            transform-origin: right;
+            right:0;
+        }
+        @include responsive(tab-port) {
+            right : $left-right-margin-tab;            
+        }
+        &-social {
+            display: block;
+            margin-bottom: .15rem;
+            &-list {
+                list-style: none;
+                float: right;
+                @include responsive(phone) {
+                    margin-left:  32%;
+                    margin-top: 30px;
+                    float: left;
+                }
+                &-item {
+                    display: inline-block;
+                    &:not(:last-child) {
+                        padding-right: .2rem;
+                    }
+                }
+                &-icon {
+                    font-size: 25px;
+                    font-weight: 300;
+                    color: $color-primary;
+                    cursor: pointer;
+                    transition: all .2s;
+                }
+                &-icon:hover {
+                    color: $color-secondary;
+                    @include responsive(phone) {
+                        color: $color-white;
+                    }
+                    font-weight: 600;
+                    transform: font-weight .5s ease-in-out;
+                }
+            }
+            @include clearfix;
+        }
+        &-main {
+            display: block;
+            &-list {
+                list-style: none;
+                @include responsive(phone) {
+                    margin-left: 35%;
+                }
+                &-item {
+                    display: inline-block;
+                    @include responsive(phone) {
+                        float: left;
+                        clear: both;
+                    }
+                    & a {
+                        text-decoration: none;
+                        color: $color-black;
+                        font-weight: 600;
+                        border-bottom: 3px solid $color-secondary;
+                        transition: all .2s;
+                        position: relative;
+                        @include responsive(phone) {
+                            font-size: 20px;
+                            border-bottom: 3px solid $color-clean;
+                        }
+                    }
+                    & a::after {
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 3px;
+                        background: $color-primary;
+                        transition: width .3s ease-out;
+                    }
+                    & a:hover::after {
+                        width: 100%;
+                        z-index: 99;
+                    }
+                    &:not(:last-child) {
+                        padding-right: .4rem;
+                        @include responsive(phone) {
+                            margin-bottom: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

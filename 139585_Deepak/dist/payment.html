@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="We deliver you food faster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <meta http-equiv="Cache-control" content="no-cache"> -->
+    <!--    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,400,600" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Castle Pay</title>
+<link href="css/style.css" rel="stylesheet"></head>
+
+<body>
+    <section class="payment">
+        <div class="pay1">
+            <div class="pay1__goback">Back to Menu</div>
+            <div class="pay1__header">Order Summary</div>
+            <div class="pay1__body">
+                <div class="pay1__body--part total">
+                    <p class="pay1__body--title">Total</p>
+                    <p class="pay1__body--value"></p>
+                </div>
+                <div class="pay1__body--part tax1">
+                    <p class="pay1__body--title">Tax ( 5% )</p>
+                    <p class="pay1__body--value"></p>
+                </div>
+                <div class="pay1__body--part tax2">
+                    <p class="pay1__body--title">Tax ( 18% )</p>
+                    <p class="pay1__body--value"></p>
+                </div>
+            </div>
+            <div class="pay1__footer">
+                <p class="pay1__footer--total">Grand Total</p>
+                <p class="pay1__footer--money"></p>
+            </div>
+        </div>
+        <div class="pay2">
+            <div class="pay2__total">
+                <p class="pay2__total--text">Total: </p>
+                <p class="pay2__total--money"></p>
+            </div>
+            <div class="pay2__total--title">Select your Payment Method</div>
+            <div class="pay2__paytype">
+
+                <div class="pay2__paytype--icon active" data-id="cc">
+                    <svg class="icon2">
+                        <use xlink:href="img/sprite.svg#icon-credit-card"></use>
+                    </svg>
+                    <p class="pay2__paytype--text">Card</p>
+                </div>
+                <div class="pay2__paytype--icon" data-id="wallet">
+                    <svg class="icon2">
+                        <use xlink:href="img/sprite.svg#icon-coin-euro"></use>
+                    </svg>
+                    <p class="pay2__paytype--text">Wallet</p>
+                </div>
+                <div class="pay2__paytype--icon" data-id="ibanking">
+                    <svg class="icon2">
+                        <use xlink:href="img/sprite.svg#icon-library"></use>
+                    </svg>
+                    <p class="pay2__paytype--text">i Banking</p>
+                </div>
+            </div>
+            <div class="pay2__paydetails">
+                <div class="pay2__paydetails--cc">
+                    <div class="pay2__cc--img">
+                        <img src="img/cardsLogo.png" alt="cards">
+                    </div>
+                    <div class="pay2__cc--title">
+                        Enter your card Details</div>
+                    <div class="pay2__cc--form">
+                        <form id="payForm" class="pay2__cc--form1" onsubmit="return false;">
+                            <label for="Card Number">Card Number:</label>
+                            <input type="text" name="Card Number">
+                            <label for="Expiration Month">Expiration Date:</label>
+                            <select name="Expiration Month">
+                               <option value="" disabled selected>Month</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+	                        </select>
+                            <!--                            <label for="Expiration Year"></label>-->
+                            <select class="year" name="Expiration Year">
+                               <option value="" disabled selected>Year</option>
+	                        </select>
+                            <label for="CVV Code">CVV Code</label>
+                            <input type="password" maxlength="3" name="CVV Code">
+
+                        </form>
+                        <input type="submit" form="payForm" class="pay2__cc--form1-submit btn btn-blue">
+                    </div>
+                </div>
+                <div class="pay2__paydetails--wallet hidden">
+                    <div class="pay2__wallet--title">Select your Wallet</div>
+                    <div class="pay2__wallets">
+                        <div class="pay2__wallet">
+                            <input type="radio" name="wallets" value="PAYTM">
+                            <img src="img/Paytm.jpg">
+                        </div>
+                        <div class="pay2__wallet">
+                            <input type="radio" name="wallets" value="MOBIK">
+                            <img src="img/Mobikwik.jpg">
+                        </div>
+                        <div class="pay2__wallet">
+                            <input type="radio" name="wallets" value="FREECHARGE">
+                            <img src="img/FreeCharge.jpg">
+                        </div>
+                        <div class="pay2__wallet">
+                            <input type="radio" name="wallets" value="PAYUMONEY">
+                            <img src="img/PayuMoney.jpg">
+                        </div>
+                        <div class="pay2__wallet">
+                            <input type="radio" name="wallets" value="OXIGEN">
+                            <img src="img/Oxigen.jpg">
+                        </div>
+                        <div class="pay2__wallet">
+                            <input type="radio" name="wallets" value="AIRTELMONEY">
+                            <img src="img/AirtelMoney.jpg">
+                        </div>
+                        <div class="pay2__wallet">
+                            <input type="radio" name="wallets" value="AIRTELMONEY">
+                            <img src="img/SBI_Buddy.jpg">
+                        </div>
+                        <div class="pay2__wallet">
+                            <input type="radio" name="wallets" value="IDEAMONEY">
+                            <img src="img/Idea_Money.png">
+                        </div>
+                    </div>
+                    <input type="submit" form="payForm" class="pay2__cc--form1-submit btn btn-blue">
+                </div>
+                <div class="pay2__paydetails--ibanking hidden">
+                    <div class="pay2__ibanking--title">Net Banking</div>
+                    <div class="pay2__ibanking--subtitle">Select from popular Banks</div>
+                    <div class="pay2__ibanking--popularbanks">
+                        <div class="pay2__ibanking--popularbank">
+                            <input type="radio" name="topBanks" value="AXIB">
+                            <img src="img/AXIS_Bank.jpg">
+                        </div>
+                        <div class="pay2__ibanking--popularbank">
+                            <input type="radio" name="topBanks" value="HDFB">
+                            <img src="img/HDFC_Bank.jpg">
+                        </div>
+                        <div class="pay2__ibanking--popularbank">
+                            <input type="radio" name="topBanks" value="ICIB">
+                            <img src="img/ICICI_Bank.jpg">
+                        </div>
+                        <div class="pay2__ibanking--popularbank">
+                            <input type="radio" name="topBanks" value="KOTB">
+                            <img src="img/Kotak_Mahindra_Bank.jpg">
+                        </div>
+                        <div class="pay2__ibanking--popularbank">
+                            <input type="radio" name="topBanks" value="SBIB">
+                            <img src="img/State_Bank_of_India.jpg">
+                        </div>
+                        <div class="pay2__ibanking--popularbank">
+                            <input type="radio" name="topBanks" value="YESB">
+                            <img src="img/YES_Bank.png">
+                        </div>
+                    </div>
+                    <div class="pay2__ibanking--subtitle">Or</div>
+                    <div class="pay2__ibanking--banks">
+                        <select name="cChoice" class="pay2__ibanking--banks-bank" id="Netbanking">
+                           <option value="" disabled selected>Select Bank</option>
+                           <option value="AmexNb">American Express</option>
+                           <option value="AND_N!ru_Andhra_Bank">Andhra Bank</option>
+                           <option value="AXIB">AXIS Bank</option>
+                           <option value="BOBCO_N!ru_Bank_of_Baroda_Corporate">Bank of Baroda Corporate Accounts</option>
+                           <option value="BOB_N!ru_Bank_of_Baroda_Retail">Bank of Baroda Retail Accounts</option>
+                           <option value="BOI_N!ru_Bank_of_India">Bank of India</option>
+                           <option value="BOM_N!ru_Bank_of_Maharashtra">Bank of Maharashtra</option>
+                           <option value="CAN_N!ru_Canara_Bank">Canara Bank</option>
+                           <option value="CEN_N!ru_Central_Bank_of_India">Central Bank Of India</option>
+                           <option value="CBIBAN_N!ru_Citibank">Citibank Bank Account Online</option>
+                           <option value="CITIUB_N!ru_City_Union_Bank">City Union Bank</option>
+                           <option value="COP_N!ru_Corporation_Bank">Corporation Bank</option>
+                           <option value="DCB_N!ru_DCB_BANK_Personal">DCB Bank ( Development Credit Bank )</option>
+                           <option value="DSHB">Deutsche Bank</option>
+                           <option value="DLSB!ru_Dhanlaxmi_Bank">Dhanlaxmi Bank</option>
+                           <option value="FDEB_N!ru_Federal_Bank">Federal Bank</option>
+                           <option value="HDFB">HDFC Bank</option>
+                           <option value="ICIB">ICICI Bank</option>
+                           <option value="IDBI_N!ru_IDBI_Bank">IDBI Bank</option>
+                           <option value="IDF_N!ru_IDFC_Bank">IDFC Bank</option>
+                           <option value="INB_N!ru_Indian_Bank">Indian Bank</option>
+                           <option value="IOB_N!ru_Indian_Overseas_Bank">Indian Overseas Bank</option>
+                           <option value="INIB">IndusInd Bank</option>
+                           <option value="ING_N!ru_ING_Vysya_Bank">ING Vysya Bank ( now Kotak )</option>
+                           <option value="JKB_N!ru_Jammu_and_kashmir_Bank">Jammu Kashmir Bank</option>
+                           <option value="KTKB_N!ru_Karnataka_Bank">Karnataka Bank</option>
+                           <option value="KVB_N!ru_Karur_Vysya_Bank">Karur Vysya Bank</option>
+                           <option value="162B">Kotak Mahindra Bank</option>
+                           <option value="LVB_N!ru_Lakshmi_Vilas_Bank">Lakshmi Vilas Bank NetBanking</option>
+                           <option value="OBPRF_N!ru_Oriental_Bank_Of_Commerce">Oriental Bank of Commerce</option>
+                           <option value="NPNB_N!ru_Punjab_National_Bank">Punjab National Bank Retail Accounts</option>
+                           <option value="RBL_N!ru_RBL_Bank">RBL Bank</option>
+                           <option value="RUPAY">Rupay</option>
+                           <option value="SIB_N!ru_South_Indian_Bank">South Indian Bank</option>
+                           <option value="SDCB">Standard Chartered Bank</option>
+                           <option value="SBI_N!ru_State_Bank_of_India">State Bank of India</option>
+                           <option value="SYNBK_N!ru_Syndicate_Bank">Syndicate Bank</option>
+                           <option value="TNMB_N!ru_Tamilnad_Mercantile_Bank">Tamilnad Mercantile Bank</option>
+                           <option value="UCOB">UCO Bank</option>
+                           <option value="UNI_N!ru_Union_Bank_of_India">Union Bank of India</option>
+                           <option value="UBI_N!ru_United_Bank_of_India">United Bank of India</option>
+                           <option value="VJYA_N!ru_Vijaya_Bank">Vijaya Bank</option>
+                           <option value="VISA">VISA</option>
+                           <option value="YESB">YES Bank</option>
+                        </select>
+                    </div>
+                    <input type="submit" form="payForm" class="pay2__cc--form1-submit btn btn-blue">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--        wait loader for page load
+    <div class="loader"></div>
+-->
+
+<script type="text/javascript" src="js/bundle.js"></script></body>
+
+</html>

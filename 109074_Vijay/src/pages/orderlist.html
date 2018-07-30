@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="css/icon-font.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <!-- <link rel="stylesheet" href="../dist/css/style.prefix.css"> -->
+
+    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCLTpfMA4zsWpMxKE-qMjNqP1BvMoWAkIA",
+            authDomain: "masalacafe-eea2d.firebaseapp.com",
+            databaseURL: "https://masalacafe-eea2d.firebaseio.com",
+            projectId: "masalacafe-eea2d",
+            storageBucket: "masalacafe-eea2d.appspot.com",
+            messagingSenderId: "701483082017"
+        };
+        var app = firebase.initializeApp(config);
+    </script>
+    <title>Masala cafe | finger licking good</title>
+</head>
+
+<body>
+    <div class="mask">
+
+    </div>
+
+    <div class="maincontainer">
+        <div class="sidemenu">
+            <ul class="sidemenu__nav-link">
+                <a href="/">
+                    <li>
+                        <svg class="sidemenu__nav__icon">
+                            <use xlink:href="img/svg/sprite6.svg#icon-home"></use>
+                        </svg>
+                        <span>
+                            Home
+                        </span>
+
+                    </li>
+                </a>
+                <a href="/">
+                    <li>
+                        <svg class="sidemenu__nav__icon">
+                            <use xlink:href="img/svg/sprite6.svg#icon-shopping-cart"></use>
+                        </svg>
+                        <span>
+                            Order online
+                        </span>
+
+
+                    </li>
+                </a>
+                <a href="#">
+                    <li>
+                        <svg class="sidemenu__nav__icon">
+                            <use xlink:href="img/svg/sprite6.svg#icon-phone"></use>
+                        </svg>
+                        <span>
+                            Contact us
+                        </span>
+
+                    </li>
+                </a>
+
+
+            </ul>
+
+        </div>
+        <header class="header">
+            <div class="hamburger">
+                <span class="hamburger__top-bun"></span>
+                <span class="hamburger__top-middle"></span>
+                <span class="hamburger__bottom-bun"></span>
+            </div>
+            <div class="header__logo">
+
+                <picture>
+                    <!-- <source media="(min-width: 650px)" srcset="img/logo1-white.png"> -->
+                    <source media="(max-width: 37.5em)" srcset="img/logo1-white.png">
+                    <img class="header__logo-img" src="img/logo1.png" alt="Flowers">
+                </picture>
+
+
+                <!-- <img class="header__logo-img" src="img/logo1-white.png" alt="masala cafe"> -->
+                <!-- <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+            </form> -->
+            </div>
+            <div class="header__nav">
+                <ul class="header__nav-link">
+                    <li>
+                        <a href="/"> Order online</a>
+                    </li>
+                    <li>
+                        <a href="#"> Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="user-nav">
+
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="img/svg/sprite6.svg#icon-shopping-cart"></use>
+                    </svg>
+                    <span class="user-nav__notification">0</span>
+                </div>
+                <!-- <div class="user-nav__user">
+                    <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
+                    <span class="user-nav__user-name">Jonas</span>
+                </div> -->
+            </nav>
+
+
+        </header>
+        <!-- <div class="section__hero">
+               
+
+            banner
+            <br>
+
+        </div> -->
+
+
+        <div class="section-orderlist">
+
+            <div class="cart">
+                <div class="cart__header">
+                    <span class="cart__header-title">
+                        Your cart
+                    </span>
+                    <span class="cart__header-additems">
+                        <a class="btn2 btn2--red" href="/">Add more items
+                            <span class="arrow__right">&rarr;</span> </a>
+                    </span> 
+                </div>
+                <div class="cart__body">
+                    <div class="cart__row">
+                            <span class="align--center u-padding--3">
+                                    You cart is empty
+                            </span>
+                    </div>
+                    
+                </div>
+                
+                <div class="cart__footer">
+                     
+                    <a href="./pay.html" class="btn btn--red">
+                        Proceed to payment
+                    </a>
+                </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+        <footer class="footer">
+            <div class="footer__link">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Company</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Contact us</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Carrers</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Privacy policy</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__link">Terms</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__copy">
+                <span>
+                    © Copyright 2017 by Jonas Schmedtmann. Feel free to use this project for your own purposes. This does NOT apply if you plan
+                    to produce your own course or tutorials based on this project.
+                </span>
+            </div>
+
+
+
+
+        </footer>
+        <script src="../dist/js/main.js">
+        </script>
+</body>
+
+</html>

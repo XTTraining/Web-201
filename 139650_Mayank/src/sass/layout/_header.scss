@@ -1,0 +1,338 @@
+.header{
+    grid-column: full-start / full-end;
+    display: grid;
+    padding: 1rem 0;
+    grid-template-columns: 7rem minmax(10vw,.8fr) 1fr;
+    @include gradientStyle;
+
+    position: sticky;
+    top:0;
+    z-index: 30;
+    align-items: center;
+
+    &__link{
+        grid-column: 1/2;
+        justify-self: end;
+    }
+
+    &__logo{
+        height:5.5rem;
+       
+    }
+
+}
+
+.header-menu{
+
+    // hide menu from tablet portatriat mode
+    @include respond(tab-port)  {
+       display: none;
+    }
+
+    grid-column: 3/-1;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(min-content, 1fr));
+   
+    align-items: center;
+    justify-items: center;
+    position: relative;
+
+  
+
+    &__notification{
+        font-size: 1rem;
+        height: 1.7rem;
+        width: 1.7rem;
+        border-radius: 50%;
+        background-color: $color-orange;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        right: 8.5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    @include respond(tab-land){
+        &__notification{
+            right: 6.5rem;
+        }
+     }
+    
+    &__icon{
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: currentColor;
+    }
+
+    &__link{
+        font-size: 1.4rem;
+        @include navlinks;
+        text-align: center;
+        display: block;
+        letter-spacing: 1px;
+        padding: .5rem;
+        transition: all .2s;
+    }
+
+    &__item:hover .header-submenu{
+        display: block;
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: $color-orange;
+        border-bottom: 1px solid currentColor;
+    }
+}
+
+.header-submenu{
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: $color-grey-dark-1;
+    min-width: 18rem;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    z-index: 10;
+
+    &__link{
+    font-size:1.4rem;
+    display: inline-block;
+    margin: 1.2rem;
+    @include navlinks;
+    letter-spacing: 1px;
+    }
+    
+    &__link:hover,
+    &__link:active {
+        color: $color-orange;
+        border-bottom: 1px solid currentColor;
+        
+    }
+    
+}
+
+
+//////////////**Mobile Header CSS *************//////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+
+
+.mobile-header{
+    grid-column: full-start / full-end;
+    display: none;
+    padding: 1rem 0;
+    grid-template-columns: 7rem minmax(10vw,.8fr) 1fr;
+    height: 8rem;
+    @include gradientStyle;
+    align-items: center;
+
+    &__button {
+        background-color: $color-white;
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        top: .5rem;
+        left: 1rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+    }
+
+      //ICON
+      &__icon {
+        position: relative;
+        margin-top: 3rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before { top: -.8rem; }
+        &::after { top: .8rem; }
+    }
+    
+}
+
+.sidebar{
+    background-color: $color-grey-dark-1;
+    width: 70%;
+    height: 100%;
+    z-index: 3000;
+    position: absolute;
+    top:0;
+    transform: translateX(-100%);
+    overflow: hidden;
+    transition: all .3s;
+    cursor: pointer;
+
+    &-submenu{
+        list-style: none;
+        margin-top:2.5rem;
+        display: none;
+        transform: translateY(-100%);
+
+        &__item:not(:last-child){
+        margin:2.5rem 0;
+        
+        }
+
+        &__link{
+            @include navlinks;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-left: 2.5rem;
+
+        }
+    }
+
+    &-menu{
+      list-style: none;
+
+      &__icon{
+        height:1.8rem;
+        width:1.8rem;
+        fill: $color-white;
+        
+      }
+
+        &__item{
+           padding: 2rem;
+           position: relative;
+           
+
+           &:not(:last-child){
+            border-bottom: 1px solid $color-grey;
+           }
+           
+        }
+        &__link{
+            display: inline;
+            @include navlinks;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-left: .5rem;
+            transition: all .3s;
+
+            &--accordion-up::after{
+                @include accordion;
+                transform: rotate(-90deg);
+            }
+
+            &--accordion-down::after{
+                @include accordion;
+                transform: rotate(90deg);
+                right:3rem;
+            }
+        }
+
+    }
+}
+
+.mobile-nav{
+    &__logocontainer{
+        display: flex;
+        align-items: center;
+        padding: 3rem 2rem;
+        border-bottom: 3px solid $color-white;
+
+        &--heading{
+            font-size: 1.8rem;
+            color: $color-white;
+            font-weight: 600;
+            margin-left: 3rem;
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+.sidebar-animation{
+    transform: translateX(0);
+}
+
+.submenu-animation-expand{
+    transform: translateY(0);
+}
+
+.submenu-animation-collapse{
+    transform: translateY(-100%);
+}
+
+
+/**********Scroll menu for tab *************/
+/*******************************************/
+
+.scroll-menu{
+    font-size: 1.6rem;
+    list-style: none;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-top: 2rem;
+    letter-spacing: 1px;
+    @include gradientStyle;
+    display: none;
+
+    @include respond(tab-port)  {
+        display: block;
+     }
+     
+    
+    
+    &__item{
+        display: inline-block;
+        padding: 2rem 3rem;
+        width: 15rem;
+        &--selected{
+            border-bottom: 3px solid $color-orange;
+        }
+    }
+    &__link{
+        @include navlinks;
+    }    
+}
+
+/**********Scroll menu for tab end *************/
+/*******************************************/
+
+@include respond(tab-port)  {
+    .header{
+        display: none;
+    }
+ }
+
+ @include respond(tab-port)  {
+    .mobile-header{
+        display: grid;
+    }
+ }
+
+
+
+
+

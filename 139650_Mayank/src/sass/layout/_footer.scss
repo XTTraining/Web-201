@@ -1,0 +1,51 @@
+.footer{
+    grid-column: full-start / full-end;
+    @include gradientStyle;
+    display: grid;
+    grid-template-columns: 5vw repeat(auto-fit, minmax(25rem, 1fr)) 5vw;
+
+    &-wrapper{
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        grid-template-rows: auto auto;
+        
+        justify-content: center;
+    }
+
+    &__items{
+
+        &--heading{
+            margin: 1.5rem 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: $color-grey-light-2;
+        }
+    }
+
+&-list{
+    &__item{
+        list-style: none;
+        padding: 0 0 .8rem;
+    }
+
+    &__link{
+        @include navlinks;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+&__copyright{
+    color:$color-grey-light-2;
+    grid-column: 1/-1;
+    margin:1rem 0;
+    padding:1rem 0;
+    border-top: 1px solid $color-grey-dark-3;
+}
+    
+}

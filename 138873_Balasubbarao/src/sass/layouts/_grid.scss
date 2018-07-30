@@ -1,0 +1,30 @@
+//food delivery application used Two Column and Three column row grid in home page below are the grid designs.
+.row {
+    //set row max widht and align center. 
+    max-width: $grid-width;
+    margin: 0 auto; //add margin bottom to all the child expcet last on using Psuedo last-child and not Selector.
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    } //add clearfix after each row to assing the clear both 
+    @include clearfix; //select all class which has start "col-" key word and set float left to align all column in given row width. 
+    [class^="col-"] {
+        float: left; // Set margin right to all columns expcet the last one using not and last-child Pseduo          
+        &:not(:last-child) {
+            margin-right: $gutter-horizantal;
+        }
+    } //split a row into two coloumns
+    .col-1-of-2 {
+        //widht of the column = 100 -  Marign right / 2 (no. of columns)
+        width: calc((100% - #{$gutter-horizantal}) / 2);
+    } //split a row into three coloumns
+    .col-1-of-3 {
+        //widht of the column = 100 -  Marign right / 3 (no. of columns)
+        width: calc((100% - 2 * #{$gutter-horizantal}) / 3);
+        @include responsive(phone) {
+            width: calc((100% - 1 * #{$gutter-horizantal}) / 1);
+        }
+        @include responsive(tab-port) {
+            width: calc((100% - #{$gutter-horizantal}) / 2); // change three column to two column in ipad      
+        }
+    }
+}

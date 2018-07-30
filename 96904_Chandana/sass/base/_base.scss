@@ -1,0 +1,204 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size : 62.5%;
+    box-sizing: border-box;
+
+    @include respond(phone){
+        font-size: 40%;
+    }
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+    @include respond(tab-land){
+        font-size: 55%;
+    }
+    @include respond(big-desktop){
+        font-size: 80%;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif, serif;
+    font-weight: 400;
+    line-height: 1.6rem;
+    color: var(--color-grey-dark);
+    min-height: 100vh;
+}
+
+a {
+    outline: none;
+    list-style: none;
+
+    &:hover, &:active {
+        outline: none;
+    }
+}
+
+.border-heading {
+    background-color: var(--color-grey-dark);
+    font-size: 2rem;
+    height: 3rem;
+    width: 100%;
+    color: #fff;
+}
+
+.img-star {
+    width: 2rem;
+    height: auto;
+}
+
+.icon {
+    width: 3.3rem;
+    height: 3rem;
+    fill: var(--color-primary-dark);
+
+    @include respond(tab-land) {
+        width: 3rem;
+        height: 2.5rem;
+    }
+    @include respond(tab-port) {
+        width: 2.5rem;
+        height: 2.2rem;
+    }
+}
+.icon-big {
+    width: 4rem;
+    height: 4rem;
+    fill: var(--color-primary-dark);
+
+    @include respond(tab-land) {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    
+}
+
+.icon-like {
+    position: relative;
+    height: 2.5rem;
+    width: 3rem;
+    font-weight: 600;
+    fill: var(--color-dark-background);    
+    top: -1rem;
+    left: 8rem;
+
+    @include respond(tab-land){
+        top: -0.5rem;
+        left: 7rem;
+        height: 2rem;
+        width: 2.5rem;
+    }
+
+    @include respond(tab-port) {
+        top: -0.5rem;
+        left: 6rem;
+        height: 2rem;
+        width: 2.5rem;
+    }
+}
+
+/*----------- BUTTONS ----------------------*/
+.btn-big, .btn-small {
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;    
+}
+.btn-big {
+    background-color: var(--color-primary);
+    width: 15vw;
+    height: 6vh;
+    font-size: 1.3rem;
+    list-style: none;
+    outline: none;
+
+    @include respond(tab-land) {
+        font-size: 1.1rem;
+        width: 40vw;
+    }
+}
+.btn-small {
+    width: 6vw;
+    height: 4vh;
+    background-color: var(--color-dark-background);
+    font-size: .9rem;
+
+    @include respond(tab-port){
+        width: 9vw;
+        height: 5vh;
+        font-size: 1rem;
+    }
+}
+
+.button_nextPage{
+    color: var(--color-primary-dark);
+    font-weight: bold;
+
+    @include hoverEffect;
+}
+
+/*-------------------ICONS ---------------------*/
+
+.loader {
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center; 
+}
+
+.loader svg {
+      height: 5.5rem;
+      width: 5.5rem;
+      fill: var(--color-dark-background);
+      //transform-origin: 44% 50%;
+      animation: rotate 1.5s infinite linear; 
+}
+
+.notification {
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--color-dark-background);
+    color: #fff;
+    font-size: 1.1rem;
+    height: 16px;
+    width: 16px;
+    transform: translate(-2rem, -0.6rem);
+    z-index: 300;
+}
+
+
+
+.checked {
+    color: orange;
+}
+
+.div-left {
+    text-align: left;
+}
+
+.div-right {
+    text-align: right;
+}
+
+.summary {
+    font-weight: 800;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.div-center {
+    width: 100%;
+    text-align: center;
+}

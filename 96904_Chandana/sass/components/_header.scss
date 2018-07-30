@@ -1,0 +1,7 @@
+.header {
+    background-color: var(--color-primary-light);
+    grid-column: 1 / -1;
+    grid-row: header-start / header-end;
+    position: fixed;
+    z-index: 10;
+}

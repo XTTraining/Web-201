@@ -1,0 +1,25 @@
+@import 'vendors/carousel.css';
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+
+@import "base/base";
+@import "base/typography";
+
+@import "components/accordion";
+@import "components/button";
+@import "components/carousel";
+//@import "components/checkout";
+@import "components/filter";
+@import "components/search";
+
+@import "layout/header";
+@import "layout/food";
+@import "layout/footer";
+@import "layout/pay";
+
+@import "pages/home";
+@import "pages/cart";
+@import "pages/payment";
+

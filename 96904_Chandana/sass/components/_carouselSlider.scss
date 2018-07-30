@@ -1,0 +1,249 @@
+
+.carousel-wrapper { 
+  
+  grid-column: 2 / 12;
+  grid-row: carousel-start / carousel-end;
+  position: relative; 
+  
+  transition: all 0.6s east-in;
+
+  @include respond(tab-port) {
+      grid-column: 1 / 13;
+  }
+}
+
+.carousel-wrapper .carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .carousel-wrapper .carousel-item .arrow {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 50px;
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+    background: url("../img/arrow.png") 50% 50%/20px no-repeat;
+
+  }
+
+  .carousel-wrapper .carousel-item .arrow.arrow-prev { left: 0; }
+
+  .carousel-wrapper .carousel-item .arrow.arrow-next {
+    right: 0;
+    -webkit-transform: rotate(180deg); 
+    transform: rotate(180deg);
+  }
+
+  .carousel-wrapper .carousel-item.light { color: white; }
+
+  .carousel-wrapper .carousel-item.light .arrow { background: url("../arrow.png") 50% 50%/20px no-repeat; }
+
+  .carousel-wrapper [id^="target-item"] { display: none; }
+
+  .carousel-wrapper .item-1 {
+    background-image:linear-gradient(105deg, rgba(#0fbcf9,0.9) 0%, rgba(#0fbcf9,0.9) 50%, transparent 50%), url(../img/carousel-1.jpg);
+    z-index: 2;
+    opacity: 1;
+
+    p {
+        @include curatedText;
+        width: 45%;
+        text-align: end;
+        color: var(--color-grey-dark);
+        transition: all .4s;
+        padding-top: 10rem;
+
+        @include respond(tab-port){
+            padding-top: 5rem;
+        }
+    }
+
+    animation-duration: 0.4s;
+
+    &-writer {                
+        padding-right: 6rem;
+        @include respond(tab-port){
+            padding-right: 4rem;
+        }
+    }
+  }
+
+  .carousel-wrapper .item-2 { 
+    background-image: linear-gradient(to right, rgba(216, 112, 147, 0.377) 20%, palevioletred), url(../img/youlovedme.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        overflow: hidden;
+        padding: 6rem 20rem;
+        text-align: left;
+        
+        @include respond(tab-port){
+          padding: 3rem 6rem;
+        }
+        @include respond(tab-land){
+          padding: 4rem 8rem;
+        }
+
+        &-img {
+            width: 22rem;
+            height: auto;
+            text-align: center;
+            display: inline-block;
+            
+            @include respond(tab-port){
+                width: 14rem;
+            }
+
+            @include respond(tab-land){
+                width: 18rem;
+            }
+
+        }
+         
+        &-text {
+            display: inline-block;
+            font-size: 2.5rem;
+            line-height: 4rem;
+            top: -20rem;
+            left: 2rem;
+
+            @include respond(tab-port){
+                top: -18rem;
+                left: 1.5rem;
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+
+            &-writer {                
+                padding-right: 6rem;
+                font-size: 1.5rem;
+
+                @include respond(tab-port){
+                  padding-right: 5rem;
+                  font-size: 1.4rem;
+              }
+            }
+        }
+
+        &-btn {
+            &-link {
+                text-decoration: none;
+                transform: all .5s ease;
+                color: #fff;
+
+                &:hover, &:active {
+                    transform: scale(1.2);
+                }
+            }
+        }
+  }
+
+  .carousel-wrapper .item-3 {
+    background: linear-gradient(to right bottom, orange 30%, var(--color-grey-light-2) 50%, green 100%);
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .carousel-wrapper *:target ~ .item-1 { opacity: 0; }
+
+  .carousel-wrapper #target-item-1:target ~ .item-1 { opacity: 1; }
+
+  .carousel-wrapper #target-item-2:target ~ .item-2,
+
+  .carousel-wrapper #target-item-3:target ~ .item-3 {
+    z-index: 3;  
+    opacity: 1;
+  }
+
+  .carousel-img {
+    width: 11vw;
+    height: 35vh;
+    margin-left: 5rem;
+
+    @include respond(tab-port){
+      width: 7vw;
+      height: 18vh;
+      margin-left: 2rem;
+    }
+
+    @include respond(tab-land){
+      width: 9vw;
+      height: 22vh;
+      margin-left: 3rem;
+    }
+
+    overflow: hidden;
+
+    box-shadow: 0 2rem 3rem black;
+    
+    &-2 {
+      transform: translateX(-70%) translateY(-10%); 
+      @include respond(phone){
+        display: none;
+      }
+      
+      @include respond(tab-port){
+        transform: translateX(-70%) translateY(-30%);
+      }
+    }
+    &-3 {
+      transform: translateX(-140%);
+      @include respond(tab-port){
+        display: none;
+      }
+    }
+  }
+
+  .carousel-item-3 {    
+    margin-top: 8%;
+    display: flex;
+
+    @include respond(tab-land){
+      margin-top: 4%;
+    }
+  }
+
+  .carousel-3-right {
+    margin-left: -10%;
+    margin-top: 6%;
+    color: blue;
+    text-align: center;
+
+    p {
+      font-size: 1.8rem;
+      color: currentColor;
+      line-height: 4rem;
+      font-weight: 700;
+
+      @include respond(tab-land){
+        font-size: 1.6rem;
+      }
+    }
+
+    input {
+      @include btnBlock(blue, orangered);
+      @include hoverEffect;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+  }
+
+  .carousel-title {
+      text-transform: uppercase;
+      color: currentColor;
+  }
+  
+  .writer {
+    font-size: 1.6rem;
+  }

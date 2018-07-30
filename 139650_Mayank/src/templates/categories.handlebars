@@ -1,0 +1,12 @@
+<nav class="tab-navigation">
+    <ul class="scroll-menu">
+        <li class="scroll-menu__item scroll-menu__item--selected">
+            <a id="menu-0" href="#" class="scroll-menu__link">Home</a>
+        </li>
+        {{#each this}}
+        <li class="scroll-menu__item">
+            <a id="menu-{{Id}}" href="#" class="scroll-menu__link">{{Name}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</nav>

@@ -1,0 +1,59 @@
+<div class="checkout-page__cart">
+    <h2 class="cart__details-heading checkout-page__cart-heading">Cart</h2>
+    <div class="checkout-page__cart-count">{{this.totalProductCount}} Items</div>
+
+    <!-- to do foreach -->
+    {{#each this.products}}
+        <div class="cart__details-products checkout-page__cart-products">
+            <div class="checkout-page__cart-product">
+                <div class="cart__product-name checkout-page__cart-product--name">
+                    <svg class="cart__product-icon {{#if foodTypeName}}cart__product-icon--green {{/if}}">
+                        <use xlink:href="img/sprite.svg#icon-radio-checked"></use>
+                    </svg>
+                    <span class="product__name checkout-page__cart-product-name">{{ProductName}}</span>
+                </div>
+
+                <div class="cart__button--quantity checkout-page__cart-product--quantity">{{count}}</div>
+                <div class="product__item-price cart__product-price">{{totalPrice}}</div>
+            </div>
+        </div>
+    {{/each}}
+    <div class="checkout-page__cart-container">
+        <div class="checkout-page__cart-wrapper">
+            <div class="checkout-page__cart-pricing">
+                <div class="checkout-page__cart-pricing__heading">
+                    <span>Item Total</span>
+                </div>
+                <div class="">
+                    <span class="product__item-price cart__product-price">{{totalAmount}}</span>
+                </div>
+            </div>
+            <div class="checkout-page__cart-pricing">
+                <div class="checkout-page__cart-pricing__heading">
+                    <span>GST</span>
+                </div>
+                <div class="">
+                    <span class="product__item-price cart__product-price">{{gstAmount}}</span>
+                </div>
+            </div>
+            <div class="checkout-page__cart-pricing">
+                <div class="checkout-page__cart-pricing__heading">
+                    <span>Delivery Charges</span>
+                </div>
+                <div class="">
+                    <span class="product__item-price cart__product-price">{{deliveryCharges}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-page__cart-finalPrice">
+            <div class="checkout-page__cart-pricing">
+                <div class="checkout-page__cart-pricing__heading checkout-page__cart-pricing__heading--bold">
+                    <span>To Pay</span>
+                </div>
+                <div class="">
+                    <span class="product__item-price cart__product-price">{{amountWithTax}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

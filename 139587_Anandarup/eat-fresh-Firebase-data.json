@@ -1,0 +1,160 @@
+{
+  "CategoryList" : [ {
+    "CategoryId" : "1",
+    "CategoryName" : "Featured",
+    "taxTypeId" : 1
+  }, {
+    "CategoryId" : "2",
+    "CategoryName" : "Breakfast",
+    "taxTypeId" : 1
+  }, {
+    "CategoryId" : "3",
+    "CategoryName" : "Starters",
+    "taxTypeId" : 2
+  }, {
+    "CategoryId" : "4",
+    "CategoryName" : "Main-Course",
+    "taxTypeId" : 1
+  }, {
+    "CategoryId" : "5",
+    "CategoryName" : "Biryani",
+    "taxTypeId" : 1
+  },{
+    "CategoryId" : "6",
+    "CategoryName" : "Deserts",
+    "taxTypeId" : 1
+  }, {
+    "CategoryId" : "7",
+    "CategoryName" : "Beverages",
+    "taxTypeId" : 2
+  } ],
+  "FoodType" : [ {
+    "FoodTypeName" : "Veg",
+    "FoodTypeValue" : 0
+  }, {
+    "FoodTypeName" : "Non-Veg",
+    "FoodTypeValue" : 1
+  } ],
+  "ListOfProducts" : [ {
+    "ProductName" : "Full tandoori chicken",
+    "categoryId" : 1,
+    "foodType" : 1,
+    "id" : 0,
+    "productDescription" : "Full tandoori chicken cooked in pan",
+    "productPrice" : "250",
+    "productimgurl" : "/img/Chicken_full.jpg"
+  }, {
+    "ProductName" : "Grilled Chicken Salad",
+    "categoryId" : 2,
+    "foodType" : 1,
+    "id" : 1,
+    "productDescription" : "Grilled Chicken with Tomato-Avocado Salad",
+    "productPrice" : "200",
+    "productimgurl" : "/img/chicken-salad.jpg"
+  }, {
+    "ProductName" : "Grilled chicken legs",
+    "categoryId" : 1,
+    "foodType" : 1,
+    "id" : 3,
+    "productDescription" : "Grilled chicken legs",
+    "productPrice" : "120",
+    "productimgurl" : "/img/indian-non-veg.jpg"
+  }, {
+    "ProductName" : "passion berry",
+    "categoryId" : 6,
+    "foodType" : 0,
+    "id" : 4,
+    "productDescription" : "",
+    "productPrice" : "150",
+    "productimgurl" : "/img/passion berry.jpeg"
+  }, {
+    "ProductName" : "Red sauce pasta",
+    "categoryId" : 1,
+    "foodType" : 0,
+    "id" : 5,
+    "productDescription" : "",
+    "productPrice" : "150",
+    "productimgurl" : "/img/test-1.jpg"
+  }, {
+    "ProductName" : "Classic Pina Colada",
+    "categoryId" : 6,
+    "foodType" : 1,
+    "id" : 6,
+    "productDescription" : "Classic Pina Colada",
+    "productPrice" : "150",
+    "productimgurl" : "/img/pina-colada.jpg"
+  },{
+    "ProductName" : "Chicken Noodles",
+    "categoryId" : 4,
+    "foodType" : 0,
+    "id" : 7,
+    "productDescription" : "Chicken Noodles",
+    "productPrice" : "180",
+    "productimgurl" : "/img/test-3.jpg"
+  } ,{
+    "ProductName" : "Caeser Salad",
+    "categoryId" : 3,
+    "foodType" : 0,
+    "id" : 8,
+    "productDescription" : "Caeser Salad",
+    "productPrice" : "125",
+    "productimgurl" : "/img/test-4.jpg"
+  },{
+    "ProductName" : "Pasta Italiano",
+    "categoryId" : 4,
+    "foodType" : 0,
+    "id" : 9,
+    "productDescription" : "Caeser Salad",
+    "productPrice" : "150",
+    "productimgurl" : "/img/test-5.jpg"
+  },{
+    "ProductName" : "Fresh Avocado Salad",
+    "categoryId" : 2,
+    "foodType" : 0,
+    "id" : 10,
+    "productDescription" : "Fresh Avocado Salad",
+    "productPrice" : "120",
+    "productimgurl" : "/img/test-8.jpg"
+  },{
+    "ProductName" : "Rosted Tomato Basil Spaghetti",
+    "categoryId" : 4,
+    "foodType" : 0,
+    "id" : 11,
+    "productDescription" : "Rosted Tomato Basil Spaghetti",
+    "productPrice" : "220",
+    "productimgurl" : "/img/test-10.jpg"
+  },{
+    "ProductName" : "Hyderabadi Chicken Biryani",
+    "categoryId" : 5,
+    "foodType" : 1,
+    "id" : 12,
+    "productDescription" : "Hyderabadi Chicken Biryani",
+    "productPrice" : "250",
+    "productimgurl" : "/img/Hyerabadi_chicken_biryani.jpg"
+  },{
+    "ProductName" : "Kolkata Style Mutton Biryani",
+    "categoryId" : 5,
+    "foodType" : 1,
+    "id" : 13,
+    "productDescription" : "Kolkata Style Mutton Biryani",
+    "productPrice" : "280",
+    "productimgurl" : "/img/kolkata_mutton_biryani.jpg"
+  },{
+    "ProductName" : "Chicken Chap",
+    "categoryId" : 4,
+    "foodType" : 1,
+    "id" : 14,
+    "productDescription" : "Kolkata Style Chicken Chap",
+    "productPrice" : "280",
+    "productimgurl" : "/img/Chicken_Chaap.jpg"
+  }],
+  "TaxTable" : [ {
+    "taxPercentage" : 5,
+    "taxTypeId" : 1,
+    "taxTypeName" : "Foods"
+  }, {
+    "taxPercentage" : 12,
+    "taxTypeId" : 2,
+    "taxTypeName" : "Beverages"
+  } ]
+}

@@ -1,0 +1,131 @@
+.cart-summary{
+    &__CTA{
+        display: flex;
+        justify-content: flex-end;
+
+        @include respond(phone)  {
+            .btn{
+                padding: 1.5rem 0rem;
+            }
+        }
+
+        &--back{
+            margin-right: 1rem;
+            background-color: $color-grey-light-2;
+
+            
+
+            &:hover{
+                background-color: $color-grey-light-4;
+             }
+        }
+    }
+}
+
+.cart-items{
+    list-style: none;
+    margin: 3rem 0;
+    box-shadow: 0px 0rem 2rem 0px rgba(67, 73, 72, 0.5);
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem 0;
+        &:not(:last-child){
+            border-bottom: 1px solid $color-grey-light-2 ;
+        }
+        
+    }
+
+    &__details{
+        flex-basis: 25rem;
+        padding-right: 3px;
+        &--name{
+            flex:0 1 1.5rem;
+            flex-wrap: wrap;
+            
+        }
+        &--desc{
+            font-size: 1.3rem;
+            color:$color-grey-dark-2
+        }
+
+        &--unit{
+            &::before{
+                @include currencyINR;
+                
+            }
+        }
+    }
+
+    &__price{
+        display: flex;
+        justify-content: flex-end;
+        flex-basis: 18rem;
+        color: $color-grey-dark-3;
+
+        &::before{
+            @include currencyINR;
+            
+        }
+    }
+}
+
+.payment-details{
+    margin: 3rem 0;
+    box-shadow: 0px 0rem 2rem 0px rgba(67, 73, 72, 0.5);
+    font-size: 1.4rem;
+    border-radius: 5px;
+
+    &__amount{
+        display: flex;
+        justify-content: space-around;
+        color: $color-grey-dark-3;
+        padding: 1rem;
+
+        &--label{
+            flex-basis: 25rem;
+        }
+
+        &--price{
+            display: flex;
+            justify-content: flex-end;
+            flex-basis: 9rem;
+            &::before{
+                @include currencyINR;
+            }
+        }
+
+        &:last-child{
+            border-top: 1px dashed $color-grey-dark-2;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+
+}
+
+.empty-cart{
+    display: none;
+    margin: 3rem;
+    text-align: center;
+
+    @include respond(phone)  {
+        .btn{
+            padding: 1.5rem 4rem;
+        }
+    }
+
+    &__msg{
+    margin: 2rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: $color-grey-dark-3;
+    }
+}
+
+

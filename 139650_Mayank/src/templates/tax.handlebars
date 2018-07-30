@@ -1,0 +1,17 @@
+<div class="payment-details">
+<div class="payment-details__amount">
+    <span class="payment-details__amount--label">Item Total</span>
+    <span class="payment-details__amount--price">{{amount}}</span>
+</div>
+
+{{#each this}}
+<div class="payment-details__amount">
+    <span class="payment-details__amount--label">GST on {{catName}} @{{taxPercentage}} %</span>
+    <span class="payment-details__amount--price">{{taxAmount}}</span>
+</div>
+{{/each}}
+<div class="payment-details__amount">
+    <span class="payment-details__amount--label">Pay Total</span>
+    <span class="payment-details__amount--price">{{totalAmount}}</span>
+</div>
+</div>

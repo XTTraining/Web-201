@@ -1,0 +1,19 @@
+{
+  "name": "api-project",
+  "version": "1.0.0",
+  "description": "this is node api server for interacting with mongo",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "Hemant-Sapient",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}

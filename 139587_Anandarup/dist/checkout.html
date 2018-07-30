@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i,400,500,600" rel="stylesheet">
+    <title>Eat Smart | One Stop destination for all food lovers</title>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png">
+<link href="./css/bundle.css" rel="stylesheet"></head>
+
+<body class="container">
+    <header class="header">
+        <a href="/index.html">
+            <img src="img/logo.png" alt="logo" class="header__logo">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Home</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">About Us</a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav__items">
+                            <a href="#" class="sub-nav__links">Our History</a>
+                        </li>
+                        <li class="sub-nav__items">
+                            <a href="#" class="sub-nav__links">Who we are</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Services</a>
+                    <ul class="sub-nav">
+                        <li class="sub-nav__items">
+                            <a href="#" class="sub-nav__links">Food Delivery</a>
+                        </li>
+                        <li class="sub-nav__items">
+                            <a href="#" class="sub-nav__links">Order Food</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links">Contact Us</a>
+                </li>
+                <li class="nav__items">
+                    <a href="/cart.html" class="nav__links" title="shopping cart">
+                        <svg class="nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="nav__items">
+                    <a href="#" class="nav__links" title="search icon">
+                        <svg class="nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="checkout-wrapper">
+        <div class="checkout-page">
+            <div class="checkout-page__left">
+                <div class="checkout-page__delivery">
+                    <div class="checkout-page__delivery-wrapper">
+                        <div class="checkout-page__delivery-heading">Delivery Address</div>
+                        <div class="checkout-page__delivery-change">Change</div>
+                    </div>
+                    <div class="checkout-page__delivery-detail">
+                        <div class="checkout-page__delivery-name">Home</div>
+                        <div class="checkout-page__delivery-address">
+                            Flat No 203, 15th Cross Rd, Industrial Area, Stage 2, BTM 2nd Stage, Bengaluru, Karnataka 560076, India
+                        </div>
+                        <div class="checkout-page__delivery-time">29 MINS</div>
+                    </div>
+                </div>
+                <div class="checkout-page__payment">
+                    <div class="checkout-page__payment-heading">
+                        <div class="checkout-page__delivery-heading">Choose payment method</div>
+                    </div>
+                    <div class="checkout-page__payment-wrapper">
+                        <div class="checkout-page__payment-options--wrapper">
+                            <div class="checkout-page__payment-options">
+                                <div class="checkout-page__payment-option" data-id="wallet">
+                                    <svg class="checkout-page__icon">
+                                        <use xlink:href="img/sprite.svg#icon-wallet"></use>
+                                    </svg>
+                                    Wallet
+                                </div>
+                                <div class="checkout-page__payment-option" data-id="cards">
+                                    <svg class="checkout-page__icon">
+                                        <use xlink:href="img/sprite.svg#icon-credit-card"></use>
+                                    </svg>
+                                    Credit & Debit cards
+                                </div>
+                                <div class="checkout-page__payment-option" data-id="netbanking">
+                                    <svg class="checkout-page__icon">
+                                        <use xlink:href="img/sprite.svg#icon-library"></use>
+                                    </svg>
+                                    Netbanking
+                                </div>
+                                <div class="checkout-page__payment-option" data-id="cod">
+                                    <svg class="checkout-page__icon">
+                                        <use xlink:href="img/sprite.svg#icon-coin-dollar"></use>
+                                    </svg>
+                                    Pay on Delivery
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-page__payment-ways--wrapper">
+                            <div class="checkout-page__payment-ways" id="wallet">
+                                <div class="checkout-page__payment-way">
+                                    <img src="./img/Paytm-Wallet.jpg" alt="paytm logo" class="checkout-page__payment-image">
+                                    <span class="checkout-page__payment-heading">PayTM</span>
+                                    <span class="checkout-page__payment-heading checkout-page__payment-heading--sub">Pay using PayTM wallet</span>
+                                    <button class="btn btn-payment">Pay Now</button>
+                                </div>
+                                <div class="checkout-page__payment-way">
+                                    <img src="./img/MobiKwik-Logo.png" alt="Mobikwick logo" class="checkout-page__payment-image">
+                                    <span class="checkout-page__payment-heading">Mobikwick </span>
+                                    <span class="checkout-page__payment-heading checkout-page__payment-heading--sub">Pay using Mobikwick wallet</span>
+                                    <button class="btn btn-payment"> Pay Now</button>
+                                </div>
+                            </div>
+                            <div class="checkout-page__payment-ways" id="cards">
+                                <div class="checkout-page__payment-way checkout-page__payment-way--modified">
+                                    <span class="checkout-page__payment-heading">Add a New Card</span>
+                                    <span class="checkout-page__payment-heading checkout-page__payment-heading--sub">Save and Pay via ZETA, HDFC Food Cards, Ticket Restaurants Meal Cards & more.</span>
+                                    <button class="btn btn-payment"> ADD NEW</button>
+                                </div>
+                            </div>
+                            <div class="checkout-page__payment-ways" id="netbanking">
+                                <div class="checkout-page__payment-way checkout-page__payment-way--modified">
+                                    <span class="checkout-page__payment-heading">Pay using Net Banking.</span>
+                                    <span class="checkout-page__payment-heading checkout-page__payment-heading--sub">Choose one of the bank from below.</span>
+                                    <select name="banks" class="checkout-page__payment-banks">
+                                        <option value="ICICI">ICICI Bank</option>
+                                        <option value="HDFC">HDFC Bank</option>
+                                        <option value="SBI">Sate Bank of India</option>
+                                        <option value="AXIS">AXIS Bank</option>
+                                        <option value="KOTAK">KOTAK Mahindra Bank</option>
+                                    </select>
+                                    <button class="btn btn-payment btn-payment--big">Pay Now</button>
+                                </div>
+                            </div>
+                            <div class="checkout-page__payment-ways" id="cod">
+                                <div class="checkout-page__payment-way checkout-page__payment-way--modified">
+                                    <img src="./img/cash-on-delivery-with-fee.jpg" alt="cod logo" class="checkout-page__payment-image--big">
+                                    <span class="checkout-page__payment-heading">Cash</span>
+                                    <span class="checkout-page__payment-heading checkout-page__payment-heading--sub">Please keep exact change handy to help us serve you better.</span>
+                                    <button class="btn btn-payment btn-payment--big">Pay Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout-page__right">
+                <div class="checkout-page__items">
+                    <div class="checkout-page__cart">
+                        <h2 class="cart__details-heading checkout-page__cart-heading">Cart</h2>
+                        <div class="checkout-page__cart-count">5 Items</div>
+                        <div class="cart__details-products checkout-page__cart-products">
+                            <div class="checkout-page__cart-product">
+                                <div class="cart__product-name checkout-page__cart-product--name">
+                                    <svg class="cart__product-icon">
+                                        <use xlink:href="img/sprite.svg#icon-radio-checked"></use>
+                                    </svg>
+                                    <span class="product__name">Tandoori Chicken</span>
+                                </div>
+
+                                <div class="cart__button--quantity checkout-page__cart-product--quantity">2</div>
+                                <div class="product__item-price cart__product-price">250</div>
+                            </div>
+
+                        </div>
+
+                        <div class="checkout-page__cart-container">
+                            <div class="checkout-page__cart-wrapper">
+                                <div class="checkout-page__cart-pricing">
+                                    <div class="checkout-page__cart-pricing__heading">
+                                        <span>Item Total</span>
+                                    </div>
+                                    <div class="">
+                                        <span class="product__item-price cart__product-price">729.00</span>
+                                    </div>
+                                </div>
+                                <div class="checkout-page__cart-pricing">
+                                    <div class="checkout-page__cart-pricing__heading">
+                                        <span>GST</span>
+                                    </div>
+                                    <div class="">
+                                        <span class="product__item-price cart__product-price">36.45</span>
+                                    </div>
+                                </div>
+                                <div class="checkout-page__cart-pricing">
+                                    <div class="checkout-page__cart-pricing__heading">
+                                        <span>Delivery Charges</span>
+                                    </div>
+                                    <div class="">
+                                        <span class="product__item-price cart__product-price">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-page__cart-finalPrice">
+                                <div class="checkout-page__cart-pricing">
+                                    <div class="checkout-page__cart-pricing__heading checkout-page__cart-pricing__heading--bold">
+                                        <span>To Pay</span>
+                                    </div>
+                                    <div class="">
+                                        <span class="product__item-price cart__product-price">500</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">About us</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Terms & Conditions</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Privacy Policy</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Contact us</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Careers</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <img class="nav__img" src="img/google_play.png" alt="google play">
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <img class="nav__img" src="img/app_store.png" alt="app store">
+                    </a>
+                </li>
+            </ul>
+            <div class="footer-bottom">
+                <div class="footer-bottom__logo">
+                    <img src="img/logo-white.png" alt="logo" class="footer-bottom__logo-img">
+                </div>
+                <p class="footer-bottom__copyright">
+                    &copy; Copyright 2018 by Eat - Smart
+                </p>
+                <ul class="footer-bottom__social">
+                    <li class="footer-bottom__social-icons">
+                        <svg class="footer-bottom__social-icon">
+                            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                        </svg>
+                    </li>
+                    <li class="footer-bottom__social-icons">
+                        <svg class="footer-bottom__social-icon">
+                            <use xlink:href="img/sprite.svg#icon-instagram-with-circle"></use>
+                        </svg>
+                    </li>
+                    <li class="footer-bottom__social-icons">
+                        <svg class="footer-bottom__social-icon">
+                            <use xlink:href="img/sprite.svg#icon-pinterest-with-circle"></use>
+                        </svg>
+                    </li>
+                    <li class="footer-bottom__social-icons">
+                        <svg class="footer-bottom__social-icon">
+                            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+
+        </footer>
+<script type="text/javascript" src="js/bundle.js"></script></body>
+
+</html>

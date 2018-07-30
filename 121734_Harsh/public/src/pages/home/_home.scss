@@ -1,0 +1,43 @@
+.fliters {
+    background-color: $color-grey-dark-3;
+    color: $color-grey-dark;
+    padding: 1.8rem 1.8rem 1rem 1.8rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: 1fr;
+    }
+    &-title {
+        @media only screen and (max-width: $bp-large) {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+fieldset {
+    border: 0;
+}
+
+.overflow {
+    height: 200px;
+}
+
+select {
+    border-radius: 2rem;
+    color: $color-grey-dark;
+    padding: 1rem;
+    width: 55%;
+    margin: 0 1rem;
+    border: 0;
+}
+
+select:hover {
+    background-color: #bebaba;
+    ;
+}

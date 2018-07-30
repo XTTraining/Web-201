@@ -1,0 +1,182 @@
+var ref = new Firebase('https://dine-to-door.firebaseio.com')
+var snacksRef = ref.child("categories/Snacks");
+snacksRef.push({
+    title: "ITC Master Chef Prawns + Brown Rice Bowl",
+    shortDescription: "A wholesome, fulfilling brown rice salad with pan seared prawns and veggies.",
+    price: "165",
+    image: "itc_masterchef_prawns_brown_rice_bowl_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"3458",
+    });
+snacksRef.push({
+    title: "Tropical Crunch Fruit Salad",
+    shortDescription: "A bowl of freshly cut exotic fruits, nutty granola, feta cheese and delicious honey lemon dip",
+    price: "165",
+    image: "tropical-crunch-fruit-salad_s_1.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"7812"
+});
+snacksRef.push({
+    title: "ITC Master Chef Prawns Aglio Olio Pasta",
+    shortDescription: "Pasta, prawns and veggies in a simple, lovely aglio olio sauce.",
+    price: "320",
+    image: "itc_masterchef_prawns_aglio_olio_pasta_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/non-veg-icon.png",
+	filter:"nonVeg|",
+	id:"0560"
+});
+snacksRef.push({
+    title: "Gunpowder Mini Idlis",
+    shortDescription: "Mini idlis coated with podi, served with sambar and chutneys",
+    price: "155",
+    image: "gunpowder_mini_idlis_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"8414"
+});
+snacksRef.push({
+    title: "Rascala : Idli Manchurian",
+    shortDescription: "Delicious munturian style idlies",
+    price: "155",
+    image: "rascala_manchurian_small_1_.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|new",
+	id:"9355"
+});
+snacksRef.push({
+    title: "Chennai Style Dahi Vada",
+    shortDescription: "Two vadas dunked in creamy yogurt, topped with crisp boondi, ginger and curry leaves",
+    price: "130",
+    image: "dahi_vada_ic_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"2835"
+});
+
+snacksRef.push({
+    title: "Blossom Idlis",
+    shortDescription: "4 fluffy idlis with sambar, coconut chutney and onion tomato chutney",
+    price: "99",
+    image: "blossoms_idli_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"1979"
+});
+
+
+var beveragesRef = ref.child("categories/beverages"); 
+beveragesRef.push({
+    title: "Himalayan Iced Tea",
+    shortDescription: "The chilled amber beauty that gets you high in all the right ways (200ml)",
+    price: "165",
+    image: "himalayan_iced_tea_s_2.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"1206"
+});
+beveragesRef.push({
+    title: "Jamun Smoothie",
+    shortDescription: "A smooth blend of jamun, lemon, honey and green chilli",
+    price: "160",
+    image: "jamun_smoothie_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|new",
+	id:"0870"
+	});
+beveragesRef.push({
+    title: "Shuddh Watermelon",
+    shortDescription: "The wonderful watermelon elixir that is just fruit in a bottle (200ml)",
+    price: "95",
+    image: "watermelon__s_1.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"5129"
+});
+beveragesRef.push({
+    title: "Glow+",
+    shortDescription: "Banana, Spinach Smoothie (200 ml)",
+    price: "125",
+    image: "glow__s_4_2.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|new",
+	id:"6453"
+});
+
+beveragesRef.push({
+    title: "Yoga Kick+ : Healthy Green Smoothie",
+    shortDescription: "Spinach, apple, Lettuce, Tamarind, Jeera, celery",
+    price: "115",
+    image: "yoga_kick_s_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"7728"
+});
+
+
+
+var mainCourseRef = ref.child("categories/MainCourse");
+mainCourseRef.push({
+    title: "Veg Jalfrezi with Lachha Parantha",
+    shortDescription: "Rajma in a deliciously spiced tomato onion gravy, served with two kulchas.",
+    price: "155",
+    image: "veg_jalfrezi_with_lachha_paranthas_s_1_2.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"1700"
+});
+mainCourseRef.push({
+    title: "Fish + Herb Salsa",
+    shortDescription: "Zesty flavoursome fish plated with sauteed vegetables & paprika rice accompanied by ",
+    price: "295",
+    image: "fish_herb_salsa_s_7_2.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/non-veg-icon.png",
+	filter:"nonVeg|new",
+	id:"6850"
+});
+mainCourseRef.push({
+    title: "ITC Master Chef Prawns in Szechuan Sauce",
+    shortDescription: "Rajma in a deliciously spiced tomato onion gravy, served with two kulchas.",
+    price: "155",
+    image: "itc_master_chef_prawns_in_szechuan_sauce_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/non-veg-icon.png",
+	filter:"nonVeg|new",
+	id:"9733"
+});
+mainCourseRef.push({
+    title: "Kottayam Fish Curry Rice Bowl",
+    shortDescription: "Nadan fish curry with fluffy steamed rice",
+    price: "340",
+    image: "thurs-_kotayam_fish_curry_rice_bowl_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/non-veg-icon.png",
+	filter:"nonVeg|new",
+	id:"9530"
+});
+mainCourseRef.push({
+    title: "Rajma with lachcha Paranthas",
+    shortDescription: "Rajma in a deliciously spiced tomato onion gravy, served with flaky parathas.",
+    price: "155",
+    image: "rajma_with_lachha_paranthas_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"6410"
+});
+mainCourseRef.push({
+    title: "Rajma Kulcha",
+    shortDescription: "Rajma in a deliciously spiced tomato onion gravy, served with two kulchas.",
+    price: "155",
+    image: "rajma_kulcha_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/veg-icon.png",
+	filter:"veg|",
+	id:"3635"
+});
+mainCourseRef.push({
+    title: "Allepey Style Mutton Roast with Coconut Rice",
+    shortDescription: "Succulent mutton roasted with whole spices with coconut rice",
+    price: "285",
+    image: "allepey_style_mutton_roast_with_coconut_rice_s.jpg",
+	sImg:"https://www.innerchef.com/media/wysiwyg/non-veg-icon.png",
+	filter:"nonVeg|",
+	id:"6768"
+});

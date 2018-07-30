@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="We deliver you food faster">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <meta http-equiv="Cache-control" content="no-cache"> -->
+    <!--    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,400,600" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <title>Castle Cart</title>
+<link href="css/style.css" rel="stylesheet"></head>
+
+<body>
+    <div class="cartpage">
+        <header class="header">
+            <input class="header__burger-btn" type="checkbox" id="header__burger-btn">
+            <label class="header__burger" for="header__burger-btn"><span class="header__burger-ico"></span></label>
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="" class="header__logo--img">
+                <h2 class="header__logo--text">Castle <span>Restaurent</span></h2>
+            </div>
+            <div class="header__menu">
+                <span class="header__menu--close">X</span>
+                <ul class="header__ul">
+                    <li class="header__ul--item active"><a class="header__link" href="/index.html">Home</a></li>
+                    <li class="header__ul--item"><a class="header__link" href="#">Offers</a>
+                        <ul class="hidden header__ul--sub1">
+                            <li>Paytm</li>
+                            <li>Freecharge</li>
+                            <li>AmazonPay</li>
+                            <li>Debit Card</li>
+                        </ul>
+                    </li>
+                    <li class="header__ul--item"><a class="header__link" href="#">About</a>
+                        <ul class="hidden header__ul--sub1">
+                            <li>We believe in good</li>
+                        </ul>
+                    </li>
+                    <li class="header__ul--item"><a class="header__link" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="header__filter" style="display: none;">
+                <svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-filter"></use>
+            </svg>
+                <!----Filter section---->
+                <div class="filter">
+                    <div class="filter__header">
+                        <h3 class="filter__header--title">FILTERS</h3>
+                        <label class="filter__header--reset">Reset All Filters</label>
+                    </div>
+                    <div class="filter__body">
+                        <h3 class="filter__body--h">Food Preference</h3>
+                        <label class="filter__body--item">Veg</label>
+                        <label class="filter__body--item">Non Veg</label>
+                        <h3 class="filter__body--h">Cuisine</h3>
+                        <label class="filter__body--item">Continental</label>
+                        <label class="filter__body--item">Indian</label>
+                        <label class="filter__body--item">Pan-Asian</label>
+
+                    </div>
+                    <div class="filter__footer">
+                        <span class="food-count">98</span> DISHES AVAILABLE
+                    </div>
+                </div>
+                <!----Filter section end---->
+            </div>
+            <div class="header__cart"><svg class="icon">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+                <span class="header__cart--count">4</span>
+            </div>
+
+
+        </header>
+        <section class="cart">
+            <div class="cart__account">
+                <div class="cart__account--header">Account</div>
+                <div class="cart__account--body">To place your order now, log in to existing account or sign up.</div>
+                <div class="cart__account--button">
+                    <p class="cart__account--text btn btn-cart">Have an account?</p>
+                    <p class="cart__account--text btn btn-cart">LOG IN</p>
+                </div>
+            </div>
+            <div class="cart__address">
+                <div class="cart__address--header">Delivery Address</div>
+                <textarea class="cart__address--text" placeholder="Provide your Address here..."></textarea>
+            </div>
+            <div class="cart__list">
+                <div class="cart__list--head">
+                    <img src="img/logo.svg" class="cart__list--image" alt="logo">
+                    <p class="cart__list--text">Castle Restaurent</p>
+                </div>
+                <div class="cart__list--body">
+                    <!--All cart items goes here..-->
+                </div>
+                <div class="cart__list--footer">
+                    <div class="cart__list--tax-total">
+                        <p class="cart__list--left">Item Total</p>
+                        <P class="cart__list--right">0</P>
+                    </div>
+                    <div class="cart__list--tax-tax1">
+                        <p class="cart__list--left">GST (5%)</p>
+                        <P class="cart__list--right">0</P>
+                    </div>
+                    <div class="cart__list--tax-tax2">
+                        <p class="cart__list--left">GST (15%)</p>
+                        <P class="cart__list--right">0</P>
+                    </div>
+                    <div class="cart__list--tax-final">
+                        <p class="cart__list--left">TO PAY</p>
+                        <P class="cart__list--right">0</P>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pay">
+            <button class="pay__btn btn btn-blue">PAY</button>
+        </section>
+        <footer class="footer">
+            <!--           scroll to top-->
+            <div class="scroll-top-wrapper">
+                ^
+            </div>
+            <!--          scroll to top end-->
+
+            <div class="footer__img">
+                <img src="img/logo.svg" alt="footer-Logo">
+            </div>
+            <div class="footer__links">
+                <ul class="footer__links--ul">
+                    <li class="footer__links--link">Privacy</li>
+                    <li class="footer__links--link">Terms</li>
+                    <li class="footer__links--link">Sitemap</li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <svg class="icon icon__facebook">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+                <svg class="icon icon__instagram">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+                <svg class="icon icon__whatsapp">
+                <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+            </svg>
+                <svg class="icon icon__twitter">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__bottom--text">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. © 2008-2018 - Castle™ Media Pvt Ltd. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!--        wait loader for page load
+    <div class="loader"></div>
+-->
+
+<script type="text/javascript" src="js/bundle.js"></script></body>
+
+</html>

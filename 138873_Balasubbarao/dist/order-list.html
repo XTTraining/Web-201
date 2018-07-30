@@ -1,0 +1,208 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodie- Online Food Delivery</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800" rel="stylesheet">
+    <!-- light-300,regular-400, semi bold - 600, bold -700, extra bold -800 -->
+
+    <!-- <link href="css/icon-font.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> -->
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+<link href="./css/style.css" rel="stylesheet"></head>
+
+<body data-type='order-list'>
+    <div class="table">
+        <!-- header start -->
+        <header class="header">
+            <!-- logo start -->
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="/img/logo.png" alt="logo" class="header__logo-image">
+                </a>
+            </div>
+            <!--Mobile menu-->
+            <input type="checkbox" id="__navigation" name="__navigation" class="mobile__menu-input">
+            <label for="__navigation" class="mobile__menu">&nbsp;</label>
+            <!--desktop menu -->
+            <div class="header__navigation">
+                <div class="header__navigation-social">
+                    <ul class="header__navigation-social-list">
+                        <li class="header__navigation-social-list-item">
+                            <i class="header__navigation-social-list-icon icon-facebook"></i>
+                        </li>
+                        <li class="header__navigation-social-list-item">
+                            <i class="header__navigation-social-list-icon icon-twitter"></i>
+                        </li>
+                        <li class="header__navigation-social-list-item">
+                            <i class="header__navigation-social-list-icon icon-dribbble "></i>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="header__navigation-main">
+                    <ul class="header__navigation-main-list">
+                        <li class="header__navigation-main-list-item">
+                            <a href="index.html">Home </a>
+                        </li>
+                        <li class="header__navigation-main-list-item">
+                            <a href="#">About us </a>
+                        </li>
+                        <li class="header__navigation-main-list-item">
+                            <a href="order-list.html">Orders</a>
+                        </li>
+                        <li class="header__navigation-main-list-item">
+                            <a href="#">Products </a>
+                        </li>
+                        <li class="header__navigation-main-list-item">
+                            <a href="#">Support </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+        <!-- content start -->
+        <div class="content">
+            <div class="order_wraper">
+                <section class="order">
+                    <div class="order__title">
+                        <div class="order__title-main">
+                            <h1> Your Shoppping Bag</h1>
+                        </div>
+                        <div class="order__title-continue hide-mobile">
+                            <a href="index.html" class="order__title-continue-link">continue shopping
+                                <i class="icon-chevron-right btn__left-arrow"></i>
+                            </a>
+                        </div>
+                        <div class="order__title-continue">
+                            <a href="index.html" class="btn order__title-continue-link">
+                                Check Out
+                                <i class="icon-chevron-right btn__left-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order__list">
+                        <div class="order__list-table">
+                            <div class="order__list-table-header">
+                                <div class="order__list-table-col">Image</div>
+                                <div class="order__list-table-col hide-mobile">Description</div>
+                                <div class="order__list-table-col">Quntity</div>
+                                <div class="order__list-table-col">Price</div>
+                                <div class="order__list-table-col">Tax</div>
+                                <div class="order__list-table-col">Total</div>
+                            </div>
+                            <div class="order__list-table-row">
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    <img src="img/food/1.jpg" alt="food" class="order__list-table-col-content--image">
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content hide-mobile">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    <input type="text" id="Quntity" value="1" class="order__list-table-col-content--qty">
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    $1
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    $.05
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    $1.05
+                                </div>
+                            </div>
+                            <div class="order__list-table-row">
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    <img src="img/food/1.jpg" alt="food" class="order__list-table-col-content--image">
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content hide-mobile">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    <input type="text" id="Quntity" value="1" class="order__list-table-col-content--qty">
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    $1
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    $.05
+                                </div>
+                                <div class="order__list-table-col order__list-table-col-content">
+                                    $1.05
+                                </div>
+                            </div>
+                            <div class="order__list-table-footer">
+                                <div class="order__list-table-footer-discount order__list-table-footer-col">
+                                    <div class="discount-box">
+                                        <div class="discount-box-title">
+                                            Discount code or gift voucher
+                                        </div>
+                                        <div class="discount-box-controls">
+                                            <label for="discountCode" class="discount-box-controls-label">Enter your voucher or coupon code</label>
+                                            <input type="text" id="discountCode" name="discountCode" class="discount-box-controls-text">
+                                            <a href="index.html" class="btn btn-small discount-box-controls-btn">
+                                                update
+                                                <i class="icon-chevron-right btn__left-arrow"></i>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__list-table-footer-checkout order__list-table-footer-col">
+                                    <div class="order__list-table-footer-checkout-summary">
+                                        <div class="order__list-table-footer-checkout-summary-box">
+                                            <div class="order__list-table-footer-checkout-summary-box-label">Sub Total</div>
+                                            <div class="order__list-table-footer-checkout-summary-box-value">$12</div>
+                                        </div>
+                                        <div class="order__list-table-footer-checkout-summary-box">
+                                            <div class="order__list-table-footer-checkout-summary-box-label">Delivery</div>
+                                            <div class="order__list-table-footer-checkout-summary-box-value">Country</div>
+                                        </div>
+                                        <div class="order__list-table-footer-checkout-summary-box">
+                                            <div class="order__list-table-footer-checkout-summary-box-label">Shipping Method</div>
+                                            <div class="order__list-table-footer-checkout-summary-box-value">Ups</div>
+                                        </div>
+                                        <hr>
+                                        <div class="order__list-table-footer-checkout-summary-box">
+                                            <div class="order__list-table-footer-checkout-summary-box-label">Tax</div>
+                                            <div class="order__list-table-footer-checkout-summary-box-value">$1</div>
+                                        </div>
+                                        <div class="order__list-table-footer-checkout-summary-box">
+                                            <div class="order__list-table-footer-checkout-summary-box-label large-font">Total</div>
+                                            <div class="order__list-table-footer-checkout-summary-box-value">$12</div>
+                                        </div>
+                                    </div>
+                                    <div class="order__list-table-footer-checkout-controls">
+                                        <a href="index.html" class="order__list-table-footer-checkout-controls-link">continue shopping
+                                            <i class="icon-chevron-right btn__left-arrow"></i>
+                                        </a>
+                                        <a href="index.html" class="btn btn-small order__list-table-footer-checkout-controls-link">
+                                            Check Out
+                                            <i class="icon-chevron-right btn__left-arrow"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- footer start -->
+        <footer class="footer">
+            <div class="footer__navigation">
+                <div class="footer__navigation-logo">
+                    <img src="/img/logo-x.png" alt="footer logo" class="footer__navigation-logo-img">
+                </div>
+                <div class="footer__navigation-links margin-top-medium">
+                    <a href="#" class="footer__navigation-links-link">About us</a>
+                    <a href="#" class="footer__navigation-links-link">Contact us</a>
+                    <a href="#" class="footer__navigation-links-link">privacy policy</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+<script type="text/javascript" src="js/bundle.js"></script></body>
+
+</html>

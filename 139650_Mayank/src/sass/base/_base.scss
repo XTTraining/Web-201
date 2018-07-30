@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:[full-start] 3vw [center-start] 1fr [center-end] 3vw [full-end];
+    background-color: $color-white;
+}
+
+
+/////*********Overlay used throughout the application end*******////////////////
+///////////////////////////////////////////////////////////////////////////
+
+////////Skip to main content for accessibility/////////////////
+//////////////////////////////////////////////////////////////
+a.skip-main {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+
+    &:focus,
+    &:active{
+    color: $color-white;
+    background-color:$color-grey-dark-2;
+    left: 0;
+    width: 20rem;
+    height: auto;
+    overflow:auto;
+    margin: 11rem 0;
+    font-size:1.5rem;
+    z-index: 1001;
+    padding: 1rem;
+    text-align: center;
+    }
+}
+
+////////Skip to main content for accessibility end/////////////////
+//////////////////////////////////////////////////////////////
+    

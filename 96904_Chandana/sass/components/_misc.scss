@@ -1,0 +1,89 @@
+.library {
+    grid-row: library-start / library-end;
+    grid-column: 1 / span 12;
+    overflow: hidden;
+    left: 0;
+    opacity: .5;
+    overflow: hidden;
+    top: 0;
+    transform-style: preserve-3d;
+    width: 100%;
+    z-index: 1;
+
+    &__div {
+        position: absolute;
+        background-color: var(--color-tertiary);
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .8;
+    }
+
+    &-icon, &-text {
+        position: relative;
+        color: black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        z-index: 700;
+        font-weight: bold;
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    &-text {
+        margin-top: 2rem;
+        background-color: white;
+        padding: 1rem 2rem;
+        width: 25%;
+        text-transform: uppercase;
+    }
+}
+
+/*-----*/
+.layout-inline > * {
+    display: inline-block;
+}
+.quantity, .quantity-plus, .quantity-minus {
+    display: block;
+    float: left;
+}
+
+.quantity {
+    font-size: 1.6rem;
+    line-height: 4rem;
+    width: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    height: 2.5rem;
+    vertical-align: middle;
+
+    @include respond(tab-land) {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &-plus, &-minus {
+        background: #fcfcfc;
+        border: none;
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0 2rem;
+        line-height: 4rem;    
+
+        @include respond(tab-land) {
+            font-size: 2rem;
+        }
+
+        &:hover {
+            background: #53b5aa;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+

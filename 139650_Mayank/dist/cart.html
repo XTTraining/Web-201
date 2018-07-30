@@ -1,0 +1,262 @@
+<!DocTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Best foo delivery website in town, just order your yummy food in few clicks." />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+    <link href="css/carousel.css" rel="stylesheet" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <title>Checkout | Tasty food service</title>
+<link href="./css/style.css" rel="stylesheet"></head>
+
+<body class="container">
+    <a class="skip-main" href="#content">Skip to main content</a>
+    <header class="header">
+        <a href="index.html" class="header__link">
+            <img src="img/logo.png" alt="Yummiz Logo" class="header__logo">
+        </a>
+       <span>&nbsp;</span>
+        <nav class="header-nav">
+            <ul class="header-menu">
+                <li class="header-menu__item">
+                    <a href="index.html" class="header-menu__link">Home</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">Services</a>
+                    <ul class="header-submenu">
+                        <li class="header-submenu__item">
+                            <a href="#" class="header-submenu__link">Food delivery</a>
+                        </li>
+                        <li class="header-submenu__item">
+                            <a href="#" class="header-submenu__link">Pick up store</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">About</a>
+                    <ul class="header-submenu">
+                        <li class="header-submenu__item">
+                            <a href="#" class="header-submenu__link">Who we are</a>
+                        </li>
+                        <li class="header-submenu__item">
+                            <a href="#" class="header-submenu__link">History</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">Contact</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="cart.html" class="header-menu__link">
+                        <svg class="header-menu__icon">
+                            <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                        </svg>
+                        <span class="header-menu__notification hide">7</span>
+                        Cart</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <header class="mobile-header">
+        <label class="mobile-header__button" tabindex="0">
+            <span class="mobile-header__icon">&nbsp;</span>
+        </label>
+        
+        <nav id="mobile-nav" class="sidebar">
+            <div class="mobile-nav__logocontainer">
+                <img src="img/logo.png" alt="Yummiz Logo" class="header__logo">
+                <span class="mobile-nav__logocontainer--heading">Yummies - The taste hub</span>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-home"></use>
+                    </svg>
+                    <a href="index.html" class="sidebar-menu__link">Home</a>
+                </li>
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-lifebuoy"></use>
+                    </svg>
+                    <div class="sidebar-menu__link sidebar-menu__link--accordion-up">Services
+
+                    <ul class="sidebar-submenu">
+                        <li class="sidebar-submenu__item">
+                            <a href="#" class="sidebar-submenu__link">- Food delivery</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="#" class="sidebar-submenu__link">- Pick up store</a>
+                        </li>
+                    </ul>
+                </div>
+                </li>
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-info-with-circle"></use>
+                    </svg>
+                    <div class="sidebar-menu__link sidebar-menu__link--accordion-up">About us
+                    <ul class="sidebar-submenu">
+                        <li class="sidebar-submenu__item">
+                            <a href="#" class="sidebar-submenu__link">- Who we are</a>
+                        </li>
+                        <li class="sidebar-submenu__item">
+                            <a href="#" class="sidebar-submenu__link">- History</a>
+                        </li>
+                    </ul>
+                </div>
+                </li>
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-old-mobile"></use>
+                    </svg>
+                    <a href="#" class="sidebar-menu__link">Contact us</a>
+                </li>
+                <li class="sidebar-menu__item">
+                    <svg class="sidebar-menu__icon">
+                        <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                    </svg>
+                    <a href="cart.html" class="sidebar-menu__link">Cart</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart-details" id="content">
+        <div class="cart-summary cart--info">
+            <h2 class="heading-secondary">Review Order</h2>
+            <div id="cart-items-result">
+            </div>
+            <h2 class="heading-secondary">payment details</h2>
+
+            <div id="payment-details-tax">
+            </div>
+            <div class="cart-summary__CTA">
+                <a href="index.html" class="btn cart-summary__CTA--back" role="button">Back</a>
+                <a href="order.html" class="btn cart-summary__CTA--next" role="button">Next</a>
+            </div>
+        </div>
+
+        <div class="empty-cart">
+            <img class="empty-cart__image" src="img/empty-cart.PNG" alt="empty-cart"/>
+            <div class="empty-cart__msg">Your cart is empty</div>
+            <a href="index.html" class="btn" role="button">Add Food to Cart</a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer__items">
+                <h3 class="footer__items--heading heading-tertiary">About Yummies</h3>
+                <ul class="footer-list">
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">About Us</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Culture</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Blog</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Carrers</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__items">
+                <h3 class="footer__items--heading heading-tertiary">For Foodies</h3>
+                <ul class="footer-list">
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Code of conduct</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Community</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Verified users</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Blogger Help</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Developers</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="footer__items">
+                <h3 class="footer__items--heading heading-tertiary">For Restaurants</h3>
+                <ul class="footer-list">
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Add a restaurants</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Claim your Listing</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Business App</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Business Blog</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Product for Business</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="overlay"></div>
+
+            <div class="footer__items">
+                <h3 class="footer__items--heading heading-tertiary">For Business</h3>
+                <ul class="footer-list">
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">
+                            Franchise</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Business</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__items">
+                <h3 class="footer__items--heading heading-tertiary">Social Connect</h3>
+                <ul class="footer-list">
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">
+                            Facebook</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Linkedin</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Twitter</a>
+                    </li>
+                    <li class="footer-list__item">
+                        <a href="#" class="footer-list__link">Carrers</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__copyright">
+                By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All
+                trademarks are properties of their respective owners. © 2008-2018 - Yummies™ Media Pvt Ltd. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+
+<script type="text/javascript" src="js/bundle.js"></script></body>
+
+</html>

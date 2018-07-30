@@ -1,0 +1,181 @@
+//CAROUSEL
+.carousel {
+    height: 450px;
+    position: relative;
+    background: linear-gradient(to bottom, rgba($color-secondary, .4), rgba($color-secondary, .7)), url(/img/bg.jpg);
+    overflow: hidden;
+    @include responsive(phone) {
+        height: 280px;
+    }
+    @include responsive(tab-port) {
+        height: 380px;
+    }
+    &__list {
+        height: 450px;
+        padding: .4rem;
+        overflow: hidden;
+        &-item {
+            position: absolute;
+            display: block;
+            left: $left-right-margin;
+            right: $left-right-margin;
+            @include responsive(phone) {
+                left: $left-right-margin-phone;
+                right: $left-right-margin-phone;
+            }
+            @include responsive(tab-port) {
+                left: $left-right-margin-tab;
+                right: $left-right-margin-tab;
+            }
+            bottom: 0;
+            top: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 2s;
+        }
+        &-item::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color-teritiary, .7);
+            transition: all 2s;
+        }
+        &-activator {
+            visibility: hidden;
+        }
+        //CARSOUEL HAS BEEN IMPLEMTED FOR FOUR SLIDES, USED CHECK BOX HACK TO NAVIGATE FROM ONE SLIDE TO ANOTHER 
+        @for $i from 1 to 5 {
+            &-activator:nth-of-type(#{$i}):checked~.carousel__list-item:nth-of-type(#{$i}) {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity .8s cubic-bezier(.37, .47, .75, .69);
+            }
+            &-activator:nth-of-type(#{$i}):checked~.carousel__list-item:nth-of-type(#{$i})::before {
+                transform: translateX(1000px);
+                opacity: 0;
+            }
+            &-activator:nth-of-type(#{$i}):checked~.carousel__list-page .carousel__list-page-indicator:nth-of-type(#{$i}) {
+                background-color: $color-primary;
+                opacity: 1;
+            }
+        }
+        &-page {
+            position: absolute;
+            top: 50%;
+            left: 90%;
+            transform: translate(-90%, -50%);
+            @include responsive(phone) {
+                bottom: 0;
+                top: initial;
+                left: 64%;
+            }
+            @include responsive(tab-port) {
+                bottom: 0;
+                top: initial;
+                left: 55%;
+            }
+            &-indicator {
+                display: block;
+                cursor: pointer;
+                margin-bottom: 7px;
+                text-align: center;
+                padding: 0 8px;
+                color: transparent;
+                border-radius: 50%;
+                background-color: $color-secondary;
+                transition: all 2s;
+                opacity: .4;
+                @include responsive(phone) {
+                    display: inline-block;
+                }
+                @include responsive(tab-port) {
+                    display: inline-block;
+                    opacity: .7;
+                }
+            }
+            &-indicator:hover {
+                background-color: $color-primary;
+                transform: background-color .2s linear;
+                opacity: .6;
+            }
+        }
+    }
+    &__slide {
+        padding: 0 0.2rem;
+        color: $color-white;
+        position: relative;
+        &-image {
+            &-img {
+                height: 285px;
+                padding: .6rem .4rem;
+                @include responsive(phone) {
+                    height: 245px;
+                    padding: .1rem .05rem;
+                    opacity: .25;
+                }
+                @include responsive(tab-port) {
+                    height: 245px;                  
+                    opacity: .4;
+                }
+            }
+        }
+        &-content {
+            transform: translateY(30%);
+            height: 100%;
+            @include responsive(phone) {
+                transform: translate(0, 0);
+                position: absolute;
+                width: 100% !important;
+                top: 25px;
+            }
+            @include responsive(tab-prot) {
+                transform: translateY(10%);
+            }
+            &-title {
+                display: inline-block;
+                padding-right: .2rem;
+                background: linear-gradient(to right, rgba($color-primary, -2.6), rgba($color-primary, .4));
+                background-size: cover;
+                background-position: top;
+                clip-path: polygon(0% 0%, 100% 0, 98% 52%, 100% 100%, 0% 100%);
+                transition: all 2s;
+            }
+            &-title::after {
+                content: '';
+                background: linear-gradient(to right, rgba($color-secondary, .9), rgba($color-secondary, .4));
+                clip-path: polygon(0% 0%, 100% 0, 90% 52%, 100% 100%, 0% 100%);
+                background-size: cover;
+                background-position: top;
+                width: 100px;
+                height: 8px;
+                display: inline-block;
+                transition: all 2s;
+            }
+            &-title:hover {
+                animation: titleAnimate 2s linear;
+            }
+            &-title:hover::after {
+                animation: titleLineAnimate 2s linear;
+            }
+            &-desc {
+                display: inline-block;
+                color: $color-black;
+                text-decoration: underline;
+                text-decoration-style: dotted;
+                text-decoration-color: $color-secondary;
+                padding-right: 1.4rem;
+                @include responsive(phone) {
+                    padding-right: .01rem;
+                }
+                @include responsive(tab-land) {
+                    padding-right: .4rem;  
+                }
+            }
+            &-desc:hover {
+                text-decoration-style: initial;
+            }
+        }
+    }
+}

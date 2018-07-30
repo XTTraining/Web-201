@@ -1,0 +1,40 @@
+ <div class="cart__payment-detail">
+    <div class="cart__payment-name">
+        <span>Total Bill Amount</span>
+    </div>
+    <div class="cart__payment-cost">
+        <span class="product__item-price cart__product-price">{{totalAmount}}</span>
+    </div>
+</div>
+ 
+ 
+ 
+ {{#each this.items}}
+<div class="cart__payment-detail">
+    <div class="cart__payment-name">
+        <span>GST on {{categoryName}} products</span>
+        <span>({{taxPercentage}}%)</span>
+    </div>
+    <div class="cart__payment-cost">
+        <span class="product__item-price cart__product-price">{{taxAmount}}</span>
+    </div>
+</div>
+{{/each}}
+
+<div class="cart__payment-detail">
+    <div class="cart__payment-name">
+        <span>Delivery Charges</span>
+    </div>
+    <div class="cart__payment-cost">
+        <span class="product__item-price cart__product-price 
+        {{#if shippingClass}}{{shippingClass}} {{/if}}">{{shippingAmount}}</span>
+    </div>
+</div>
+<div class="cart__payment-detail cart__payment-detail--final">
+    <div class="cart__payment-name">
+        <span>Total Bill Amount With Tax</span>
+    </div>
+    <div class="cart__payment-cost">
+        <span class="product__item-price cart__product-price">{{totalAmountWithTax}}</span>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+//CLEAR DEFAULT MARGIN FOR ALL ELEMENTS AND BEFORE AFTER SUDO 
+*,
+*:before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+//ASSIGNED THE FONT AT ROOT LEVEL, TO INHERIT FOR ALL NESTED ELEMENTS.
+html {
+    font-size: 6.25rem;
+    @include responsive(phone) {
+        font-size: 5rem;
+    }
+}

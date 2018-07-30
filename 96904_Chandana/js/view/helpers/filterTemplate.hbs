@@ -1,0 +1,80 @@
+<div class="features__row filter">
+         Filter by   
+    <div class="filter-box filter-button"  id="filterCategory">
+       <div>Category</div> 
+    </div>
+    <div class="filter-box filter-button"  id="filterAuthor">
+       <div>Author</div> 
+    </div>
+    <div class="filter-box filter-button"  id="filterRating">
+       <div>Rating</div> 
+    </div>
+    <div class="filter-box  filter-buttonSubmit"  id="applyFilter">
+        <svg class="icon">
+            <use xlink:href="./img/icons/SVG-sprite.svg#filter-filled-tool-symbol"></use>
+        </svg>
+    </div>    
+    <div class="filter-box  filter-buttonSubmit"  id="refreshPage">
+        <svg class="icon">
+            <use xlink:href="./img/icons/SVG-sprite.svg#refresh-button"></use>
+        </svg>
+    </div>
+</div>
+<div class="features__row filter filter-row"  id="filterCategory__div" style="display:none;">    
+{{#each this.CategoriesList}}
+    <div class="filter-box-item">
+        <input type="checkbox" name="category" value="{{this}}" id="checkbox-{{this}}"> 
+        <label for="checkbox-{{this}}">{{this}}</label>
+    </div>
+{{/each}}
+</div>
+<div class="features__row filter filter-row"  id="filterAuthor__div" style="display:none;">
+{{#each this.AuthorList}}
+    <div class="filter-box-item">
+        <input type="checkbox" name="author" value="{{this}}" id="checkbox-{{this}}"> 
+        <label for="checkbox-{{this}}">{{this}}</label>
+    </div>
+{{/each}}
+</div>
+<div class="features__row filter filter-row"  id="filterRating__div" style="display:none;">
+    <div class="filter-box-item">
+        <input type="radio" name="rating" value="5" id="rad-rating-5"> 
+        <label for="rad-rating-5">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </label>
+    </div>
+    <div class="filter-box-item">
+        <input type="radio" name="rating" value="4" id="rad-rating-4"> 
+        <label for="rad-rating-5">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </label>
+    </div>
+    <div class="filter-box-item">
+        <input type="radio" name="rating" value="3" id="rad-rating-3"> 
+        <label for="rad-rating-3">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </label>
+    </div>
+    <div class="filter-box-item">
+        <input type="radio" name="rating" value="2" id="rad-rating-2"> 
+        <label for="checkbox-rating-2">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </label>
+    </div>
+    <div class="filter-box-item">
+        <input type="radio" name="rating" value="1" id="rad-rating-1"> 
+        <label for="rad-rating-1">
+            <span class="fa fa-star checked"></span>
+        </label>
+    </div>
+</div>

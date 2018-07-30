@@ -1,0 +1,94 @@
+.food {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 20px 40px;
+    &__search {
+        grid-column: 1/-1;
+        height: 40px;
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: 2rem 2fr 1fr;
+        padding-bottom: 1rem;
+        background-color: $color-primary-dark; //        height: 250px;
+        transition: height .3s;
+        overflow: hidden;
+        &:hover {
+            box-shadow: $shadow-light; //transform: translateY(-1px);
+            transform: scale(1.01);
+            transform: translateY(-4px);
+            transition: all .2s;
+            border-radius: 0 17px;
+        }
+        &--img {
+            width: 100%;
+            grid-column: 1/-1;
+        }
+        &--head {
+            grid-column: 2/-1;
+            font-size: 2rem;
+            margin: 0 8px;
+        }
+        &--icon {
+            grid-column: 1/2;
+            margin-left: 8px;
+        }
+        &--catagory {
+            grid-column: 2/-1;
+            font-size: 1.2rem;
+            margin: 0 8px;
+            letter-spacing: .25rem;
+            text-transform: uppercase;
+        }
+        &--price {
+            grid-column: 2/3;
+            font-size: 2rem;
+            margin: 0 8px;
+            letter-spacing: 2px;
+            &::before {
+                content: "₹";
+                margin-right: 5px;
+            }
+        }
+        &--add {
+            grid-column: 3/-1;
+            font-size: 2rem;
+            text-align: center;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: fit-content(3rem) fit-content(3rem) 1fr;
+            &-1 {
+                background-color: $color-secondary-light;
+                width: 9rem;
+                grid-column: 1/-1;
+            }
+            &-2 {
+                width: 3rem;
+                grid-column: 1/2;
+                background-color: $color-secondary-light;
+            }
+            &-3 {
+                width: 3rem;
+                grid-column: 2/3;
+                background-color: transparent;
+                color: $color-secondary-light; //                border: 0.5px solid $color-secondary-light;
+                cursor: no-drop;
+            }
+            &-4 {
+                width: 3rem;
+                grid-column: 3/-1;
+                background-color: $color-secondary-light;
+            }
+        }
+        &[data-id="0"] {
+            &:hover {
+                box-shadow: none;
+                transform: scale(1.0);
+                transform: translateY(0px);
+                border-radius: 0;
+            }
+        }
+    }
+
+
+}

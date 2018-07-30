@@ -1,0 +1,139 @@
+////////////Carousel/////////////////////////////////
+//////////////////////////////////////////////////////
+
+.item {
+    height: 50vh;
+    line-height: 0;
+    margin: 0;
+    position: relative;
+} 
+
+.carousel-caption{
+    width:45rem;
+    height: 15rem;
+    background: rgba($color-grey-light-4, .5);
+    line-height: 1.33;
+    z-index: 10;
+    position: absolute;
+    left: 2rem;
+    padding-left: 1rem;
+    border: 2px dashed $color-white;
+    border-radius: 2rem;
+    
+    @include respond(tab-land)  {
+        width:45rem;
+        bottom:10rem;
+
+        #carousel .carousel-indicators{
+            top:27rem;
+            bottom: 0;
+        }
+     }
+
+     @include respond(tab-port)  {
+        width:45rem;
+        bottom:20rem;
+     }
+
+     @include respond(phone)  {
+        width:28rem;
+        top:5rem;
+        height: 13rem;
+        right:0;
+
+        #carousel .carousel-indicators{
+            top:22rem;
+            bottom: 0;
+        }
+     }
+
+    &__link{
+            &:link,
+            &:visited{
+                text-decoration: none;
+                color:$color-white;
+            }
+
+            &:hover{
+                border-bottom: 2px solid currentColor;
+            }
+        }
+        
+    &__heading{
+        padding: 1rem 0;
+        font-size:3rem;
+        font-weight: 500;
+
+        @include respond(tab-land)  {
+            font-size:2.5rem;
+         }
+
+        @include respond(phone)  {
+            font-size:2rem;
+         }
+
+        text-transform: uppercase;
+            &--type1{
+                color:$color-white;
+            }
+    
+            &--type2{
+                color:$color-black;
+            }
+    
+            &--type3{
+                color:$color-orange;
+            }
+        }
+
+        &--text{
+            font-size:1.5rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            word-spacing: .3rem;
+        }
+}
+
+///////////Media queries of the carousel component//////////
+///////////////////////////////////////////////////////////
+
+@include respond(tab-land)  {
+    #carousel{
+      height: 65rem;
+
+      & .carousel-inner{
+        height: 65rem;
+      }
+    }
+ }
+
+ @include respond(tab-port)  {
+    #carousel{
+      height: 49rem;
+
+      & .carousel-inner{
+        height: 49rem;
+      }
+    }
+ }
+
+@include respond(phone)  {
+    #carousel{
+      height: 24rem;
+
+      & .carousel-inner{
+        height: 24rem;
+      }
+    }
+ }
+
+
+
+
+
+
+
+ 
+
+
+

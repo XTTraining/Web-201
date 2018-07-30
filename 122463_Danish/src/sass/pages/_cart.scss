@@ -1,0 +1,114 @@
+.cart-products {
+    margin: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 70%;
+    border: 2px solid var(--color-primary-dark);
+    font-size: 1.3rem; 
+
+    @media only screen and (max-width: $bp-smallest) {
+        margin: 1rem 1rem;
+    }
+}
+
+.cart-product {
+    background-color: var(--color-grey-light-1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    flex: 0 0 70%;
+    border-bottom: solid 1px var(--color-grey-light-3);
+    padding: .5rem .5rem;
+    &__img {
+        width: 100%;
+        z-index: 1;
+    }
+    &__image {
+        width: 20%;
+        @media only screen and (max-width: $bp-smallest) {
+            width: 12%;
+        }
+    }
+    &__name {        
+        width: 20%;
+    }
+    &__description {
+        width: 20%; 
+    }
+    &__price {
+        width: 10%;
+    }
+    &__qty {
+        width: 10%;
+        @media only screen and (max-width: $bp-smallest) {
+            width:20%;
+        }
+    }
+    &__vat {
+        width: 8rem;
+        @media only screen and (max-width: $bp-smallest) {
+            width: 5rem;
+        }
+    }
+    &__total {
+        width: 8rem;
+    }
+    &__row {       
+        width: 10rem;
+    }
+    &__btn {       
+        width: 10rem;
+    }
+    &__button-update {       
+         width: 10rem;
+     }
+
+    
+    @media only screen and (max-width: $bp-smallest) {
+        width: 100%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+        width: 100%;
+    }
+}
+
+.cart-empty {
+    text-align: center;
+    padding: 2rem 10rem;
+    font-size: 1.3rem;
+    flex: 1;
+    background: var(--color-primary-dark);
+    color: var(--color-grey-light-1);
+}
+
+.head {
+    background: var(--color-primary-dark);
+    color: var(--color-grey-light-1);
+    font-weight: bold;
+    padding: .2rem .5rem;
+    font-size: 1.3rem;
+    text-align: left;
+    border-bottom-width: 0;
+}
+
+.my-cart {
+    margin: 2rem 2rem;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+
+
+.cart-nav {
+    margin: .5rem .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+
+    &__item {
+        padding: 1rem 1rem;
+    }
+}

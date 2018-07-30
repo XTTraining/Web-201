@@ -1,0 +1,116 @@
+.cartPopUp{
+    @include orderList();
+    width:50rem;
+    top:5rem;
+    display:none;
+    overflow: scroll;
+    @media only screen and (min-width:$bp-small){
+            right:-21rem;
+            height:44%;
+        }
+    @media only screen and (min-width:$bp-large){
+         right:3rem;
+         height:40%;    
+        } 
+    @media only screen and (max-width:$bp-small){
+            right:-61rem;
+            top: 7rem;
+            height:55%;
+            width:63rem;
+        }       
+   }
+
+.cart{
+    &__heading{ 
+        @include cartHeading;
+    }
+
+    &__close{
+        margin-bottom: 2rem;
+        color: black;
+    }
+    &__icon{
+        @include icon();
+    }
+    &__cancel{
+        @include content();
+    }
+
+}
+
+.cartItem{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    @media only screen and (max-width:$bp-small){
+        display:unset;
+     } 
+    &__image{
+        width:10rem;
+    }
+
+    &__content{
+        @include content();
+        max-width:16rem;
+        word-wrap:break-word;
+        @media only screen and (max-width:$bp-small){
+           font-size:3rem;
+        } 
+    }
+
+    &__quantity{
+        @include quantity();
+        background-color:rgb(180, 163, 130);
+        margin-top:2rem;
+      
+        & button{
+        @include buttons();
+        }
+
+        & input{
+            @include input(); 
+        }
+    
+    }
+
+    &__total{
+        display: flex;
+        justify-content: space-around;
+        @include content();
+        font-size: xx-large;
+        background-color: #cde5b2;
+        height: 5rem;
+        padding-top: 1rem;
+        margin-bottom:3.3rem;
+   
+    }
+
+    &__checkout{
+        @include buttonBig();
+        background-color:$color-primary;
+        width: 35rem;
+        margin-left: 48rem;
+        padding-left: 3rem;
+        margin-top: 3rem;
+        font-size:2rem;
+        margin-bottom:2.4rem;
+        cursor: pointer;
+        @media only screen and (min-width:$bp-large){
+            margin-left: 42rem;
+         }
+         
+         @media only screen and (min-width:$bp-medium){
+            margin-left: 0;
+         } 
+         @media only screen and (max-width:$bp-medium){
+            margin-left: 28rem;
+         }
+        & a{
+            text-decoration: none;
+            color:$color-white;
+        }
+    }
+    
+}
+
+

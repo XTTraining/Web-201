@@ -1,0 +1,33 @@
+.center__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    @include respond(tab-land) {
+        width: 80vw;
+    }
+}
+.center__heading{
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: $font-primary;
+    letter-spacing: 1px;
+    word-spacing: .4rem;
+
+    &--1{
+        font-size: 4rem;
+    }
+    
+    &--2{
+        font-size: 2.5rem;
+    }
+}
+.heading-2 {
+    font-family: $font-primary;
+    font-size: 2.8rem;
+    color: #fff;
+    text-shadow: 0 1rem 2rem rgba(0,0,0, .10);
+}

@@ -1,0 +1,37 @@
+ {{#each this}}
+    <div class="cart__product">
+        <div class="cart__product-wrapper">
+            <div class="cart__product-name">
+                <svg class="cart__product-icon {{#if productDetails.foodTypeName}}cart__product-icon--green {{/if}} ">
+                    <use xlink:href="img/sprite.svg#icon-radio-checked"></use>
+                </svg>
+                <span class="product__name">{{productDetails.ProductName}}
+                    <span class="product__count">({{this.count}} Pcs)</span>
+                </span>
+                
+            </div>
+            {{#if productDetails.productDescription}}
+                <div class="cart__product-description">
+                    {{productDetails.productDescription}}
+                </div>
+            {{/if}}
+            <div class="cart__product-category">
+                {{productDetails.categoryName}}
+
+            </div>
+            <input type="hidden" name="productUnitPrice" value="{{productDetails.productPrice}}" class="cart__product-price--hidden">
+        </div>
+        <div class="product__item-price cart__product-price">
+            {{this.totalPrice}}
+        </div>
+        <div class="cart__button" id="{{this.productId}}">
+            <div class="btn-increment cart__button--wrapper">
+                <div class="btn-increment__minus cart__button--minus" tabindex="0" role="button"></div>
+                <div class="btn-increment__quantity cart__button--quantity">
+                    {{this.count}}
+                </div>
+                <div class="btn-increment__plus cart__button--plus" tabindex="0" role="button">+</div>
+            </div>
+        </div>
+    </div>
+{{/each}}

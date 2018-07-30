@@ -1,0 +1,28 @@
+.accordion {
+    grid-column: 1/-1;
+    background-color: inherit;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $color-primary-dark;
+    text-align: start;
+    outline: none;
+    font-size: 2rem;
+    transition: 0.3s;
+    text-transform: uppercase;
+    &::after {
+       content: "\2212";
+        color: $color-primary-dark;
+        font-weight: bold;
+        float: right;
+    }
+    &.collapsed{
+
+        &::after{
+
+            content: '\002B';
+        }
+    }
+}

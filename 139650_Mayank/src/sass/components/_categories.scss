@@ -1,0 +1,49 @@
+.categories{
+    &-list{
+        list-style: none;
+        box-shadow: 0px 0rem 3rem 0px rgba(67, 73, 72, 0.5);
+        margin-top: 2.3rem;
+        border-radius: 1rem;
+
+
+        &__item{
+            display: flex;
+            align-items: center;
+            padding: 3rem 2.5rem;
+
+            @include respond(tab-land)  {
+                padding: 3rem 1.5rem;
+             }
+
+            &:not(:last-child)
+            {
+                border-bottom: 1px solid $color-grey-light-5;
+            }
+
+            &--name{
+                font-size: 1.5rem;
+                font-weight:500;
+                cursor: pointer;
+                text-transform: capitalize;
+                word-wrap: break-word;
+                color: $color-grey-dark-1;
+
+                &:hover{
+                    color:$color-orange-light;
+                }
+            }
+
+            &-input{
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+@include respond(tab-port)  {
+    .categories{
+    display: none;
+    }
+ }

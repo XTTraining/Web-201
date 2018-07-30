@@ -1,0 +1,346 @@
+{  
+  "0": {
+			"id":"2015",
+			"name":"Bread Pakoda",
+			"price": {
+						"f":"99"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"bread-pakoda.jpg",
+			"splcategoryid":"102",
+			"categoryid":"202",
+			"tags":"street,pakoda,bread pakoda"
+          
+        },
+  "1": {
+			"id":"2016",
+			"name":"Cheesy Nachos",
+			"price":{
+						"h":"99",
+						"f":"165"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"cheesy-nachos.jpg",
+			"splcategoryid":"103,101",
+			"categoryid":"205",
+			"tags":"Cheesy Nachos,popular"
+          
+        },
+  "2": {
+			"id":"2017",
+			"name":"Chicken Biryani",
+			"price": {
+						"h":"250",
+						"f":"510"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"Chicken-Biryani.jpg",
+			"splcategoryid":"101,103",
+			"categoryid":"204",
+			"tags":"biryani,chicken"
+          
+        },
+  "3": {
+			"id":"2018",
+			"name":"Chicken Bruschetta",
+			"price": {
+						"h":"200",
+						"f":"400"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"Chicken-Bruschetta.jpg",
+			"splcategoryid":"104",
+			"categoryid":"205",
+			"tags":"Bruschetta,chicken"
+          
+        },
+  "4": {
+			"id":"2019",
+			"name":"Chicken Burger",
+			"price": {
+						"f":"310"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"chicken-burger.jpg",
+			"splcategoryid":"101,103",
+			"categoryid":"203",
+			"tags":"Chicken Burger,Burger"
+          
+        },
+  "5": {
+			"id":"2020",
+			"name":"Tandoori Chicken Momos",
+			"price": {
+						"h":"90",
+						"f":"160"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"chicken-momos.jpg",
+			"splcategoryid":"101,102,103",
+			"categoryid":"201",
+			"tags":"Momos,chicken,Tandoori"
+          
+        },
+  "6": {
+			"id":"2021",
+			"name":"Chicken Nuggets",
+			"price": {
+						"h":"100",
+						"f":"180"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"chicken-nuggets.jpg",
+			"splcategoryid":"101,104",
+			"categoryid":"205",
+			"tags":"Nuggets,chicken"
+          
+        },
+  "7": {
+			"id":"2022",
+			"name":"Chilly Potato",
+			"price": {
+						"f":"180"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"chilly-potato.jpg",
+			"splcategoryid":"",
+			"categoryid":"205",
+			"tags":"fresh,Chilly,potato"
+          
+        },
+  "8": {
+			"id":"2023",
+			"name":"Chocolate Belgium Cake",
+			"price": {
+						"f":"420"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"choco-belgium-cake.jpg",
+			"splcategoryid":"104",
+			"categoryid":"206",
+			"tags":"Chocolate,Cake,Belgium"
+          
+        },
+  "9": {
+			"id":"2024",
+			"name":"Chole Bhature",
+			"price": {
+						"f":"200"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"chole-bhature.jpg",
+			"splcategoryid":"101",
+			"categoryid":"202",
+			"tags":"Chole,Bhature,chaat"
+          
+        },
+  "10": {
+			"id":"2025",
+			"name":"Egg Chomu",
+			"price": {
+						"f":"165"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"egg-chomu.jpg",
+			"splcategoryid":"104",
+			"categoryid":"201",
+			"tags":"Egg Chomu,egg,new"
+          
+        },
+  "11": {
+			"id":"2026",
+			"name":"Ferrero Rocher Brownie",
+			"price": {
+						"f":"90"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"Ferrero-Rocher-Brownie.jpg",
+			"splcategoryid":"",
+			"categoryid":"206",
+			"tags":"Ferrero Rocher Brownie,new"
+          
+        },
+  "12": {
+			"id":"2027",
+			"name":"French Fries",
+			"price": {
+						"h":"75",
+						"f":"120"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"french-fries.jpg",
+			"splcategoryid":"",
+			"categoryid":"205",
+			"tags":"French Fries,potato"
+          
+        },
+  "13": {
+			"id":"2028",
+			"name":"Ghee Roast Mutton",
+			"price": {
+						"f":"500"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"ghee-roast-mutton.jpg",
+			"splcategoryid":"",
+			"categoryid":"204",
+			"tags":"Ghee Roast Mutton,Mutton"
+          
+        },
+  "14": {
+			"id":"2029",
+			"name":"Japanese Chiffon Cake",
+			"price": {
+						"f":"360"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"Japanese-Chiffon-Cake.jpg",
+			"splcategoryid":"104",
+			"categoryid":"206",
+			"tags":"Japanese Chiffon Cake,cake"
+          
+        },
+  "15": {
+			"id":"2030",
+			"name":"Lamb Burger",
+			"price": {
+						"f":"350"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"lamb-burger.jpg",
+			"splcategoryid":"104,103",
+			"categoryid":"203",
+			"tags":"Lamb Burger,burger"
+          
+        },
+  "16": {
+			"id":"2031",
+			"name":"Minestrone Soup",
+			"price": {
+						"f":"99"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"minestrone-soup.jpg",
+			"splcategoryid":"",
+			"categoryid":"201",
+			"tags":"Minestrone Soup,new"
+          
+        },
+  "17": {
+			"id":"2032",
+			"name":"Non Veg Thali",
+			"price": {
+						"f":"250"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"non-veg-thali.jpg",
+			"splcategoryid":"",
+			"categoryid":"204",
+			"tags":"Non Veg Thali,chicken"
+          
+        },
+  "18": {
+			"id":"2033",
+			"name":"Paneer Tikka",
+			"price": {
+						"f":"99"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"paneer-tikka.jpg",
+			"splcategoryid":"",
+			"categoryid":"201",
+			"tags":"Paneer,start"
+          
+        },
+  "19": {
+			"id":"2034",
+			"name":"Samosa",
+			"price": {
+						"f":"25"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"samosa.jpg",
+			"splcategoryid":"",
+			"categoryid":"202",
+			"tags":"Samosa,chaat"
+          
+        },
+  "20": {
+			"id":"2035",
+			"name":"Veg Biryani",
+			"price": {
+						"f":"200"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"veg-biryani.jpg",
+			"splcategoryid":"",
+			"categoryid":"204",
+			"tags":"veg,Veg Biryani"
+          
+        },
+  "21": {
+			"id":"2036",
+			"name":"Veg Burger",
+			"price": {
+						"f":"150"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"veg-burger.jpg",
+			"splcategoryid":"",
+			"categoryid":"203",
+			"tags":"Veg Burger,burger,veg"
+          
+        },
+  "22": {
+			"id":"2037",
+			"name":"Veg Deluxe Thali",
+			"price": {
+						"f":"160"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"veg-deluxe-thali.jpg",
+			"splcategoryid":"",
+			"categoryid":"204",
+			"tags":"Veg Deluxe Thali,thali,veg"
+          
+        },
+  "23": {
+			"id":"2038",
+			"name":"Veg Wrap",
+			"price": {
+						"f":"99"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"veg-wrap.jpg",
+			"splcategoryid":"105",
+			"categoryid":"205",
+			"tags":"Veg Wrap,new"
+          
+        },
+  "24": {
+			"id":"2039",
+			"name":"White Pasta",
+			"price": {
+						"f":"180"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"white-pasta.jpg",
+			"splcategoryid":"105",
+			"categoryid":"205",
+			"tags":"White Pasta,pasta"
+          
+        },
+  "25": {
+			"id":"2040",
+			"name":"Wonton Noodle Soup",
+			"price": {
+						"f":"109"
+					},
+			"description":"Chicken Biryani served with basmati rice and our secret 21 herbs",
+			"imgsrc":"wonton-noodle-soup.jpg",
+			"splcategoryid":"105,102",
+			"categoryid":"201",
+			"tags":"Wonton Noodle Soup,soup"
+          
+        }
+}

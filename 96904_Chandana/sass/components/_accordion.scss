@@ -1,0 +1,45 @@
+.accordion {
+    background-color: var(--color-primary-light);
+    transition: 0.4s;
+
+    &:hover, &:active {
+        background-color: var(--color-primary-medium);
+
+    }
+
+    &::after {
+        content: '\002B';
+        color: var(--color-grey-dark);
+        font-weight: bold;
+        float: right;
+        margin-left: .5rem;
+        padding-right: 2rem;
+    }
+}
+
+.active {
+    background-color: var(--color-primary-medium);
+     
+    &::after {
+        content: '\2212';
+    }
+}
+
+.panel {
+    padding: 0 1.8rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    display:grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond(tab-port) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+    }
+}

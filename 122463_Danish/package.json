@@ -1,0 +1,38 @@
+{
+  "name": "web201-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "handlebars": "^4.0.11",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "fs": "0.0.1-security",
+    "html-webpack-plugin": "^3.2.0",
+    "jasmine": "^3.1.0",
+    "live-server": "^1.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "scripts": {
+    "webpack-dev-build": "webpack --config webpack.config.js --display-error-details",
+    "webpack-prod-build": "webpack --config webpack.config.js --display-error-details",
+    "sass": "node-sass src/sass/main.scss dist/css/style.css -w",
+    "build": "webpack -p ./src/js/app.js ./dist/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

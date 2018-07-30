@@ -1,0 +1,1 @@
+export const categoryTemplate = (cat) => `<li id="cat-${escape(cat.name)}"><a href='#${escape(cat.name)}-placeholder'><img class='category-logo' src='${cat.imgsrc}' alt='${cat.name}' width='50px'><span>${cat.name}</span></a></li>`;

@@ -1,0 +1,77 @@
+/* Style the tab */
+.tab {
+    float: left;
+    //border: 1px solid #ccc;
+    background-color:var(--color-fda-accordion-light);
+    width: 30%;
+    height: 300px;
+    @include respond(phone){
+        width: 100%;
+        display: flex;
+        height: auto !important;
+        
+    }
+    /* Style the buttons inside the tab */
+    & span {
+        display: block;
+        background-color: inherit;
+        //color: black;
+        padding: 12px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 1.6rem;
+        border-left: 2px solid transparent;
+    }
+    /* Change background color of spans on hover */
+    & span:hover {
+        background-color: var(--color-fda-accordion-dark);
+        border-left: 2px solid var(--color-logo);
+    }
+
+    /* Create an active/current "tab span" class */
+    & span.current {
+        background-color: var(--color-white);
+        border-left: 2px solid var(--color-logo);
+        //box-shadow: 5px 0 5px 0 rgba(0,0,0,.15); 
+        @include respond(phone){
+            border-left: 0;
+            border-top: 2px solid var(--color-logo);
+            
+        }
+    }
+    &--row{
+        display: flex;
+        padding: 1rem 0;
+        width: 100%;
+        flex-direction: row;
+        flex-flow: wrap;
+        //border-bottom: 1px solid var(--color-fda-accordion-dark);
+    }
+}
+
+
+
+
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 1.5rem 1rem;
+    //border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+    background-color: var(--color-white);
+    &--hide{
+        display: none;
+    }
+
+    @include respond(phone){
+        width: 100%;
+        
+    }
+}

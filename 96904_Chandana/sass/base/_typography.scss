@@ -1,0 +1,54 @@
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 
+
+
+.writer {
+    font-size: 1.5rem;
+    text-align: end;
+    text-transform: uppercase;
+}
+
+.copyright {
+    padding-bottom: 2rem;
+}
+.info {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.vert_bar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--color-tertiary);
+    font-weight: 600;
+}
+
+.heading-text {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+
+    @include respond(tab-port) {
+        display: none;
+    }
+}
+
+
+
+

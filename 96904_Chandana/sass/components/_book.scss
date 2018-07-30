@@ -1,0 +1,67 @@
+
+.book {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: hidden;
+    margin: 1rem;
+    background: var(--color-white);
+    padding: 1rem;
+    background-clip: border-box; 
+
+    @include respond(tab-land){
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    &:hover, &:active {
+        @include hoverEffect;
+    }
+
+    &__image {
+        height:100%;
+        width: 40%;
+    }  
+       
+    &__desc {
+        width: 60%;
+        line-height: 2.2rem;
+    }
+
+    &-title {
+        @include bookTitleText;
+        @include titleHover;
+    }
+    
+    &-mrp {
+        font-size: 1.5rem;
+        text-decoration: line-through;
+    }
+    
+    &-price {
+        font-size: 1.5rem;
+        color: var(--color-dark-background);
+        text-decoration: none;
+    }
+
+    &-img {
+        text-align: left;
+        height: 17rem;
+        width: 10rem;
+
+        @include respond(tab-port) {
+            height: 17rem;
+            width: 12rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &-author {
+        color: var(--color-grey-medium);
+    }
+
+    &-publisher {
+        color: var(--color-grey-dark);
+    }
+}

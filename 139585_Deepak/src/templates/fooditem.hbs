@@ -1,0 +1,19 @@
+{{#each this}}
+<div class="food__item" data-type="{{foodtype category}}" data-id="{{id}}">
+    <img src="{{image}}" alt="" class="food__item--img">
+    <h2 class="food__item--head">{{name}}</h2>
+
+    <svg class="icon food__item--icon icon__preference {{foodclass category}}">
+        <use xlink:href="img/sprite.svg#icon-radio-checked"></use>
+    </svg>
+
+    <label class="food__item--catagory">{{foodcuisine cuisine}}</label>
+    <label class="food__item--price">{{price}}</label>
+    <div class="food__item--add">
+        <div class="food__item--add-1">ADD</div>
+        <div class="hidden food__item--add-2">-</div>
+        <div class="hidden food__item--add-3">1</div>
+        <div class="hidden food__item--add-4">+</div>
+    </div>
+</div>
+{{/each}}

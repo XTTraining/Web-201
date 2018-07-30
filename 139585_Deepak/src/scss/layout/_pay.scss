@@ -1,0 +1,221 @@
+.pay1 {
+    background: linear-gradient(0deg, rgba(193, 125, 40, 0.7), rgba(193, 125, 40, 0.9)), url(../img/m.png);
+    background-size: cover;
+    padding: 2rem 4rem;
+    overflow: hidden;
+    min-width: 190px;
+    @include respond(phone) {
+        grid-column: 1/-1;
+        padding: 0.5rem 4rem;
+    }
+    &__goback {
+        color: $color-black;
+        font-size: 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        &:before {
+            content: "";
+            display: block;
+            background: url("../img/back.png") no-repeat;
+            width: 22px;
+            height: 22px;
+            float: left;
+            background-size: 100%;
+            margin: 0 6px 0 0;
+        }
+    }
+    &__header {
+        font-size: 3rem;
+        margin: 3rem 0;
+        @include respond(phone) {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+        }
+    }
+    &__body {
+        font-size: 1.6rem;
+        &--part {
+            display: flex;
+            margin: 1rem 0;
+            p {
+                width: 50%;
+            }
+        }
+        &--value {
+            &::before {
+                content: "\20B9";
+                margin-right: 5px;
+            }
+        }
+    }
+    &__footer {
+        margin: 7rem 0;
+        @include respond(phone) {
+            margin: 1rem 0;
+        }
+        &--total {
+            font-size: 1.5rem;
+        }
+        &--money {
+            font-size: 5rem;
+            @include respond(phone) {
+                font-size: 3rem;
+            }
+            &::before {
+                content: "\20B9";
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.pay2 {
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    @include respond(phone){
+        padding: 1rem 2rem;
+    }
+    &__total {
+        display: flex;
+        letter-spacing: 0.4rem;
+        &--title {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        &--money:before {
+            content: "\20B9";
+            margin-right: 5px;
+        }
+    }
+    &__paytype {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+        @include respond(phone){
+            margin: 1rem 0;
+        }
+        &--text {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        &--icon {
+            background-color: $color-gray-light-3;
+            margin: 0 1rem; // padding: 3rem 4rem;
+            //padding: 1.2vw 6%;
+            padding: 1.2vw 3vw;
+            border-radius: 5%;
+            margin: auto;
+
+            &.active {
+                background-color: rgba(193, 125, 40, 1);
+                box-shadow: $shadow-light3; //                border-bottom: 3px solid #1f253d;
+                //                border-radius: 5% 5% 0 0;
+            }
+        }
+    }
+    &__paydetails {
+        font-size: 1.5rem;
+        padding: 3rem 3rem;
+        border: 1px solid #00000017;
+        &--wallet {
+            min-width: 27rem;
+        }
+    }
+    &__cc {
+        &--img {
+            img {
+                width: 18vw;
+                min-width: 18rem;
+            }
+        }
+        &--form1 {
+            border-radius: 15px; // background-color: #1f253d;
+            padding: 1rem 0 3rem 2rem;
+            min-width: 270px;
+            max-width: 450px;
+            background: linear-gradient(0deg, rgba(31, 37, 61, 0.7), rgba(31, 37, 61, 0.9)), url(../img/world.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9;
+            box-shadow: $shadow-light3;
+            label {
+                display: block;
+                margin: 1rem 0 0 1rem;
+            }
+            select {
+                border: none;
+                height: 3rem;
+                font-size: 1.7rem;
+                background-color: #a8bfcc;
+                outline: none;
+                margin: 0 1rem;
+            }
+            input {
+
+                background-color: $color-gray-light-3;
+                border: none;
+                height: 3rem;
+                border-radius: 20px;
+                outline: none;
+                font-size: 1.7rem;
+                padding: 0 1.5rem;
+                min-width: 22rem;
+
+                &:nth-child(7) {
+                    width: 64px;
+                    min-width: auto !important;
+                }
+            }
+            &-submit {
+                margin-top: 1rem;
+            }
+        }
+    }
+    &__ibanking {
+        &--title {
+            font-size: 2.5rem;
+            padding-bottom: 1rem;
+        }
+        &--banks {
+            &-bank {
+                border: none;
+                height: 3rem;
+                font-size: 1.7rem;
+                background-color: #a8bfcc;
+                outline: none;
+                margin: 0 1rem;
+                max-width: 25rem;
+            }
+        }
+        &--popularbanks {
+            display: flex;
+            padding: 2rem 0;
+            flex-wrap: wrap;
+        }
+        &--popularbank {
+            display: flex;
+            align-items: center;
+            margin: 0 1rem 1rem 0;
+            input {
+                margin-right: 1rem;
+            }
+        }
+        &--banks {
+            padding: 1rem 0;
+        }
+    }
+    &__wallets {
+        display: flex;
+        padding: 2rem 0;
+        flex-wrap: wrap;
+    }
+    &__wallet {
+        display: flex;
+        align-items: center;
+        margin: 0 1rem 1rem 0;
+        &--title {
+            font-size: 2.5rem;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+   
+  "0": {
+			"id":"101",
+			"name":"Popular",
+			"imgsrc":"static/icons/burn.svg"
+          
+        },   
+  "1": {
+			"id":"102",
+			"name":"Pocket Friendly",
+			"imgsrc":"static/icons/breakfast.svg"
+          
+        },   
+  "2": {
+			"id":"103",
+			"name":"Speciality",
+			"imgsrc":"static/icons/dinner.svg"
+          
+        },   
+  "3": {
+			"id":"104",
+			"name":"What's New",
+			"imgsrc":"static/icons/new.svg"
+          
+        },   
+  "4": {
+			"id":"105",
+			"name":"Vegetarian",
+			"imgsrc":"static/icons/vegetables.svg"
+          
+        }
+}

@@ -1,0 +1,37 @@
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    80% {
+        opacity: .8;
+        transform: translate(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes apperFromMiddle {
+
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: .5;
+        transition: blur(40%);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

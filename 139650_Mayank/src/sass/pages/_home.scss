@@ -1,0 +1,35 @@
+.food-carousel{
+    grid-column: center-start/center-end;
+    padding:3rem 0;
+}
+
+.horizontal-scroll-menu{
+    grid-column: full-start/full-end;
+}
+
+.food-items{
+    grid-column: center-start/center-end;
+    display: grid;
+    grid-template-columns: minmax(15vw,min-content) 1fr;
+    grid-column-gap:10rem;
+
+    @include respond(tab-land)  {
+        grid-column-gap:2rem;
+     }
+}
+
+.section-checkout{
+    grid-column: center-start/center-end;
+    justify-self: end;
+    margin-bottom: 2rem;
+    @include respond(phone)  {
+       display: grid;
+       justify-self: auto;
+   }
+}
+
+@include respond(tab-port)  {
+    .food-items{
+        grid-template-columns: 1fr;
+    }
+ }

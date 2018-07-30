@@ -1,0 +1,12 @@
+.payment {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    width: 95vw;
+    margin: 4vw auto;
+    background-color: $color-primary-light;
+    box-shadow: $shadow-light;
+    @include respond(phone) {
+        grid-template-columns: auto;
+
+    }
+}

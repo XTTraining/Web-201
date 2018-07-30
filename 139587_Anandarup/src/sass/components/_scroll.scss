@@ -1,0 +1,23 @@
+.horizontal-scroll {
+    background-color: $color-black;
+    color: $color-white;
+    grid-column: full-start/ full-end;
+    font-size: 2.5rem;
+    display: none;
+    @include respond(tab-port) {
+        display: block;
+     }
+
+     &__nav {
+        white-space: nowrap;
+        overflow-x: auto;
+
+        &-item {
+            padding:0 4rem;
+            text-transform: uppercase;
+            &--active {
+                border-bottom: 1px solid $color-white;
+            }
+        }
+     }
+}

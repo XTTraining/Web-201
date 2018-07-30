@@ -1,0 +1,19 @@
+.prefooter {
+    background-image: url(../img/Book_Footer_Web.png);
+    font-size: 1.6rem;
+    grid-column: 1 / 13;
+    grid-row: prefooter-start / prefooter-end;
+
+   
+    &__div {
+        height: 10vh;
+        content: "";
+
+        &:after {
+            content: "";
+            height: 2rem;
+            background-color: var(--color-primary);
+        }
+    }
+
+}

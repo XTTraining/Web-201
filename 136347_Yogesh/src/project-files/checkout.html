@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <title>Order Food Online & Get Healthy Food Delivery Near You</title>
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header class="top-header">
+        <div class="column column1">
+            <img src="Images/logo.png" alt="Logo">
+        </div>
+        <div class="column column2">
+            <div class="menu__navigation">
+                <ul class="menur__list">
+                    <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="orders.html" class="menu__link">Cart<span id="cartItem"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Start main section -->
+    <main>
+        <section>
+            <div class="row">
+                <!-- entry-template for  Breakfast-->
+                <div class="container">
+                    <div class="row card card-desktop order-summary">
+                        <div>
+                            <div class='price-detail-head'>
+                                <h3>PRICE DETAILS</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col-1-of-2 price-detail'>
+                                Order Number
+                            </div>
+                            <div class='col-1-of-2' id="orderId">
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col-1-of-2 price-detail'>
+                                Price <span id="order-itm"></span>
+                            </div>
+                            <div class='col-1-of-2' id="totalAmount">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col-1-of-2 price-detail'>
+                                Delivery Charges
+                            </div>
+                            <div class='col-1-of-2'>
+                                FREE
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col-1-of-2 price-detail'>
+                                Amount Payable
+                            </div>
+                            <div class='col-1-of-2' id="amountPayable">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class='col-1-of-2 price-detail'>
+                                Payment Method
+                            </div>
+                            <div class='col-1-of-2' id="amountPayable">
+                                COD
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="footer__navigation">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="index.html" class="footer__link">Home</a></li>
+                <li class="footer__item"><a href="orders.html" class="footer__link">Cart</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        if (localStorage.getItem('TotalAmount') != null) {
+            $('#totalAmount').html("₹ " + localStorage.getItem('TotalAmount'));
+            $('#amountPayable').html("₹ " + localStorage.getItem('TotalAmount'));
+            var orderitm = JSON.parse(localStorage.getItem('cartItems'))
+            $('#order-itm').html("(" + orderitm.length + " items)");
+
+            $('#orderId').html(Math.random().toString(36).substring(7).toUpperCase());
+        }
+        localStorage.removeItem('TotalAmount');
+        localStorage.removeItem('cartItems');
+    </script>
+</body>
+
+</html>

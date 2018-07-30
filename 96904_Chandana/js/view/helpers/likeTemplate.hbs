@@ -1,0 +1,35 @@
+ <div class="wrapper cart-row-heading">
+    <div class="header-title wrapper-heading-title"><h1>Saved for later ...</h1></div>
+    <div class="wrapper-heading-title header-continue">        
+       &nbsp;
+    </div>
+    <div class="wrapper-text heading-text">&nbsp;</div>
+</div>
+<div class="cart-row wrapper">
+    <div class="wrapper-img heading-text">Item Image</div>
+    <div class="wrapper-desc heading-text">Description</div>
+    <div class="wrapper-price heading-text">Price</div>
+    <div class="wrapper-quantity heading-text">&nbsp;</div>
+    <div class="wrapper-text heading-text">&nbsp;</div>
+        
+</div>
+{{#each this}}
+<div class="cart-row wrapper header">
+    <div class="wrapper-img"><img src="./img/books/{{Image}}" class="item-image" alt="{{Title}}"></div>
+    <div class="wrapper-desc wrapper-desc-title">{{Title}}
+        <div class="wrapper-desc-author">By: {{Author}}</div>
+        <div class="wrapper-desc">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+        </div>
+    </div>
+    <div class="wrapper-price">Rs. {{Price}}</div>
+    <div class="wrapper-quantity">
+        &nbsp;
+    </div>
+    <div class="wrapper-text heading-text">&nbsp;</div>
+</div>
+{{/each}}

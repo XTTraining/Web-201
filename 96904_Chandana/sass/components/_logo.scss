@@ -1,0 +1,49 @@
+.logo {
+    background-color: var(--color-grey-light-1);
+    grid-row: header-start / header-end;
+    grid-column: 1 / 4;    
+    justify-content: center;
+    text-align: center;
+    align-self: top;
+    z-index: 1000;
+    @include respond(phone){
+        grid-column: 1 / span 9;    
+        text-align: left;
+    }
+
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    &_image {
+        padding-left: 3rem;
+        display: inline-block;
+        width: 6.5rem;
+        height: 6.5rem;  
+        color: var(--color-primary);   
+
+        @include respond(tab-port) {            
+            transform: translate(-2.5rem, -1rem);
+        }
+    }
+
+    &_text {
+        display: inline-block;
+        font-size: 2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        color: var(--color-tertiary);
+        align-self: center;
+        transform: translateY(-2rem);
+
+        @include respond(phone){
+            display: none;
+        }
+
+        &-black {
+            color: #000;
+            font-weight: 600;
+        }
+    }
+
+}

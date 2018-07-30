@@ -1,0 +1,27 @@
+//CAROUSEL TITLE ANIMATION
+@keyframes titleAnimate {
+    100% {
+        clip-path: polygon(0% 0%, 100% 0, 100% 52%, 100% 100%, 0% 100%);
+    }
+}
+
+// CAROUSEL TITLE SUBLINE ANIMATION
+@keyframes titleLineAnimate {
+    100% {
+        width: 100%;
+        transform: width 2s linear;
+        clip-path: polygon(0% 0%, 100% 0, 100% 52%, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes foodieLoader {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+

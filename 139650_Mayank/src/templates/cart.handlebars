@@ -1,0 +1,20 @@
+<ul class="cart-items">
+    {{#each this}}
+    <li id="{{this.Id}}" class="cart-items__list">
+        <div class="cart-items__details">
+            <div class="cart-items__details--name">{{cartItem.Name}}</div>
+            <div class="cart-items__details--desc">{{cartItem.Description}}</div>
+        </div>
+
+        <div class="btn-quantity">
+            <div class="btn-quantity__minus" role="button" tabindex="0"></div>
+            <div class="btn-quantity__value" role="button" tabindex="0">{{this.quantity}}</div>
+            <div class="btn-quantity__plus" role="button" tabindex="0">+</div>
+        </div>
+
+        <div class="cart-items__price">
+            {{this.totalPrice}}
+        </div>
+    </li>
+    {{/each}}
+</ul>
