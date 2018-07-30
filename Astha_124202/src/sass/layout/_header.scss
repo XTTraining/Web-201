@@ -1,0 +1,116 @@
+.header{
+    grid-column:1/-1;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top:1rem;
+    &__logo--box{
+        grid-column:1/2;
+    }
+    &__logo{
+        height: 7rem;
+        margin-left:3rem;
+        }
+    &__notificationMobile{
+        position: absolute;
+        right: 9.2rem;
+        top: 1rem;
+        font-size: 1.5rem;
+        border-radius: 74%;
+        background-color: $color-white;
+        padding: 3.5px;
+        @media only screen and (max-width: $bp-small) {
+            right: -61rem;
+            padding: 4.5px;
+            border-radius: 74%;
+            top:3rem;
+             }
+    }    
+    &__icon{
+    width:2rem;
+    height:2rem;
+  
+    &--notification{
+        position: absolute;
+        right: 9.2rem;
+        top: 1rem;
+        font-size: 1.5rem;
+        border-radius: 74%;
+        background-color: $color-white;
+        padding: 3.5px;
+        @media only screen and (max-width: $bp-largest) {
+            right: 7.2rem;
+        }
+        @media only screen and (max-width: $bp-large) {
+            right: 2.2rem
+        }
+        @media only screen and (max-width: $bp-medium) {
+            right: -21.2rem;
+        }
+             
+    }
+    }
+    &__search{
+   
+     grid-column: 5/11; 
+     background-color: #ffff;
+     padding-bottom: 1rem;
+     border-radius: 2rem;
+     width: 85%;
+     margin-top: 13rem;
+     @media only screen and (max-width: $bp-large) {
+       width:34%;
+       grid-column:unset;
+       margin-top: 4rem;
+       margin-left: 37rem;
+    }
+    &--button{
+        border:none;
+        background-color:transparent;
+        margin-top:1rem;
+        outline:none;
+        cursor: pointer;
+    }
+    &--input{
+       border:none;
+        background-color:transparent;
+        border-bottom: 1px solid $color-black;
+        margin-left:2rem;
+        @media only screen and (max-width: $bp-large) {
+            margin-left: 2rem;
+            width: 85%;
+        } 
+      &:focus{
+        outline:none;
+        }
+    }
+   
+    }
+    &__addToCart{
+        grid-column: 11/12  ;
+      margin-top: 2rem;
+    
+    }
+    &__navigation{
+       grid-column: 3/4;
+      display:grid;
+       justify-content: center;
+       grid-auto-flow: column;
+       margin-top: 2rem;
+      
+    }
+    
+}
+
+
+.header__cartIcon{
+    width:2rem;
+    height:2rem;
+    @media only screen and (max-width: $bp-small) {
+        right: -60rem;
+        position:absolute;
+        top:5rem;
+        }  
+    } 
+.header__mobileAddToCart{
+    margin-top: 2rem;
+}

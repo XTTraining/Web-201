@@ -1,0 +1,69 @@
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+    color:black;
+    font-family:"Lato", sans-serif;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns:repeat(12, 1fr);
+   grid-template-rows: 12vh 80vh max-content 30vh;
+   background-color:#98bcc8;
+
+   @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6vh 33vh max-content 30vh;
+     }
+   @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 7vh 45vh max-content 30vh;
+    width:131%;
+     } 
+     @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 9vh 57vh max-content 30vh;
+        width:269%;
+         } 
+  
+}
+ .feature{
+ display:grid;
+ grid-template-columns: [filter-start]1fr[category-start]80vw[category-end];
+ grid-column:1/-1;
+background-image:  linear-gradient(rgba(0, 0, 0, 0.863), rgba(0, 0, 0, 0.863)),url(/img/main1.jpg); 
+background-repeat: no-repeat;
+background-size: cover; 
+background-attachment: fixed;
+@media only screen and (max-width: $bp-large) {
+   width:101%;
+   grid-template-columns:unset;
+   }  
+.checkout{
+    @include buttonBig();
+    margin-left: 80rem;
+    background-color: $color-primary;
+    float:right;
+    margin-top:2rem;
+    @media only screen and (max-width:$bp-large){
+        float:unset;
+        margin-top:0;
+      }
+
+}
+ }
+
+.hide{
+    display:none;
+}
+
+.heading {
+   
+    display:none;
+}
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+ .categories{
+    position: relative;
+    @media only screen and (max-width:$bp-large){
+       grid-column:unset;
+    }
+    &__button
+    {
+    background-color:transparent;
+    color: $color-white;
+    cursor: pointer;
+    width: 97%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    font-weight:200%;
+    transition: 0.4s;
+    margin-bottom:4rem;
+    margin-top:4rem;
+    transition: all .3s ease-in-out;
+    background-color:rgb(104, 25, 71);  
+    padding: 16px; 
+    &:hover
+    {
+        background-color:rgb(168, 17, 105);
+    }
+    &:after{
+        content: '\25BC'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: $color-white;
+        float: right;
+        margin-left: 5px; 
+    }
+    
+    }
+    &__text{
+        display:grid;
+         font-weight:400%;
+         text-align: justify; 
+         color:$color-white;
+         font-size: 3rem;
+         margin-top:4rem;
+            }
+    
+    &__accordian{
+    display: grid;
+    justify-items: left;
+    @media only screen and (max-width:$bp-large){
+        margin-left: 5rem;
+     }
+     &--product{
+        overflow: hidden;
+        width:90%;
+        border-radius: .5rem;
+        @media only screen and (max-width:$bp-large){
+           width:70%;
+         }
+        &:hover{
+            box-shadow: 0 2px 15px 5px rgba(255, 254, 254, 0.2);
+            transition: box-shadow 0.2s cubic-bezier(0.15, 0.69, 0.83, 0.67) 0s;
+            
+           }
+
+        }
+    
+ &-content{
+        
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+     z-index:9999;
+     grid-column-gap: 5rem;
+     grid-row-gap:4rem;
+     display:none;
+     @media only screen and (max-width:$bp-large){
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: unset;
+        grid-row-gap: 7rem;
+        margin-left: 10rem;
+     }
+    
+     @media only screen and (max-width:$bp-small){
+     grid-template-columns: unset;
+     margin-left: 17rem;
+     width: 45%;
+     }
+     &-card{
+         width:30rem;
+         height:20rem;
+         opacity:.7;
+         transition:transform 0.5s,opacity 0.5s;
+         @media only screen and (max-width:$bp-small){
+        width:80rem;
+         height:40rem;;
+            }s
+        &:hover{
+         transform: scale(1.03);
+         opacity:1;
+          }
+
+        &__icon{
+            @include icon;
+        }  
+     }
+}
+    
+    }
+}  
+
+
+
+
+
+
+.show{
+     display: grid;
+    
+}
+
+.filter{
+      &__options{
+        margin-top: 10rem;
+        margin-left:4rem;
+        @media only screen and (max-width:$bp-large){
+            display:flex;
+            margin-bottom:1rem;
+            margin-top: 3rem;
+            margin-left: 34rem;
+        }
+        & p{
+            margin-bottom:2rem;
+            font-size: 2rem;
+            color:$color-white;
+            transition: color .1s ease;  
+            @media only screen and (max-width:$bp-large){
+                margin-left: 4rem;
+                margin-bottom:0;
+            }
+        } 
+        & p:hover{
+
+            color:red;
+                 } 
+
+        }
+
+        @media only screen and (max-width: $bp-large) {
+        max-width:100%;
+        grid-column:unset;
+        
+        }
+    }
+
