@@ -10,7 +10,10 @@ Welcome to Dine to Door.Order your food spiced with less delivery time at your d
 5)use can remove item from cart.
 6)There are three pages in this application index,cart,paymnet pages.
 
-This application is made by using Sass,Grid-css Layout,flexbox,ES6,Jquery
+Technology Stack:
+FrontEnd: Sass,Grid-css Layout,flexbox,
+Backend:ES6,Jquery
+Database:Firebase
 
 Getting Started:
 
