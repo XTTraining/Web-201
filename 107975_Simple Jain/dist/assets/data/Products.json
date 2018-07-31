@@ -1,0 +1,78 @@
+	{
+	"Products" : [
+			{
+			 "ProductId":"1",
+			 "ProductImage":"assets/img/food/biryani.jpg",
+			 "ProductDescription":"Biryani with Red-Green Chilli Biriyani Masala, Basmati and Home-Style Raita",
+			 "Price":"176",
+			 "ProductName":"Lal Murgh Biriyani",
+			 "Stock":"40",
+			 "Max":"15",
+			 "Type":"NonVeg",
+			  "Category":"Snacks",
+			  "Tax":"5"
+			},
+			{
+			 "ProductId":"2",
+			 "ProductImage":"assets/img/food/banarsiPulao.jpg",
+			 "ProductDescription":"Basmati boiled with Indian whole spices is layered with a spicy tomato-based gravy teeming with carrot, haricot, green pea, cauliflower and finished off with coriander and ghee before being steamed to a fine harmony.",
+			 "Price":"160",
+			 "ProductName":"Masala Pulao - Banarasi Kadhai Veg",
+			 "Stock":"20",
+			 "Max":"15",
+			 "Type":"Veg"			,
+			 "Category":"Snacks",
+			  "Tax":"12"
+			},
+				{
+			 "ProductId":"3",
+			 "ProductImage":"assets/img/food/veggies.jpg",
+			 "ProductDescription":"Mushroom, Zucchini, Bell Pepper, Baby Corn, Bok Choy, Cabbage, Carrot and Broccoli are tossed into a blistering hot wok with sautéed garlic and ginger stir-fried on high flame.",
+			 "Price":"100",
+			 "ProductName":"Crunchy Stir-Fried Veggies",
+			 "Stock":"4",
+			 "Max":"15",
+			 "Type":"Veg",
+			  "Category":"Beverages",
+			  "Tax":"12"
+			},
+				{
+			 "ProductId":"4",
+			 "ProductImage":"assets/img/food/chickensalad.jpg",
+			 "ProductDescription":"A succulent breast of chicken, flattened, marinated with chillies, garlic and lemon juice is rolled over sesame seeds and baked in foil to retain the juices. The sliced roulade, wonton chips, golden corn tossed with peanut butter, chillies and crushed peanut are packed into a bowl with crunchy, assorted veggies.",
+			 "Price":"100",
+			 "ProductName":"Sesame Chicken Mega Salad - 791 kcal",
+			 "Stock":"4",
+			 "Max":"15",
+			 "Type":"NonVeg"
+			,
+			  "Category":"Main Menu",
+			  "Tax":"5"
+			},
+				{
+			 "ProductId":"5",
+			 "ProductImage":"assets/img/food/chickensteak.jpg",
+			 "ProductDescription":"A sweet and spicy chilli sauce and rice tossed with carrot, green bean, fried garlic and butter complete the Mongolian BBQ Chicken Bowl. May contain mushroom. No added MSG. Serves 1.",
+			 "Price":"100",
+			 "ProductName":"Asian BBQ Chicken Steak",
+			 "Stock":"50",
+			 "Max":"15",
+			 "Type":"NonVeg"
+			,
+			  "Category":"Main Menu",
+			  "Tax":"5"
+			},
+				{
+			 "ProductId":"6",
+			 "ProductImage":"assets/img/food/spinachcorn.jpg",
+			 "ProductDescription":"Fresh spinach and golden corn sautéed with rice, mozzarella and earthy cumin powder are wrapped with a warm tortilla smeared with cheese sauce and fried to a crisp. Tangy and spicy salsa and a fine helping sour cream accompany the chimichanga. Serves 1.",
+			 "Price":"100",
+			 "ProductName":"Spinach corn chimichanga",
+			 "Stock":"50",
+			 "Max":"15",
+			 "Type":"Veg",
+			  "Category":"Main Menu",
+			  "Tax":"5"
+			}
+			]
+			}

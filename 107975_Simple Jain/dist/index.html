@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <title>Natours | Exciting tours for adventurous people</title>
+</head>
+
+<body>
+    <header>
+        <div class="navigation">
+            <img src="assets/img/logo.png" alt="Omnifood logo" class="logo-black">
+
+            <div class="navigation__mobile">
+                <a class="navigation__button" href="#">
+                    <span class="navigation__icon">&nbsp;</span>
+                </a>
+                <div class="navigation__background">&nbsp;</div>
+            </div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#features">Food delivery</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#works">How it works</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#cities">Our cities</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#plans">Sign up</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="logo__cart">
+                <a class="logo__cart__link">
+                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGZpbGw9IiMzMTRENUQiIGQ9Ik00LDIxYzAsMC42LDAuNCwxLDEsMWgyNWMwLjYsMCwxLTAuNCwxLTFzLTAuNC0xLTEtMUg2di0yaDE5YzAuNSwwLDAuOS0wLjMsMS0wLjhsMy0xMmMwLjEtMC4zLDAtMC42LTAuMi0wLjlTMjguMyw0LDI4LDRINlYxYzAtMC42LTAuNC0xLTEtMUgxQzAuNCwwLDAsMC40LDAsMXMwLjQsMSwxLDFoM1YyMXoiLz48Y2lyY2xlIGZpbGw9IiMzMTRENUQiIGN4PSI3IiBjeT0iMjgiIHI9IjMiLz48Y2lyY2xlIGZpbGw9IiMzMTRENUQiIGN4PSIyOCIgY3k9IjI4IiByPSIzIi8+PC9nPjwvc3ZnPg=="
+                        alt="Cart" class="cart__icon">
+                    <span id="totalItems">0</span>
+                    <ul class="cart"></ul>
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <!-- Carousel Section -->
+        <section class="section-carousel">
+            <div class="carousel">
+                <input type="radio" id="carousel-1" name="carousel[]" checked>
+                <input type="radio" id="carousel-2" name="carousel[]">
+                <div class="carousel__items">
+                    <li class="carousel__item carousel__item--1">
+                        <div class="carousel__item__text-box">
+                            <h1 class="heading-primary">
+                                <span class="heading-primary--main">Outdoors</span>
+                                <span class="heading-primary--sub">is where life happens</span>
+                            </h1>
+
+                            <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
+                        </div>
+                    </li>
+                    <li class="carousel__item carousel__item--2">
+                        <div class="carousel__item__text-box">
+                            <h1 class="heading-primary">
+                                <span class="heading-primary--main">Outdoors</span>
+                                <span class="heading-primary--sub">is where life happens</span>
+                            </h1>
+
+                            <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
+                        </div>
+                    </li>
+                </div>
+                <div class="carousel__prev">
+                    <label for="carousel-1"></label>
+                    <label for="carousel-2"></label>
+                </div>
+                <div class="carousel__next">
+                    <label for="carousel-1"></label>
+                    <label for="carousel-2"></label>
+                </div>
+                <div class="carousel__nav">
+                    <label for="carousel-1"></label>
+                    <label for="carousel-2"></label>
+                </div>
+            </div>
+        </section>
+        <!-- End Carousel Section -->
+        <section class="section-accordion" id="section-accordion">
+            <div class="content">
+                <div class="search">
+                    <form action="#" class="form">
+                        <div class="form__group searchbox">
+                            <input type="search" class="form__input" autocomplete="off" 
+                            placeholder="Search" id="search">
+                            <label for="search" class="form__label">Search</label>
+                        </div>
+
+                        <div class="form__group filter">
+                            <div class="form__checkbox-group">
+                                <input value="Veg" type="checkbox" class="form__checkbox-input" id="filter__veg">
+                                <label for="filter__veg" class="form__checkbox-label">
+                                    <span class="form__checkbox"></span>
+                                    Veg
+                                </label>
+                            </div>
+
+                            <div class="form__checkbox-group">
+                                <input value="NonVeg" type="checkbox" class="form__checkbox-input" id="filter__non-veg">
+                                <label for="filter__non-veg" class="form__checkbox-label">
+                                    <span class="form__checkbox"></span>
+                                    Non-Veg
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__group action">
+                            <button class="btn btn--green" id="btn--search">Search &rarr;</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="accordion">
+                    <button class="btn btn--green">Check out</button>
+                    <ul id="accordion__items" class="accordion__items">
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <ul class="nav">
+            <li class="nav__item">
+                <a href="#" class="nav__link">Food at home</a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">Community</a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">Download app</a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">Contact us</a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">Franchising</a>
+            </li>
+            <li class="nav__item">
+                <a href="#" class="nav__link">Come work with us!</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            &copy; Copyright 2018 Brinker International All Rights Reserved
+        </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+        
+    
+</body>
+
+</html>
