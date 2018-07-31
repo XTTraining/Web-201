@@ -1,0 +1,58 @@
+<section class="section-accordion" id="section-accordion">
+    <div class="content">
+        <div class="search">
+            <form action="#" class="form">
+                <div class="form__group searchbox">
+                    <input type="text" class="form__input" autocomplete="off" placeholder="Search" id="search">
+                    <label for="search" class="form__label">Search</label>
+                </div>
+
+                <div class="form__group filter">
+                    <div class="form__checkbox-group">
+                        <input value="veg" type="checkbox" class="form__checkbox-input" id="filter__veg">
+                        <label for="filter__veg" class="form__checkbox-label">
+                            <span class="form__checkbox"></span>
+                            Veg
+                        </label>
+                    </div>
+
+                    <div class="form__checkbox-group">
+                        <input value="non-veg" type="checkbox" class="form__checkbox-input" id="filter__non-veg">
+                        <label for="filter__non-veg" class="form__checkbox-label">
+                            <span class="form__checkbox"></span>
+                            Non-Veg
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form__group action">
+                    <button class="btn btn--green">Search &rarr;</button>
+                </div>
+            </form>
+        </div>
+        <div class="accordion">
+            <button class="btn btn--green">Check out</button>
+            <ul class="accordion__items">
+                <li>
+                    <input type="checkbox">
+                    <label for=""></label>
+                    <em></em>
+                    <h2 class="heading-secondary">Main Menu</h2>
+                    <div class="accordion__item">
+                        <div class="cards" id="cards__main-menu">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox" checked>
+                    <em></em>
+                    <h2 class="heading-secondary">Snacks</h2>
+                    <p class="accordion__item">Using the sibling and checked selectors, we can determine the styling of sibling elements based on the
+                        checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and
+                        HTML accordion element. Media queries are used to make the element responsive to different screen
+                        sizes.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

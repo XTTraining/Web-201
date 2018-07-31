@@ -1,0 +1,218 @@
+ %animation-default {
+    opacity: 1 !important;
+    z-index: 3;
+  }
+  
+  @mixin carousel($items, $animation: 'default') {
+    .carousel {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+  
+      > input[type="radio"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+  
+        &:checked {
+          ~ .carousel__items .carousel__item,
+          ~ .carousel__prev > label,
+          ~ .carousel__next > label {
+            opacity: 0;
+          }
+        }
+  
+        @for $i from 1 through $items {
+          &:nth-child(#{$i}) {
+            &:checked {
+              ~ .carousel__items .carousel__item {
+                @if $animation == 'default' {
+                  &:nth-child(#{$i}) {
+                    opacity: 1;
+                  }
+                }
+              }
+  
+              ~ .carousel__prev {
+                > label {
+                  @if $i == 1 {
+                    &:nth-child(#{$items}) {
+                      @extend %animation-default;
+                    }
+                  } @else if $i == $items {
+                    &:nth-child(#{$items - 1}) {
+                      @extend %animation-default;
+                    }
+                  } @else {
+                    &:nth-child(#{$i - 1}) {
+                      @extend %animation-default;
+                    }
+                  }
+                }
+              }
+  
+              ~ .carousel__next {
+                > label {
+                  @if $i == $items {
+                    &:nth-child(1) {
+                      @extend %animation-default;
+                    }
+                  } @else {
+                    &:nth-child(#{$i + 1}) {
+                      @extend %animation-default;
+                    }
+                  }
+                }
+              }
+  
+              ~ .carousel__nav {
+                > label {
+                  &:nth-child(#{$i}) {
+                    background: $color-grey-light-3;
+                    cursor: default;
+                    pointer-events: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      &__items {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+  
+      &__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: opacity 2s;
+        -webkit-transition: opacity 2s;
+        background-size: cover;
+        background-position: center;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,rgba($color-primary-light, 0.5),
+                                              rgba($color-primary-dark, 0.5)),
+                                              url(../img/food/food4.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,rgba($color-primary-light, 0.5),
+                              rgba($color-primary-dark, 0.5)),
+                              url(../img/food/food5.jpg);
+        }
+
+        &__text-box {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+  
+        img {
+          width: 100%;
+          vertical-align: middle;
+        }
+      }
+  
+      &__prev,
+      &__next {
+        > label {
+          border: 1px solid $color-white;
+          border-radius: 50%;
+          cursor: pointer;
+          display: block;
+          width: 4rem;
+          height: 4rem;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          transition: all .3s ease;
+          -webkit-transition: all .3s ease;
+          opacity: 0;
+          z-index: 2;
+  
+          &:hover,
+          &:focus {
+            opacity: .5 !important;
+          }
+  
+          &:before,
+          &:after {
+            content: "";
+            position: absolute;
+            width: inherit;
+            height: inherit;
+          }
+  
+          &:before {
+            background: linear-gradient(to top, $color-white 0%, $color-white 10%, rgba(51, 51, 51, 0) 10%), 
+                        linear-gradient(to left, $color-white 0%, $color-white 10%, rgba(51, 51, 51, 0) 10%);
+            width: 50%;
+            height: 50%;
+            top: 20%;
+          }
+        }
+      }
+  
+      &__prev {
+        > label {
+          left: 2%;
+  
+          &:before {
+            left: 35%;
+            top: 20%;
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+          }
+        }
+      }
+  
+      &__next {
+        > label {
+          right: 2%;
+  
+          &:before {
+            left: 10%;
+            transform: rotate(315deg);
+            -webkit-transform: rotate(315deg);
+          }
+        }
+      }
+  
+      &__nav {
+        position: absolute;
+        bottom: 3%;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        z-index: 3;
+  
+        > label {
+          border: 1px solid $color-white;
+          display: inline-block;
+          border-radius: 50%;
+          cursor: pointer;
+          margin: 0 .125%;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+
+  @include carousel(2);

@@ -1,0 +1,310 @@
+.product {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+    transition: margin .2s linear, opacity .2s linear;
+    @include display-flex;
+    @include respond(phone) {
+        flex-direction: column;
+    }
+    &>* {
+        width: 100%;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    
+    &__image {
+        flex: 0 0 20%;
+        text-align: center;
+        background: $color-black;
+        margin: 0 1% 2rem 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        cursor: pointer;
+        line-height: 0;
+        img {
+            width: 100%;
+        }
+        & a {
+            color: $color-primary-light;
+            text-decoration: none;
+            -webkit-transition: color .2s linear;
+            -moz-transition: color .2s linear;
+            -ms-transition: color .2s linear;
+            -o-transition: color .2s linear;
+            transition: color .2s linear;
+            &:hover {
+                color: $color-black;
+            }
+        }
+        h3 {
+            background: $color-primary-light;
+            color: $color-white;
+            font-size: 2.2rem;
+            font-weight: 300;
+            line-height: 4.9rem;
+            margin: 0;
+            padding: 0 3rem;
+            position: absolute;
+            bottom: -5rem;
+            right: 0;
+            left: 0;
+            -webkit-transition: bottom .2s linear;
+            -moz-transition: bottom .2s linear;
+            -ms-transition: bottom .2s linear;
+            -o-transition: bottom .2s linear;
+            transition: bottom .2s linear;
+        }
+        &:hover {
+            img {
+                opacity: .7;
+            }
+            h3 {
+                bottom: 7.3rem;
+            }
+        }
+    }
+    &__section {
+        display: flex;
+        flex-direction: column;
+    }
+    &__details {
+        flex: 0 1 80%;
+        padding: 0 2rem;
+        background-color: $color-white;
+        border: 1px solid $color-grey-light-2;
+    }
+    &__title {
+        color: $color-primary-light;
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin: 1.7rem 0 2rem 0;
+    }
+    &__description {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        line-height: 1.4em;
+        padding-bottom: 1.5rem;
+    }
+
+    &__GST {
+        font-size: 1.2rem;
+    }
+    
+    &__calc {
+        margin-top: .6rem;
+        padding: 0;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        background-color: $color-white;
+        border: .1rem solid $color-grey-light-2;
+        @include display-flex;
+
+        @include respond(small-phone) { flex-direction: column; }
+        
+        .product__quantity {
+            display: flex;
+            flex: 0 0 70%;
+                        
+            @include respond(phone) { flex: 0 0 50%; }
+
+            .quantity,
+            .quantity-plus,
+            .quantity-minus {
+                display: block;
+            }
+            
+            .quantity {
+                font-size: 1.9rem;
+                width: 7rem;
+                text-align: center;
+                background-color: $color-white;
+                border : 2px solid $color-primary-light;
+
+                @include respond(tab-land) {
+                    width: 5rem;
+                }
+            }
+            
+            .quantity-plus,
+            .quantity-minus {
+                background: $color-grey-light-1;
+                border: none;
+                font-size: 3rem;
+                font-weight: 300;
+                height: 100%;
+                padding: 0 2rem;
+                transition: background .2s linear;
+            }
+
+            .quantity-plus:hover,
+            .quantity-minus:hover {
+                background: $color-primary-light;
+                color: $color-white;
+                cursor: pointer;
+            }
+
+            .quantity-plus,
+            .quantity-minus {
+                line-height: 4.5rem;
+                @include respond(tab-land) {
+                    line-height: 3.5rem;
+                }
+            }
+        }
+
+
+        .price, 
+        .full-price {
+            margin: 0;
+            padding: 0 3rem;
+            text-align: right;            
+            font-weight: 300;
+            line-height: 4.9rem;
+
+            @include respond(tab-land) {
+                padding: 0 1rem;
+                line-height: 3.5rem;
+            }
+        }
+
+        .price {
+            flex: 0 0 12%;
+            @include respond(phone) { flex: 0 0 20%; }
+
+            background: $color-grey-light-1;
+            color: $color-black;
+            font-size: 1.5rem;
+        }
+
+        .full-price {
+            flex: 0 0 18%;
+            @include respond(phone) { flex: 0 0 30%; }
+
+            background: $color-primary-light;
+            color: $color-white;
+            font-size: 2.2rem;
+            
+            transition: margin .15s linear;
+        }
+
+        .price:before,
+        .full-price::before {
+            content: '$';
+        }
+    }
+
+    .minused {
+        margin: 0 5rem 0 0 !important;
+    }
+    
+    .added {
+        margin: 0 -5rem 0 0 !important;
+    }
+}
+
+.cart__calc {
+    @include display-flex;
+    
+    &>* {
+        @include display-flex; 
+    }
+
+    & .cart__amount {
+        flex: 0 0 80%;
+        @include display-flex; 
+        flex-direction: column;
+
+        @include respond(tab-land) {
+            flex: 0 0 75%;
+        }
+
+        @include respond(tab-port) {
+            flex: 0 0 70%;
+        }
+
+        @include respond(phone) {
+            flex: 0 0 60%;
+        }
+
+        & > * > span:before {
+            content: '$';
+        }
+
+        & .subtotal{
+            font-size: 2.4rem;
+            font-weight: 300;
+            margin: 1rem 0;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
+        }
+
+        & .tax,
+        & .shipping{
+            font-size: 1.9rem;
+            font-weight: 300;
+            margin: 1rem 0;
+
+            @include respond(phone) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &> .cart__total {
+        flex: 0 0 20%;
+        @include display-flex; 
+        flex-direction: column;
+
+        @include respond(tab-land) {
+            flex: 0 0 25%;
+        }
+
+        @include respond(tab-port) {
+            flex: 0 0 30%;
+        }
+
+        @include respond(phone) {
+            flex: 0 0 40%;
+        }
+
+        & .total {
+            background: $color-grey-light-1;
+            border: 1px solid $color-grey-light-1;
+            border-style: none none solid none;
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            padding: 1.4rem 4rem;
+            text-align: right;
+
+            @include respond(phone) {
+                font-size: 2rem;
+                padding-right: 1rem;
+            }
+        }
+
+        & .checkout {
+            text-align: center;
+            width:80%;
+            margin: 0 auto;
+
+            @include respond(phone) {
+                padding:1.5rem 2.3rem;
+            }
+
+            @include respond(small-phone) {
+                padding:1.2rem 1.2rem;
+            }
+        }
+
+        & > * > span:before {
+            content: '$';
+        }
+    }
+
+}
+

@@ -1,0 +1,28 @@
+.section-accordion {
+    background-color: $color-grey-light-1;
+    padding: 10rem 5rem 10rem 5rem;
+    @include display-grid;
+    
+    @include respond(tab-port) {
+        padding: 4rem 3rem; 
+    }
+}
+
+
+.section-cart {
+    background-color: $color-grey-light-1;
+    padding: 10rem 5rem 10rem 5rem;
+   
+    @include respond(tab-port) {
+        padding: 6rem 3rem 6rem 3rem;
+    }
+}
+
+.section-carousel {
+    height: 80vh;
+    @include respond(tab-land) {
+     height: 100vh;
+    }
+}
+
+
