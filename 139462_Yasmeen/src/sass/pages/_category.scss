@@ -1,0 +1,38 @@
+.chk_category {
+    display: none;
+}
+.category {
+    &__chk-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+    &__chk-button {
+        height: 2.5rem;
+        width: 2.5rem;
+        
+        border: 3px solid #eee; // border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem; // border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+    .chk_category:checked~&__chk-label &__chk-button::after {
+        opacity: 1;
+    }
+}

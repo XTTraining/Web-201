@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Just Eat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Buy food online in few clicks.">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" /> -->
+
+    <!-- <script src="vendors/js/bootstrap.min.js"></script> -->
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,600,700italic' rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+<link href="./css/style.css" rel="stylesheet"></head>
+
+<body class="orderDiv">
+    <header class="header">
+        <div class="header__logo" tabindex="0">
+            <img src="img/logo-white.png" alt="App Logo">
+        </div>
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu__list">
+                    <a href="/index.html" class="menu__link">Home</a>
+                </li>
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Breakfast</a>
+                    <ul class="menu__list-sub">
+                        <li>
+                            <a href="#" class="menu__link-child">Snacks</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu__link-child">Dessert</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Main Course</a>
+                </li>
+
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+   
+    <!-- <div class="cart__empty">
+        <div>Your cart is empty</div>
+    </div> -->
+    <section class="checkout">
+        <div class="checkout__payment-address">
+            <div class="checkout__address">
+                <h2 class="heading-secondary" tabindex="0">Delivery Address</h2>
+                <p>Lorem</p>
+            </div>
+            <div class="checkout__payment-options">
+                <h2 class="heading-secondary" tabindex="0">Choose Payment method</h2>
+                <div class="checkout__payment-detail">
+                    <input type="radio" id="paytm" class="checkout__radio_payment" name="payment">
+                    <label for="paytm" class="checkout__radio-label" tabindex="0">
+                            <img src="img/pay-icons/Paytm-Wallet.jpg" alt="PayTM logo" class="pay-icons">
+                            <span class="checkout__payment-text">Paytm</span>
+                        <span class="checkout__radio-button"></span>                     
+                    </label>
+                </div>
+                <div class="">
+                    <input type="radio" id="MobiKwik" class="checkout__radio_payment" name="payment">
+                    <label for="MobiKwik" class="checkout__radio-label" tabindex="0">
+                        <img src="img/pay-icons/MobiKwik-Logo.png" alt="MobiKwik logo" class="pay-icons" >
+                        <span class="checkout__payment-text">MobiKwik</span>
+                        <span class="checkout__radio-button"></span> 
+                    </label>
+                </div>
+                <div class="">
+                    <input type="radio" id="creditCard" class="checkout__radio_payment" name="payment">
+                    <label for="creditCard" class="checkout__radio-label" tabindex="0">
+                        <img src="img/pay-icons/cardicon.jpg" alt="Cash on delivery logo" class="pay-icons">
+                        <span class="checkout__payment-text">Credit/ Debit Card, NetBanking</span>
+                        <span class="checkout__radio-button"></span>
+                    </label>
+                </div>
+                <div class="">
+                    <input type="radio" id="freeCharge" class="checkout__radio_payment" name="payment">
+                    <label for="freeCharge" class="checkout__radio-label" tabindex="0">
+                        <img src="img/pay-icons/freecharge.png" alt="Cash on delivery logo" class="pay-icons">
+                        <span class="checkout__payment-text"> Free Charge</span>
+                        <span class="checkout__radio-button"></span>
+                    </label>
+                </div>
+                <div class="">
+                        <input type="radio" id="cash" class="checkout__radio_payment" name="payment">
+                        <label for="cash" class="checkout__radio-label" tabindex="0">
+                           
+                            <img src="img/pay-icons/cash-on-delivery.jpg" alt="Cash on delivery logo" class="pay-icons">
+                            <span class="checkout__payment-text"> Cash on Delivery</span>
+                            <span class="checkout__radio-button"></span>
+                        </label>
+                </div>
+                <div class="cart center">
+                    <button class="btn btn-orange" role="link"  onclick="window.location.href='#'">Place Order</button>
+                    <button class="btn btn-orange" role="link" onclick="window.location.href='cart.html'">Back to Cart</button>
+                </div>        
+            </div>
+           
+        </div>
+        <div class="order">
+            
+        </div>
+    </section>
+  
+
+    <footer class="footer">
+
+        <ul class="footer__nav">
+
+            <li class="footer__item">
+                <a href="#" class="footer__link">FAQ</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">Terms & Conditions</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">API Policy</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">CSR</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">Security</a>
+            </li>
+
+        </ul>
+    </footer>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Breakfast</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Main Course</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+                </ul>
+        </nav>
+    </div>
+    <script id="order-template" type="text/x-handlebars-template">
+        <div id="a" class="order__total">
+            <h4  tabindex="0">CART</h4>
+            <div  tabindex="0" class="order_count">{{count}} Items</div>
+        </div>
+
+        {{#each cart}}
+        <div id="order__Item-{{ItemId}}" class="order__total">
+            <div  tabindex="0" class="order_title">{{Name}}</div>
+            <div  tabindex="0" class="btn_plus_minus" id="btn__update_{{ItemId}}" readonly="readonly">
+                <!-- <span class="btn_minus qty" data-id="{{ItemId}}">-</span> -->
+                <span id="qty_{{ItemId}}" class="qty">{{qty}}</span>
+                <!-- <span class="btn_plus qty" data-id="{{ItemId}}">+</span> -->
+            </div>
+            <div  tabindex="0">&#x20b9;{{multiply qty price}}</div>
+        </div>
+        {{/each}}
+        <div class="order__total">
+            <div  tabindex="0">Subtotal
+            </div>
+            <div class="order__total-price">&#x20b9;{{subTotal}}</div>
+        </div>
+        <div class="order__total">
+            <div  >GST
+            </div>
+            <div>&#x20b9;{{gst}}</div>
+        </div>
+        <div class="order__total">
+            <div>TO PAY
+            </div>
+            <div>&#x20b9;{{totalAmount}}</div>
+        </div>
+    </script>
+<script type="text/javascript" src="js/bundle.js"></script></body>
+
+</html>

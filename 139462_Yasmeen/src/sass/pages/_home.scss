@@ -1,0 +1,194 @@
+// SEARCH
+.search {
+   align-items: end;
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+      
+        border: none;
+        padding: .9rem;
+        border-radius: 100px;
+        width: 100%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+        margin-top: .5rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color:#fff;
+            // background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            background-color:#fff;
+            // color: var(--color-grey-light-4);
+        }
+    }
+    &__button {
+        border: none;
+        background-color:#fff;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill:#ccc;;
+    }
+}
+.section-category{
+    grid-column:  1 / -1;
+    // background-color:#ccc;
+    display: grid;
+     margin-left: 2rem;
+
+    grid-template-columns: minmax(min-content , 30rem) 1fr;
+
+    @include respond(tab-port) 
+    {      
+       grid-template-columns: 1fr;
+    }
+     grid-gap: 2rem;
+}
+
+.category {
+    &_container{
+        @include respond(tab-port){
+             display: flex;
+             z-index:2001;
+             justify-items: center;
+        }
+    }
+    &_Sidebar {
+        grid-column :1 / span 1;    
+        @include respond(tab-port){
+        //    display:none;
+           grid-row :1 / -1;
+       
+           overflow-x: scroll;
+           white-space: nowrap;
+        }
+       
+        li {
+            display: flex;
+            font-size: 1.8rem;
+            color :#7e808c;
+            margin-right: .5rem;
+            align-items: center;
+            // grid-template-columns: 1fr;
+        }
+    }
+    &_firstlevel input{
+       margin: 2px;
+    }
+    &_header{
+        grid-column: 1 / -1;
+        font-weight: 700;
+        color:#fc8019;
+        font-size: 3.2rem;
+        // padding: 26px 0 20px;
+        word-spacing: 1rem;
+    } 
+    &_count {   
+        grid-column: 1 / -1;
+        color: #7e808c;
+    }
+    &_main {
+            grid-column:  2 / -1;
+            @include respond(tab-port){
+                grid-column:  1 / -1;
+            }
+            // background-color: #ddd;
+            display: grid;
+            //grid-template-columns: repeat(auto-fit , 25rem);//original
+            //grid-template-columns: repeat(auto-fit , minmax(min-content , 25rem));
+            grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+         
+            
+            //minmax(min-content , 20rem) 
+            grid-gap: 1rem;
+
+             justify-content: space-around;
+            // align-content: space-around;
+        
+    }
+    &_detail {
+            display: grid;
+           
+            grid-template-columns:  1fr 1fr;
+          
+            grid-row-gap: 1rem;
+
+            border-radius: .5rem;
+            box-shadow: 4px 3px 14px 2px #efefef;
+            // transition: all .5s ease-in-out .1s;
+            border: 1px solid #ccc;
+
+            padding: 1.5rem;
+
+            figure {
+                grid-column: 1/-1;
+            }
+           img {
+             width: 100%;   
+             overflow: hidden;
+            //  transition: transform 0.5s, opacity 0.5s;
+           }
+           img:hover {
+            opacity: 1;
+            transform: scale(1.03);
+            overflow: hidden;
+           }      
+        }   
+}
+.item-title {
+    grid-column: 1 / -1;
+
+}
+.item-desc {
+    grid-column: 1 / -1;
+}
+
+.checkout_row {
+    grid-column: 1 / -1;
+  
+    justify-self: end;
+    margin: 1rem;
+    margin-top:2rem;
+}
+
+.carousel-inner {
+     height: 320px;
+    @include respond(tab-port){
+        height: auto;
+    }
+    
+}
+.cartIcon {
+    position: relative;
+}
+.cart-notification {
+    color: #fff;
+    position: absolute;
+    top: -8px;
+    right: -9px;
+    font-weight: 900;
+    border: 2px solid red;
+    background-color: red;
+    border-radius: 47px;
+}
+
+
+
+
+

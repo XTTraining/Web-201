@@ -1,0 +1,92 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    font-family: 'Lato', 'Arial', sans-serif;
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lato', 'Arial', 'sans-serif';
+  
+}
+.containerDiv {
+    display: grid;
+    grid-template-columns: 20rem  1fr 1fr;
+   
+}
+ #myCarousel {  
+    grid-column : 1 / -1; 
+    // height: 200vh;
+}
+
+.carousel__image {
+    width: 100%;
+}
+
+.carousel-caption{
+    display: flex;
+    align-items: center;
+    top: 25%;
+    left: 70%;
+    width: 20%;
+   
+    height: auto;
+    font-weight: 500;
+    background-color: rgba($color-primary , 0.7);
+
+}
+.carousel-control .glyphicon-chevron-left:before {
+    font-weight: 600;
+  }
+  .carousel-control .glyphicon-chevron-right:before {
+    font-weight: 600;
+  }
+
+ 
+// #myCarousel{
+    // @include respond(big-desktop)  {
+    // height: 65vh;
+
+    // & .carousel-inner{
+    //     height: 65vh;
+    // }
+    // }
+    // @include respond(tab-land)  {
+   
+    //       height: 65vh;
+    
+    //       & .carousel-inner{
+    //         height: 65vh;
+    //       }
+    // }
+    // @include respond(tab-port)  {
+      
+    //       height: 49vh;
+    
+    //       & .carousel-inner{
+    //         height: 49vh;
+    //       }
+    // }
+    
+// }
+ 
+

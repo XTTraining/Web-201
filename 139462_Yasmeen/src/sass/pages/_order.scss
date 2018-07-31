@@ -1,0 +1,142 @@
+.checkout {
+    display:grid;
+    grid-template-columns: minmax(min-content, 90rem) minmax(min-content, 40rem);
+    
+    @include respond(tab-port){
+        grid-template-columns:  1fr;
+    }
+    background-color: #eee;
+   
+    &__payment-radiobutton{
+        height: 5px;
+        width: 5px;
+    }
+    &__payment-address div{
+        background-color: #fff;
+        border :2px solid #eee;
+        margin: 2rem;
+        padding: 2rem;
+    }
+    .checkout__payment-address div:last-child {
+        border: none;
+    }
+    &__address{
+        background-color: #fff;
+    }
+}
+.order {
+    display: flex;
+    flex-direction: column;
+   // flex-wrap: wrap;
+    margin:2rem;
+    font-size:1.6rem;
+    // flex: .5;
+    background-color: #fff;
+    @include respond(tab-port){
+        grid-row: 1 / span 1;
+    }
+    &__heading {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 10px 5px;
+        
+        &:first-child {
+            font-weight: bold;
+        }
+    }
+    &__total {
+        // width: 35%;
+        @include respond(tab-port){
+            // width: 100%;
+        }
+        display: flex;
+        justify-content: space-between;
+        margin: 8px; 
+        &-text {
+            display: block;
+            font-weight: 200;
+        }
+        &:last-child {
+            font-weight: 600;
+            border-top: 2px solid $color-grey-light-3;
+            padding: 10px 5px;
+        }
+    }
+    &_title{
+        width: 110px;
+    }
+}
+//   
+// .btn__checkout-order{
+// //    width: 35%;
+//         @include respond(tab-port){
+//             width: 100%;
+//         }
+// }
+// .btn_plus_minus{
+//     opacity:1;
+//     font-weight: bold; 
+// }
+.btn_minus {
+    transform: scale(1.2);
+}
+.btn_plus {
+    transform: scale(1.2);
+}
+
+.checkout {
+    &__radio-label {
+        font-size: $default-font-size;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4.5rem;
+    }
+    &__radio-button {
+        height: 2.5rem;
+        width: 2.5rem;
+        border: 3px solid  $color-secondary-dark; // border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+        // top: 1rem;
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem; // border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:  $color-secondary-dark;
+            opacity: 0;
+            transition: opacity .2s;
+            border-radius: 50%;
+        }
+    }
+    .checkout__radio_payment:checked ~ &__radio-label &__radio-button::after {
+        
+        opacity: 1;
+    }
+    &__radio_payment {
+        display: none;
+    }
+   
+}
+.pay-icons{
+     height:3rem;
+    // width:5rem;
+}
+.checkout__radio-label{
+    display: flex;
+    font-size: 2rem;
+    // height: 3rem;
+}
+.checkout__payment-text{
+ margin-left:2.5rem;
+}
+

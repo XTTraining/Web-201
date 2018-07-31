@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Just Eat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Buy food online in few clicks.">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" /> -->
+
+    <!-- <script src="vendors/js/bootstrap.min.js"></script> -->
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,600,700italic' rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+<link href="./css/style.css" rel="stylesheet"></head>
+
+<body class="cartDiv">
+    <header class="header">
+        <div class="header__logo">
+            <img src="img/logo-white.png" alt="App Logo">
+        </div>
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu__list">
+                    <a href="index.html" class="menu__link">Home</a>
+                </li>
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Breakfast</a>
+                    <ul class="menu__list-sub">
+                        <li>
+                            <a href="#" class="menu__link-child">Snacks</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu__link-child">Dessert</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Main Course</a>
+                </li>
+
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    
+    <section class="cart_wrapper">
+        <div class="cart">
+            
+        </div> 
+        <div class="cart center">
+            <button id="btn_proceed" class="btn btn-orange" role="link">Proceed</button>
+            <button id="btn_home" class="btn btn-orange" role="link">Home</button>
+        </div>
+        <div class="emptycart">
+            <img class="emptycart__image" src="img/emptycart.PNG" tabindex="0" alt="empty-cart"/>
+            <div class="emptycart__msg" tabindex="0">Your cart is empty</div>
+            <!-- <a href="index.html" class="btn" role="button">Add Food to Cart</a> -->
+            <button class="btn btn__home" role='link' onclick="window.location.href='index.html' ">Add Food to Cart </button>
+        </div>
+    </section>
+    
+    <footer class="footer">
+
+        <ul class="footer__nav">
+
+            <li class="footer__item">
+                <a href="#" class="footer__link">FAQ</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">Terms & Conditions</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">API Policy</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">CSR</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">Security</a>
+            </li>
+
+        </ul>
+    </footer>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Breakfast</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Main Course</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+                </ul>
+        </nav>
+    </div>
+    <script id="cart-template" type="text/x-handlebars-template">
+                        <div id="a" class="order__total">
+                            <h4 tabindex="0">Order Summary</h4>
+                            <div class="order_count" tabindex="0">{{count}} Items</div>
+                        </div>
+                
+                        {{#each cart}}
+                        <div id="order__Item-{{ItemId}}" class="order__total">
+                            <div class="order_title" tabindex="0">{{Name}}</div>
+                            <div class="btn_plus_minus" id="btn__update_{{ItemId}}">
+                                <span class="btn_minus qty" data-id="{{ItemId}}" role="button" aria-label="Decrement Quantity" tabindex="0">-</span>
+                                <span id="qty_{{ItemId}}" class="qty">{{qty}}</span>
+                                <span class="btn_plus qty" data-id="{{ItemId}}" role="button" aria-label="Increment Quantity" tabindex="0">+</span>
+                            </div>
+                            <div id ="cart_price_{{ItemId}}" tabindex="0">&#x20b9;{{multiply qty price}}</div>
+                        </div>
+                        {{/each}}
+                        <div class="order__total">
+                            <div tabindex="0">Subtotal
+                            </div>
+                            <div class="order__total-price" tabindex="0">&#x20b9;{{subTotal}}</div>
+                        </div>
+                        <div class="order__total">
+                            <div tabindex="0">GST
+                            </div>
+                            <div tabindex="0">&#x20b9;{{gst}}</div>
+                        </div>
+                        <div class="order__total">
+                            <div tabindex="0">TO PAY
+                            </div>
+                            <div tabindex="0">&#x20b9;{{totalAmount}}</div>
+                        </div>
+        </script>
+<script type="text/javascript" src="js/bundle.js"></script></body>
+
+</html>

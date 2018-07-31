@@ -1,0 +1,50 @@
+
+.footer {
+    background-color:#333;
+    grid-column: 1 /-1;
+    padding: 2rem;
+    display: grid;
+   // grid-template-columns: .5fr repeat(5 , 1fr);
+     //       grid-template-columns: .5fr repeat(auto-fit , 30rem);
+        //    grid-template-columns: .5fr repeat(auto-fit , minmax(150px , 1fr));
+    &__nav {
+      
+        list-style: none;
+         grid-column: 2 /span 4;
+
+        display: grid;
+        grid-template-columns:  repeat(auto-fit , minmax(18rem,1fr));//auto-fit , 30rem);
+        justify-content: space-around;
+        grid-row-gap:2rem;
+    }
+   
+    &__link {
+        &:link,
+        &:visited{
+        font-size: 1.4rem;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.5rem;
+        }
+        &:hover,
+        &:active {
+            transform: scale(1.5);
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+   
+    // &__social-icons {
+    // //    justify-content: end;
+    // //    display: flex;
+    //     svg {
+    //         fill:white;
+    //         height: 2rem;
+    //         display: inline;
+    //     }
+    //     svg :hover {
+    //         fill: #ddd;
+    //     }
+    // }
+}

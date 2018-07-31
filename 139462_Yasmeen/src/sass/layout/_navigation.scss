@@ -1,0 +1,130 @@
+
+.nav {
+    grid-column: 4 / 8;
+    align-items: center;
+}
+/* sticky Navi */
+
+.sticky{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    // background-color: rgba(255, 255, 255, 0.97);
+     box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+
+
+.menu {
+    list-style: none; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, .5fr));
+  
+    // grid-gap: 1rem;
+    align-items: center;
+
+        &__link:link,
+        &__link:visited {
+            font-size: 1.6rem;
+            color: #fff;
+           
+            padding: 1.2rem;
+
+            @include stylelink();
+
+            transform: all .2s;
+            position: relative;
+            
+        }
+
+        &__link:hover,
+        &__link:active {
+           
+            border-bottom: solid 1px red ;
+
+        }
+
+    &__list-sub {
+
+       @include stylelink();
+        position: absolute;
+        top: 50px;
+      
+        width: 15rem;
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        display: none;
+
+       z-index: 2;
+    }
+
+    &__list-sub > li
+    {
+        position: relative;
+        height: 4rem;
+        padding: 1rem;
+        color: #fff;
+        background: $color-primary;
+    }
+    
+    &__list-sub > li:link,
+    &__list-sub > li:visited {
+        color: #fff;
+    }
+
+    &__list-sub > li:hover { 
+        background: #CCCCCC;
+    
+    }
+    & li:hover > ul
+    {
+        /* On hover, display the next level's menu */
+        display: inline;
+        color: #fff;
+    }
+    &__link-child {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+//  //////////////////////////////////////////////////////
+//    SideBar Navigation
+
+.category_firstlevel{
+        padding: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        ul {
+            display: none;
+        }
+   
+}
+
+
+.category_firstlevel:focus{
+    color :#7e808c;
+    text-decoration: none;
+}
+.category_firstlevel:active,
+.category_firstlevel:hover {
+    a {
+        border-right: solid 3px $color-secondary-dark;
+        color : $color-secondary-dark;
+        text-decoration: none;
+        ul li{
+            display: inline;
+        }
+       
+    }
+ 
+}
+.category_firstlevel li:hover > ul 
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Buy food online in few clicks.">
+    <title>Just Eat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400italic' rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+<link href="./css/style.css" rel="stylesheet"></head>
+
+<body class="containerDiv">
+    <header class="header">
+        <div class="header__logo">
+            <img src="img/logo-white.png" alt="App Logo">
+        </div>
+
+        <form action="#" class="search"  autocomplete="off">
+            <input type="text" class="search__input" placeholder="Search..."aria-label="Search Your Items">
+            <button class="search__button" value="Search"  aria-label="Search">
+                <svg class="search__icon">
+                    <use xlink:href="img/iconsprites.svg#icon-search"></use>
+                </svg>
+            </button>
+        </form>
+        <!-- <form action="#" class="search" autocomplete="off">
+            <input type="text" class="search__input" placeholder="Search..." autocomplete="off" name="search" aria-label="Search Your Items"
+                value="">
+            <button class="search__button" aria-label="Search">
+                <svg class="search__icon">
+                    <use xlink:href="img/iconsprites.svg#icon-search"></use>
+                </svg>
+            </button>
+        </form> -->
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu__list">
+                    <a href="index.html" class="menu__link">Home</a>
+                </li>
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Breakfast</a>
+                    <ul class="menu__list-sub">
+                        <li>
+                            <a href="#" class="menu__link-child">Snacks</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu__link-child">Dessert</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Main Course</a>
+                </li>
+
+                <li class="menu__list">
+                    <a href="#" class="menu__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="cartIcon">
+            <svg>
+                <use xlink:href="img/iconsprites.svg#icon-cart"></use>
+            </svg>
+            <span class="cart-notification"></span>
+        </div>
+    </header>
+
+    <!-- <header class="mobile-header">
+        <label class="mobile-header__button" tabindex="0">
+            <span class="mobile-header__icon">&nbsp;</span>
+        </label>
+
+        <form class="search search-mobile" autocomplete="off">
+            <input type="text" class="search__input" placeholder="Search..." name="search" aria-label="Search"
+                value="">
+            <button class="search__button" aria-label="Search">
+                <svg class="search__icon">
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </form>   
+    </header> -->
+
+    <div id="popup-overlay">
+        <img src="img/loader.gif" alt="loader" />
+    </div>
+    <!-- <section  class="app-carousel"> -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" tabindex="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1" tabindex="0"></li>
+                <li data-target="#myCarousel" data-slide-to="2"tabindex="0"></li>
+            </ol>
+            <div class="carousel-inner">
+    
+                <div class="item active">
+                    <img src="./img/FoodImages/meal-sm.jpg" alt="Natural" class="carousel__image">
+                    <fieldset class="carousel-caption">
+                        <legend>% Offer</legend>
+                        <p>50% discount on first 5 orders!</p>
+                    </fieldset>
+                </div>
+    
+                <div class="item">
+                    <img src="./img/saladplatter.jpg" alt="Salad" class="carousel__image">
+                   
+                    <fieldset class="carousel-caption">
+                        <legend>% Offer</legend>
+                        <p>Free delivery on orders above Rs 99!</p>
+                    </fieldset>
+                </div>
+    
+                <div class="item">
+                      <img src="./img/FoodImages/soup.jpg" alt="Salad" class="carousel__image">
+                    <fieldset class="carousel-caption">
+                        <legend>% Offer</legend>
+                        <p>Free delivery on orders above Rs 99!</p>
+                    </fieldset>
+                </div>
+    
+            </div>
+    
+            <!-- // Left and right controls  -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
+        </div>
+    <!-- </section> -->
+   
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Breakfast</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Main Course</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+                </ul>
+        </nav>
+    </div>
+    <div class="checkout_row">
+
+        <button class="btn btn__checkout" role="link" tabindex="0">Check Out</button>
+      
+    </div>
+    <!-- Main layout -->
+    <section class="section-category">
+       
+        <div class="category_Sidebar" role="navigation">
+            <ul class="category_container">
+                <li class="category_firstlevel">
+                    <a href="#">Recommended</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Categories Wrapper -->
+        <!--Your new content will be displayed in here-->
+
+        <div class="category_main">
+            <h4 class="category_header">Recommended
+            </h4>
+            
+        </div>
+    </section>
+    <div class="checkout_row">
+
+        <button class="btn btn__checkout" role="link" tabindex="0">Check Out</button>
+         <!-- <a href="cart.html" role="button" class="btn btn__checkout">Check Out</a> -->
+    </div>
+    <footer class="footer">
+
+        <ul class="footer__nav">
+
+            <li class="footer__item">
+                <a href="#" class="footer__link">FAQ</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">Terms & Conditions</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">API Policy</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">CSR</a>
+            </li>
+            <li class="footer__item">
+                <a href="#" class="footer__link">Security</a>
+            </li>
+
+        </ul>
+
+    </footer>
+
+    <!--This is our template for food Items -->
+    <!--Data will be inserted in its according place, replacing the brackets.-->
+    <script id="food-template" type="text/x-handlebars-template">
+        {{#each items}}
+        <h4 class="category_header">{{ categoryName}}
+        </h4>
+        {{#each list}}
+        <div class="category_detail">
+            <figure class="category_detail__top-half">
+                <img src={{imgsrc}} alt="Pasta">
+            </figure>
+
+            <h4 class="item-title heading-4 heading-4--dark">{{Name}}</h4>
+            <p class="item-desc">{{Desc}}</p>
+            <p class="item-price">&#x20B9; {{price}}</p>
+
+
+            <div>
+                <div class="btn_plus_minus" id="btn__update_{{ItemId}}">
+                    <span class="btn_minus qty" data-id="{{ItemId}}" role="button" aria-label="Decrement Quantity">-</span>
+                    {{#if qty}}
+                    <span id="qty_{{ItemId}}" class="qty">{{qty}}</span>
+                    {{else}}
+                    <span id="qty_{{ItemId}}" class="qty">0</span>
+                    {{/if}}
+                    <span class="btn_plus qty" data-id="{{ItemId}}">+</span>
+                </div>
+                <button class="btn__add-cart" id="btn__add-cart_{{ItemId}}" data-id="{{ItemId}}" role="button" aria-label="Increment Quantity">ADD</button>
+            </div>
+        </div>
+        {{/each}} {{/each}}
+    </script>
+
+    <script id="category-template" type="text/x-handlebars-template">
+        {{#each items}}
+        <li class="category_firstlevel">
+
+            <input type="checkbox" id="cat_{{categoryId}}" tabindex="-1" class="chk_category" data-id={{categoryId}} />
+            <label for="cat_{{categoryId}}" class="category__chk-label">
+                    <span class="category__chk-button"></span>
+                {{Desc}}</label> 
+        </li>
+        {{/each}}
+     </script>
+
+<script type="text/javascript" src="js/bundle.js"></script></body>
+
+</html>
