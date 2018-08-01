@@ -516,7 +516,8 @@ body {
   @media only screen and (max-width: 56.25em) {
     .category_Sidebar {
       grid-row: 1 / -1;
-      margin-left: 6rem; } }
+      overflow-x: scroll;
+      white-space: nowrap; } }
   .category_Sidebar li {
     display: flex;
     font-size: 1.8rem;

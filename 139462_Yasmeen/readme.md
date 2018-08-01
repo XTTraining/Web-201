@@ -27,8 +27,9 @@ Step1 : npm install
 step2 : npm run dev/ build
 Step3 : npm run start
 
-
-
+=> App is deployed on Git Hub Sub Pages
+	URL :  https://yasmeenhasan.github.io/yasmeen201/
+	
 Authors:
 Yasmeen Hasan
  
