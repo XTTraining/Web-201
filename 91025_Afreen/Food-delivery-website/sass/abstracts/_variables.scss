@@ -1,0 +1,38 @@
+// COLORS
+$color-primary: #55c57a;
+$color-primary-dark: #28b485;
+$color-primary-dark-2: #144d3a;
+//#134E3A
+$color-primary-light: #7ed56f;
+// $color-primary-light-1: #7ed56fb9;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: #ccc;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+$color-grey-dark-4: #43484D;
+
+$color-white: #fff;
+$color-black: #000;
+
+// FONT
+$default-font-size: 1.6rem;
+$font-family: "Lato", sans-serif;
+
+//Line 
+$line: 1px solid $color-grey-light-2;
+$line-grey-light: 1px solid $color-grey-light-3;
+$line-black: 1px solid $color-black;
+
+//Shadow
+$shadow-dark: 0 2rem 6rem rgba(0,0,0,.2);
+$shadow-light: 0 2rem 5rem rgba(0,0,0,.06);

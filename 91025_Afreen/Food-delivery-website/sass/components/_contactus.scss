@@ -1,0 +1,92 @@
+.contactus {
+    background-color: $color-grey-light-3;
+    grid-column: full-start / -1;
+}
+
+#google-map {
+    display:flex;
+    // flex-direction: column;
+    flex:1;
+}
+.detail {
+    display: flex;
+    flex-direction: column;
+    font-size:1.8rem;
+    line-height: 4rem;
+    margin:8rem 8rem;
+    width:40%;
+
+    &__row {
+        border-top: 1px solid $color-grey-dark;
+        border-bottom: 1px solid $color-grey-dark;
+        width:55%;
+    }
+}
+
+.map-container {
+    width:60%;
+    overflow: hidden;
+}
+
+
+.google-map-container {
+    height:40rem;    
+
+    & p {
+        text-align: center;
+        font-size: 1.8rem;
+        margin:6rem 2rem;        
+    }
+
+}
+
+/* Social Links */
+
+.sociallinks {            
+            margin-right: 2rem;
+            list-style: none;
+            // border-top : 1px solid $color-white;
+            display: flex;
+            justify-items: end;
+            align-content: center;
+            font-size: 1.4rem;
+         
+        & li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    
+        & li:last-child {
+            margin-right:0; 
+        }
+    
+        & li a:link,
+        & li a:visited{
+            text-decoration: none;
+            border: 0;
+            color:#585555;
+            /* color effects to social icons */
+            font-size: 170%;
+            transition: color 0.2s;
+        }
+        
+        & li a:hover,
+        & li a:active{
+            color:#ddd;
+        }  
+} 
+
+.ion-social-facebook,.ion-social-twitter
+{
+    transition:  color 0.2s;
+}
+
+.ion-social-facebook:hover
+{
+    color:deeppink;
+}
+
+.ion-social-twitter:hover {
+    color: $color-tertiary-light;
+}
+    

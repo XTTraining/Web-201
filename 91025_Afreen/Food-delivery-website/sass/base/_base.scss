@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+body {
+    // width:100%;
+    background: linear-gradient($color-primary-light, $color-primary-dark) no-repeat; // $color-primary-light;
+ 
+    @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+.container {
+    // width: 114rem; 
+    height: auto;
+    background-color: $color-white;    
+    margin: 0 10rem;
+
+    @include respond(tab-land) {
+        margin: 0;
+    }
+
+    box-shadow: 0 1rem 2rem rgba($color-black, .4);
+
+    // create grid layout of 8 columns
+    display: grid;
+    grid-template-rows: 20vh auto-fit 60vh repeat(7, min-content);
+
+    //70vh - carousel section
+    //  20vh 40vh repeat(7, min-content);
+    grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+
+    // grid-template-rows: 80vh min-content 40vw repeat(3 ,min-content);
+
+    // // 8 column layout 1140-1200  1140/8=142.5 so 14rem = 140px
+    // grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+/*  ::selection selector matches the portion of an element that is selected by a user. */
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

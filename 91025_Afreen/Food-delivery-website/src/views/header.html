@@ -1,0 +1,80 @@
+<script id="header-partial-template" type="text/x-handlebars-template">
+    <div class="header__navigation">
+            <picture class="header__logo">
+                <a href="/index.html">
+                    <img srcset="img/logo-spice-house.png 1x" alt="Full logo" src="img/logo-spice-house.png">
+                </a>
+            </picture>
+            <ul class="header__links">                 
+                {{#each navigation}}
+                {{#if-equals this "header" }}
+                    <li class="nav__item">
+                            <a href="{{link}}" class="nav__link nav__header_link">{{name}}</a>
+                    </li>
+                {{/if-equals}}    
+                {{/each}}
+            </ul>
+            <div class="header__cart__logo">
+                <a href="/cart.html" alt="Go to Cart"><img src="img/shopping-cart.png" alt="Cart"> </a> 
+                <span class="para" id="cart__count">0</span><span class="para">&nbsp;Items</span>
+            </div>        
+        </div>
+        <!-- Mobile navigation -->
+        <div class="hamburger__navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle" aria-label="select navigation">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    {{#each navigation}}
+                        {{#if-equals this "header" }}
+                            <li class="navigation__item">
+                                <a href={{link}} class="navigation__link">{{name}}</a>
+                            </li>
+                        {{/if-equals}}    
+                    {{/each}} 
+                    <li class="navigation__item">
+                        <a href="/cart.html" alt="Go to Cart"><img src="img/shopping-cart.png" alt="Cart"> </a> 
+                        <span class="para" id="cart__count_mobile">0</span><span class="para">&nbsp;Items</span>
+                    </li>                   
+                </ul>
+            </nav>      
+        </div>
+    </script>
+
+    <script id="footer-partial-template" type="text/x-handlebars-template">
+
+        <div class="footer__logo-box">
+                <picture class="footer__logo">
+                    <img srcset="img/logo-spice-house.png 1x" alt="Full logo" src="img/logo-spice-house.png">
+                </picture>
+            </div>
+            <ul class="footer__navigation">
+                {{#each navigation}}
+                {{#if-equals this "header" }}
+                    <li class="nav__item">
+                        <a href="{{link}}" class="nav__link">{{name}}</a>
+                    </li>
+                {{/if-equals}}    
+                {{/each}}
+                <!-- <li class="nav__item">
+                    <a href="#" class="nav__link">Company</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Contact</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Press</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Terms</a>
+                </li> -->
+            </ul>
+            <p class="copyright">
+                Copyright&copy; Spice House 2018. All right reserved. Created by Afreen.
+            </p>
+    
+    </script>

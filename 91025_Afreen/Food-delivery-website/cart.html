@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Food Delivery | Order Online with Spice House</title>
+    <!-- Load the Firebase base library before loading the body. -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="src/js/vendor/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+                <script id="header-render-template" type="text/x-handlebars-template">
+                    {{> HeaderPartial }}
+                </script>
+        </header>
+
+        <div class="cart-content">
+            <main class="cart-view">
+                <div class="overview">
+                    <h1 class="overview__heading">
+                        Your Cart
+                    </h1>
+                </div>
+
+                <div class="cart__detail">
+
+                    <div class="cart__description">
+                        <div class="cart-module">
+                            <label for="promo-code">Enter a promotional code</label>
+                            <br/>
+                            <input id="promo-code" type="text" name="promo-code" maxlength="15" class="promo-code-field" aria-label="Enter promotion code">
+                            <button class="promo-code-cta" aria-label="Apply promotion code">Apply</button>
+                            <br/>
+                            <span class="validationMessage"></span>
+                        </div>
+
+                        <div class="cart__items">
+                            <!-- Cart items via HBS template -->
+                        </div>
+
+                    </div>
+                    <!-- end of cart__description -->
+
+                    <div class="section-payment">
+                        <div class="summary">
+                            <div class="summary-total-items">
+                                <span class="total-items">0</span> Items in your cart
+                            </div>
+                            <div class="summary__subtotal">
+                                <div class="summary__subtotal__title">SubTotal</div>
+                                <div class="subtotal">
+                                    <span class="subtotal_amount">0</span>
+                                </div>
+                            </div>
+                            <div class="summary__appliedpromo">
+                                <div class="summary__appliedpromo__title">Promo code
+                                    <span class="code">none</span> Applied
+                                </div>
+                                <div class="applied-promotion">
+                                    -&nbsp;
+                                    <span class="promo_amount">0</span>
+                                </div>
+                            </div>
+                            <div class="summary__shipping">
+                                <div class="summary__shipping__title">
+                                    <p>Estimated Shipping*</p>
+                                    <p class="fpt1">You qualify for free delivery because your order is above
+                                        <span class="currency_symbol">$</span>100.
+                                    </p>
+                                </div>
+                                <div class="shipping">
+                                    <span>FREE</span>
+                                </div>
+                            </div>
+                            <div class="summary__finaltotal">
+                                <div class="summary__finaltotal__title">
+                                    <p>Estimated Total</p>
+                                </div>
+                                <div class="finaltotal">
+                                    <span class="final_amount">0</span>
+                                </div>
+                            </div>
+                            <button id="btnCheckout" type="submit" class="cart_btn btn btn--green" aria-label="Proceed to Checkout">Proceed to Checkout</button>
+                        </div>
+                    </div>
+                    <!--end of summary payment-->
+
+                </div>
+                <!-- end of cart-detail-->
+
+            </main>
+        </div>
+        <!-- end of cart-content -->
+
+        <footer class="footer">
+            <script id="footer-render-template" type="text/x-handlebars-template">
+                {{> FooterPartial }}
+            </script>
+        </footer>
+        <script id="cart-entry-template" type="text/x-handlebars-template">
+            {{#each this}}
+                <div class="cart__item" id="{{id}}">
+                    <div class="cart__item__image">
+                        <img src="{{small-image}}" alt="{{name}}" />
+                    </div>                    
+                    <div class="cart__item__description">
+                        <span class="name">{{name}}</span>
+                        <span>Price:&nbsp;
+                            <span class="price">{{price}}</span>
+                        </span>
+                        <span>Tax:&nbsp;
+                            <span class="tax">{{tax}}</span>%
+                        </span>
+                    </div>
+                    <div class="cart__item__quantity">
+                        <input type="number" value="{{quantity}}" min="1" max="10" class="quantity-field" aria-label="Enter quantity">
+                        <!-- max="5" -->
+                    </div>
+                    <div class="total-price">{{itemTotal}}</div>
+                    <div class="remove">
+                        <button class="btn-inline" aria-label="Remove">Remove</button>
+                    </div>
+                </div>
+            {{/each}}
+        </script>
+    </div>
+    <!-- end of container -->
+    <!-- Handlebars JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="dist/cart-bundle.js"></script>
+</body>
+
+</html>

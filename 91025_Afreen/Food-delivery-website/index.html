@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Food Delivery | Order Online with Spice House</title>
+    <!-- Load the Firebase base library before loading the body. -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src="src/js/vendor/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">        
+        <header class="header">
+                <script id="header-render-template" type="text/x-handlebars-template">
+                    {{> HeaderPartial }}
+                </script>
+        </header>
+
+        <!-- <main class="main"> -->
+        <section class="slider">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div id="item1" class="carousel-item">
+                        <img src=img/carousel/slider-welcome-spice.jpeg alt="Welcome to spice house">
+
+                        <div class="carousel-content">
+                            <h2 class="carousel__heading-primary u-margin-left-big">Welcome to
+                                <br/>Spice house</h2>
+                        </div>
+                    </div>
+                    <div id="item2" class="carousel-item">
+                        <img src=img/carousel/slider-burger_dark.jpg alt="Offer new">
+
+                        <div class="carousel-content">
+                            <h2 class="carousel__heading-secondary">Get 10% off coupon</h2>
+                            <h3 class="carousel_short_title--sub">and use it with your next order</h3>
+                        </div>
+                    </div>
+                    <div id="item3" class="carousel-item">
+                        <img src=img/carousel/slider-dessert_dark.jpg alt="Delicious Dessert">
+
+                        <div class="carousel-content">
+                            <h2 class="carousel__heading-secondary">Delicious Dessert</h2>
+                            <h3 class="carousel_short_title--sub">Order it online even now</h3>
+                        </div>
+                    </div>
+                    <div id="item4" class="carousel-item">
+                        <img src=img/carousel/slider-pasta_dark.jpg alt="Offer new">
+
+                        <div class="carousel-content">
+                            <h2 class="carousel__heading-secondary">Boscaiola Pasta</h2>
+                            <h3 class="carousel_short_title--sub">Order now at $9.98</h3>
+                        </div>
+                    </div>
+                </div>
+                <p class="carousel-status">SLIDESHOW:
+                    <span id="status-indicator">started</span>
+                </p>
+            </div>
+        </section>
+
+        <div class="aboutus__content" id="aboutus">
+            <h3 class="heading-secondary u-margin-bottom-small">About Spice House</h3>
+            <h2 class="heading-tertiary">Vestibulum quis elit eget neque porttitor no amet dolor. Proin pretiumss.</h2>
+            <p class="paragraph u-margin-top-small">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus. Quidem
+                consequatur harum volupta!
+            </p>
+            <!-- <div class="u-margin-top-huge"> -->
+            <a href="#" class="btn-text">Read More</a>
+            <!-- </div> -->
+            <!-- <button class="btn">Read More</button> -->
+        </div>
+        <div class="aboutus__picture">
+            <img src="/img/bg-images/home-about.jpg" alt="about us" class="aboutus__img--1">
+        </div>
+
+        <section class="features-product">
+            <div class="menu__heading">
+                <h3 class="heading-secondary"> Our Popular Dishes</h3>
+            </div>
+            <div class="featuredDishes">
+                <!--Featured Dishes via HBS template -->
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+            <div class="menu__heading">
+                <h3 class="heading-secondary"> Our Menu</h3>
+            </div>
+            <div class="accordion" id="accordionDiv">
+                <!--Menu via HBS template -->
+            </div>
+        </section>
+
+        <section class="section_story">
+            <h3 class="heading-secondary"> What people say about us</h3>
+            <div class="story">
+                <figure class="story__shape">
+                    <img src="img/user-1.jpg" alt="Person on a tour" class="story__img">
+                    <figcaption class="story__caption">Henry Smith</figcaption>
+                </figure>
+                <div class="story__text">
+                    <!-- <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3> -->
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.periam, ipsum sapiente aspernatur libero repellat quis consequatur
+                        ducimus quam nisi.
+                    </p>
+                </div>
+            </div>
+            <div class="story">
+                <figure class="story__shape">
+                    <img src="img/user-2.jpg" alt="Person on a tour" class="story__img">
+                    <figcaption class="story__caption">Jessica Miller</figcaption>
+                </figure>
+                <div class="story__text">
+                    <!-- <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3> -->
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                        ducimus quam nisi.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured__dish">
+            <h3 class="heading-secondary featured__dish-heading">Dish of the month</h3>
+            <!-- Dish of the Month via HBS template -->
+        </section>
+
+        <section class="contactus" id="contactus">
+            <!-- Google Map Section -->
+            <div id="google-map">
+                <div class="detail">
+                    <h3 class="heading-secondary">Spice House</h3>
+                    <span>233 S Wacker Dr,</span>
+                    <span>Chicago</span>
+                    <div class="detail__row u-margin-top-small u-margin-bottom-small ">
+                        <div class="phone">
+                            <span>Phone: </span>
+                            <span>+48 21200 2122</span>
+                        </div>
+                        <div class="email">
+                            <span>Email:</span>
+                            <span>hello@example.com</span>
+                        </div>
+                    </div>
+                    <ul class="sociallinks">
+                        <li>
+                            <a href="#" aria-label="facebook" title=""> <i class="ion-social-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="twitter" title=""><i class="ion-social-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="google plus" title=""><i class="ion-social-googleplus"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="instagram" title=""><i class="ion-social-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="map-container" id="map-container">
+                    <div id="gmap_canvas" class="google-map-container">
+                        <p> Google Map Rendering </p> 
+                    </div>
+                </div>
+            </div>
+            <!-- /#google-map-->
+            <!-- Google Map Section End -->
+        </section>
+
+        <!-- </main> -->
+        <footer class="footer">
+                <script id="footer-render-template" type="text/x-handlebars-template">
+                    {{> FooterPartial }}
+               </script>            
+        </footer>
+        <script id="menu-entry-template" type="text/x-handlebars-template">
+            {{#each categorys}}
+            <div class="accordion-header">{{categoryName}}</div>
+                <div class="accordion-content">
+                    <div class="menu__list">
+
+                        {{#each this.menuItems}}
+                        <div class="food__item" id={{id}}>
+                            <div class="food-img">
+                                <img src="{{small-image}}" alt="{{name}}">
+                            </div>
+
+                            <div class="food__content">
+                                <h4 class="heading-5 heading-5--dark">{{name}}</h4>
+                                <p class="food__item__text">Price:
+                                    <b><span class="price">{{price}}</span></b>
+                                </p>
+                                <input type="hidden" id="hdntax" value="{{tax}}" >
+                                <a href="#" id="btn-{{id}}" class="btn-text u-margin-top-small addValue" >Add to cart</a>                                
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>    
+                </div>
+            </div> 
+            {{/each}}          
+        </script>
+        <script id="featured-dish-entry-template" type="text/x-handlebars-template">
+            {{#each featuredDishes}}
+            <div class="featuredDish" id={{id}} >
+                    <img src="{{small-image}}" alt="{{name}}" class="featuredDish__img">                   
+                    <svg class="featuredDish__like">
+                        <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+                    </svg>
+                    <h5 class="featuredDish__name">{{name}}</h5>  
+                    <div class="featuredDish__price">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-key"></use>
+                        </svg>
+                        <p class="price">{{price}}</p>
+                    </div>
+                    <input type="hidden" id="hdntax" value="{{tax}}" >
+                    <button  id="btn-{{id}}"class="featuredDish__btn btn btn--green">Add to Cart</button>
+                    <!-- <button  id="btn-{{id}}"class="featuredDish__btn btn btn--green" onclick="addToCart('{{id}}','{{name}}','{{price}}','{{small-image}}','{{tax}}')">Add to Cart</button> -->
+            </div>
+            {{/each}}
+        </script>
+        <script id="month-dish-entry-template" type="text/x-handlebars-template">
+            <h3 class="heading-secondary featured__dish-heading">Dish of the month</h3>
+            {{#with DishOfMonth}}
+                <div class="featured__dish__picture">
+                    <img src="{{small-image}}" alt="{{name}}">
+                </div>
+                <div class="featured__dish__content">
+                    <h4 class="heading-tertiary u-margin-bottom-small heading-4">{{name}}</h4>
+                    <p class="paragraph">
+                        {{description}}
+                    </p>
+                </div>
+            {{/with}}                     
+        </script>
+    </div>
+    <!-- Handlebars JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="dist/app-bundle.js"></script>
+    <!-- <script src="src/js/firebase_app_script.js"></script> -->
+    <!-- <script src="js/custom_jquery_code.js"></script> -->
+    <!-- Google Maps Script  -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCsixag2gCXrUK8OPgSqsUq31gxJZMB-Mo"></script>
+    <!-- Gmap.js For Static Maps -->
+    <script src="src/js/gmap.js"></script>
+    
+</body>
+
+</html>

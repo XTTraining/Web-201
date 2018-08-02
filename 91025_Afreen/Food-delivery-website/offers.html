@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">    
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Food Delivery | Order Online with Spice House</title>
+    <!-- Load the Firebase base library before loading the body. -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>    
+</head>
+
+<body class="offers-body">
+    <div class="container">
+        <header class="header">
+                <script id="header-render-template" type="text/x-handlebars-template">
+                    {{> HeaderPartial }}
+                </script> 
+        </header>
+
+        <main class="offers-main">
+            <section class="offers">
+                <!-- {{#with DishOfMonth}} -->
+                <!-- <div class="offers"> -->
+                <!-- <div class="offers"> -->
+                <h3 class="heading-secondary offers-heading">Special Offers</h3>
+                <div class="offer">
+                    <div class="offer__picture">
+                        <img src="/img/offers/special-burger.jpg" alt="{{name}}">
+                    </div>
+                    <div class="offer__content">
+                        <h4 class="heading-tertiary u-margin-bottom-small heading-4">Order now !!</h4>
+                        <p class="paragraph">
+                            Get 10% off coupon and use it with your next order.
+                            <!-- {{description}} -->
+                        </p>
+                    </div>
+                </div>
+
+                <div class="offer">
+                    <div class="offer__picture">
+                        <img src="/img/offers/special-dish.jpg" alt="{{name}}">
+                    </div>
+                    <div class="offer__content">
+                        <h4 class="heading-tertiary u-margin-bottom-small heading-4">Chip Friday</h4>
+                        <p class="paragraph">
+                            10% off on all dishes. Use coupon code JF10.
+                            <!-- {{description}} -->
+                        </p>
+                    </div>
+                </div>
+
+                <div class="offer">
+                    <div class="offer__picture">
+                        <img src="/img/offers/vegetable.png" alt="{{name}}">
+                    </div>
+                    <div class="offer__content">
+                        <h4 class="heading-tertiary u-margin-bottom-small heading-4">$100 Off on Soups</h4>
+                        <p class="paragraph">
+                            Order minimum 2 soups and $100 off on total bill. Use coupon code RUSH100.
+                            <!-- {{description}} -->
+                        </p>
+                    </div>
+                </div>
+
+                <div class="offer">
+                    <div class="offer__picture">
+                        <img src="/img/offers/special-pizza.jpg" alt="{{name}}">
+                    </div>
+                    <div class="offer__content">
+                        <h4 class="heading-tertiary u-margin-bottom-small heading-4">Today's special offer</h4>
+                        <p class="paragraph">
+                            Order above $500 and get 20% off. Use coupon code HAPPY20.
+                            <!-- {{description}} -->
+                        </p>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+
+            </section>
+        </main>
+
+        <footer class="footer">
+                <script id="footer-render-template" type="text/x-handlebars-template">
+                    {{> FooterPartial }}
+                </script>
+        </footer>
+    </div>
+
+    <script src="src/js/vendor/jquery-3.3.1.min.js"></script>
+    <!-- Handlebars JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <!-- Initialize Firebase -->
+    <!-- <script src="src/js/firebase_app_script.js"></script> --> 
+    <script src="dist/app-bundle.js"></script>
+</body>
+
+</html>

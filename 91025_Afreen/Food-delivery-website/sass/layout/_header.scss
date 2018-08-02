@@ -1,0 +1,48 @@
+.header {
+    background-color: $color-grey-light-1;
+    grid-column: full-start / full-end;
+        
+    &__navigation {
+
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0 5rem;
+        position: relative;
+        z-index:999;     
+    }  
+
+    &__links {        
+        list-style: none;
+        display: flex;
+        justify-content: start;
+        // display: grid;
+        // grid-template-columns: repeat(4,auto-fit);
+        // grid-template-columns: repeat(auto-fit, minmax(1rem,1fr));
+        // grid-gap: 1rem;        
+        // justify-items: start;
+        //  align-content: center;        
+        // border-top : 1px solid $color-white;       
+        padding-top: 2rem;           
+        
+        @include respond(tab-land) {
+            display: none;
+        }
+    }   
+
+    /* Logo */
+    &__logo-box {  
+        text-align: center;      
+    }
+
+    &__logo img {
+        width:50%;
+        height: auto;
+        text-align:center;  
+        margin-top:-2rem;
+        margin-bottom: -2rem; 
+
+        @include respond(phone) {
+            width:70%;
+        }
+    }
+}
