@@ -278,6 +278,7 @@ export const Checkout = styled.div`
         padding: 5px;
         color: #fff;
         margin-left: 20px;
+        cursor:pointer;
     }
     @media(max-width: 480px){
         width: 100%;

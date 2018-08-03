@@ -1,18 +1,17 @@
 import { getApiResponse } from '../../helpers/request';
 import Config from '../../config';
 import 'babel-polyfill';
+import { push } from 'react-router-redux';
+
 
 export const FETCH_RESTAURANT_DATA = 'FETCH_RESTAURANT_DATA';
 
-export const fetchRestaurantData = () => dispatch => {
-    const res = getApiResponse(Config.restaurantDataUrl);
-    res.then(outdata => {
-        let data = outdata.data;
-        dispatch({
-            type: "FETCH_RESTAURANT_DATA",
-            payload: data
-        });
-    });
+export const fetchRestaurantData = () => async dispatch => {
+    const res = await getApiResponse(Config.restaurantDataUrl);
+    dispatch({
+                 type: "FETCH_RESTAURANT_DATA",
+                 payload: res
+             });
 };
 
 
@@ -35,4 +34,14 @@ export const modifyCartItems = (menuItem, operation)=> dispatch =>{
             operation: operation
         }
     });
+};
+
+export const PUSH_USER_INFO = 'PUSH_USER_INFO';
+
+export const pushUserInfo = (user)=> dispatch =>{  
+    dispatch({
+        type: "PUSH_USER_INFO",
+        payload: user
+    });
+    dispatch(push('/'));
 };

@@ -9,7 +9,7 @@ export const MiniCartSection = styled.section`
 `;
 
 export const MiniCartHeading = styled.h2`
-    background-color: gainsboro;
+    background-color: #ff7400;
     color: #fff;
     text-align: center;
     border-radius: 3px;
@@ -62,9 +62,10 @@ export const MiniCartItem = styled.div`
         color: #000;
         font-weight: 200;
         margin-top: 4px;
+        font-size: 110%;
     }
     >ul>li>ul>li:nth-child(2){
-        border: 3px solid gainsboro;
+        border: 1px solid gainsboro;
         vertical align: center;
         font-size: 95%;
         font-weight: 500;

@@ -22,20 +22,26 @@ const menuItem = new Schema({
     available: Boolean
 });
 
-const restaurantData = new Schema({
-    _id: mongoose.Schema.Types.ObjectId,
-    coupon: String,
-    restaurantid: Number,
-    name: String,
-    ratings: Number,
-    address: String,
-    image: String,
-    delieveryTime: String,
-    offers:{
-        discount:String
+const UsersSchema = new Schema({
+    name:{
+        type: String,
+        required: true
     },
-    menu:[menuItem]
-}, {collection: "restaurant"});
+    email:{
+        type: String,
+        required: true
+    },
+    password:{
+        type: String,
+        required: true
+    },
+    date:{
+        type: Date,
+        default: Date.now
+    },
+    orders:{
+        type: [menuItem]
+    }
+}, {collection: "users"});
 
-module.exports = restaurant = mongoose.model('restaurantData', restaurantData);
-
+module.exports = Users = mongoose.model('users', UsersSchema);

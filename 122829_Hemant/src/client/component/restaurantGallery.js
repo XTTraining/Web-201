@@ -58,8 +58,15 @@ class RestaurantGallery extends React.Component {
         }
     };
 
-    componentWillMount() {
+    componentWillMount(){
         this.props.fetchRestaurantData();
+    }
+
+    componentDidMount() {
+        let totalRestaurants = this.props.restaurant && this.props.restaurant.length > 0 ? this.props.restaurant.length : 0;
+        if (totalRestaurants > 0) {
+            this.toggle(0, totalRestaurants, 'show');
+        }
     };
 
     distinctCuisines = (menuitem) => {
@@ -145,9 +152,11 @@ class RestaurantGallery extends React.Component {
             <SectionGallery>
                 <ItemDetailsWrapper accordianState={this.state.isOpen} accordianToShow={this.state.accordianTriggered}>
                     {this.createGalleryItems(restaurants)}
+                    {this.props.menuSelected && this.props.menuSelected.length>0 &&(
                     <ViewCart cartButtonDisplay={this.props.menuSelected.length}>
                         <a href="/cart">View Cart</a>
                     </ViewCart>
+                    )}
                 </ItemDetailsWrapper>
                 <CartWrapper>
                     <MiniCart />
@@ -164,6 +173,11 @@ const mapStateToProps = state => {
     }
 };
 
+const loadData = (store) => {
+    console.log('load data triggered server side');
+    return store.dispatch(fetchRestaurantData());
+};
 
+export { loadData };
 
 export default connect(mapStateToProps, { fetchRestaurantData, pushMenuItems })(RestaurantGallery);

@@ -10,7 +10,7 @@ export const FooterLinks = styled.div`
     width: 50%;
     text-align: left;
     display: inline-block;
-    >a>figure>img{
+    >a>img{
         height: 50px;
     }
 `;

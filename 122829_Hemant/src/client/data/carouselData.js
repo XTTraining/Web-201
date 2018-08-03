@@ -4,7 +4,7 @@ export const CarouselData = [{
     image: {
         title: "",
         alt: "daal",
-        src: "/assets/img/slide1.jpg"
+        src: "/assets/img/aroma.jpg"
     },
     link: {
         href: "",
@@ -17,8 +17,8 @@ export const CarouselData = [{
     description: "Enjoy 5% Discount With YO5",
     image: {
         title: "",
-        alt: "pizza",
-        src: "/assets/img/slide2.jpg"
+        alt: "noodles",
+        src: "/assets/img/cherry.jpg"
     },
     link: {
         href: "",
@@ -31,8 +31,8 @@ export const CarouselData = [{
     description: "Enjoy 15% Discount With BURGER15",
     image: {
         title: "",
-        alt: "pizza",
-        src: "/assets/img/slide3.jpg"
+        alt: "burger",
+        src: "/assets/img/beverages.jpg"
     },
     link: {
         href: "",

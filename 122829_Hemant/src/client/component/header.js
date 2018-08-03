@@ -23,7 +23,7 @@ class Header extends React.Component {
         for (let i = 0; i < items.length; i++) {
             menuItems.push(
                 <li key={i}>
-                    <a href={items[i].link.href}>{items[i].title}</a>
+                    <a href={items[i].link.href} alt={items[i].title}>{items[i].title}</a>
                 </li>
             );
         };
@@ -43,7 +43,7 @@ class Header extends React.Component {
         return (
             <HeaderStyle>
                 <NavFlexContainer Row>
-                    <a href="/" alt="">
+                    <a href="/" alt="khaanapeena">
                         <LogoImage src={this.props.headerLogoImage} alt='khaana-peena' />
                     </a>
                     <MenuUnorderedList actionHamburger={this.state.ishamburger}>

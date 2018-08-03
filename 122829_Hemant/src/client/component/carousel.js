@@ -63,7 +63,7 @@ class Carousel extends React.Component {
         for (let i = 0; i < this.props.totalItems; i++) {
             carouselHtml.push(
                 <CarouselImage order={this.getCarouselItemPosition(i)} key={i}>
-                    <p>{carouselInfo[i].description}</p>
+                    <h2>{carouselInfo[i].description}</h2>
                     <img src={carouselInfo[i].image.src} alt={carouselInfo[i].image.alt} />
                 </CarouselImage>
             );
@@ -79,6 +79,10 @@ class Carousel extends React.Component {
             );
         };
         return indicators;
+    };
+
+    componentDidMount(){
+        setInterval(()=>this.rotateCarousel('next'), 3000);
     };
 
     render() {

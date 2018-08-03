@@ -17,7 +17,7 @@ export const HeaderData={
         title:"Products",
         link: {
             title: "",
-            href: ""
+            href: "#"
         },
         image:{
             src:"",
@@ -49,10 +49,10 @@ export const HeaderData={
         child:[]
     },
     {
-        title:"SignUp",
+        title:"Login",
         link: {
             title: "",
-            href: ""
+            href: "/login"
         },
         image:{
             src:"",

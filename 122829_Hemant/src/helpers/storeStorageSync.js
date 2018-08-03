@@ -2,7 +2,6 @@ import {store } from '../helpers/clientStore';
 
 const initializeState = () => {
     store.subscribe(()=>{
-        console.log(store.getStore());
         return store.getState();
     });
 };

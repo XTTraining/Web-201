@@ -1,14 +1,37 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import Home from './pages/home';
+import Home, {loadData} from './pages/home';
 import Order from './pages/order';
 import CartPage from './pages/cartPage';
-export default () =>{
-    return(
-        <div>
-            <Route exact path="/" component={Home} />
-            <Route path='/order' component={Order} />
-            <Route path='/cart' component={CartPage} />
-        </div>
-    );
-};
+import PaymentPage from './pages/paymentPage';
+import LoginPage from './pages/loginPage';
+import RegistrationPage from './pages/registrationPage';
+
+
+export default [
+    {
+        loadData,
+        path: '/',
+        component: Home,
+        exact: true
+    },
+    {
+        path: '/order',
+        component: Order
+    },
+    {
+        path: '/cart',
+        component: CartPage
+    },
+    {
+        path: '/payment',
+        component: PaymentPage
+    },
+    {
+        path: '/login',
+        component: LoginPage
+    },
+    {
+        path: '/registration',
+        component: RegistrationPage
+    }
+]

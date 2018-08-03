@@ -44,7 +44,7 @@ export const CartWrapper = styled.div`
 export const RestaurantItem = styled.div`
     display: flex;
     margin-bottom: 10px;
-    background-color: gainsboro;
+    background-color: #ff7400;
     align-items: center;
     color: #fff;
     border-radius: 3px;
@@ -60,6 +60,8 @@ export const RestaurantItem = styled.div`
         margin-right: 15px;
         letter-spacing: 2px;
         text-transform: uppercase;
+        padding-left: 10px;
+        font-size: 75%;
     }
     @media (max-width : 768px){
         >h2{
@@ -83,9 +85,7 @@ export const ItemDetails = styled.div`
     width: 45%;
     height: 300px;
     margin-left: 10px;
-    :hover{
-        border: 2px solid gainsboro;
-    }
+    border: 1px solid gainsboro;
     @media(max-width:480px){
         width: 90%;
     }
@@ -219,10 +219,11 @@ export const ViewCart = styled.div`
 `;
 
 export const ExpandSpan = styled.span`
-    font-size: 295%;
+    font-size: 275%;
     display:block;
     cursor: pointer;
     margin: 0 0 0 auto;
+    padding-right: 10px;
 `;
 
 export const CollapseSpan = styled.span`
@@ -230,4 +231,5 @@ export const CollapseSpan = styled.span`
     display: none;
     cursor: pointer;
     margin: 0 2px 0 auto;
+    padding-right: 10px;
 `;

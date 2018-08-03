@@ -21,9 +21,7 @@ class Footer extends React.Component {
             socialLinks.push(
                 <li key={i}>
                     <a href={socialLink.link.href} alt="">
-                        <figure>
                             <img src={socialLink.image.src} alt={socialLink.image.alt} />
-                        </figure>
                     </a>
                 </li>
             );
@@ -38,10 +36,8 @@ class Footer extends React.Component {
                     <FooterLinks>
                         {
                             this.props.footerImage && (
-                                <a href={this.props.footerLink}>
-                                    <figure>
+                                <a href={this.props.footerLink} alt="khaana-peena">
                                         <img src={this.props.footerImage} alt={this.props.footerImageAlt} />
-                                    </figure>
                                 </a>
                             )
                         }

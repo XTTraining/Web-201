@@ -20,7 +20,7 @@ export const CarouselImage = styled.div`
         height: 100%;
         width: 100%;
     }
-    >p{
+    >h2{
         position: relative;
         width: 25%;
         height: 20%;
@@ -28,15 +28,14 @@ export const CarouselImage = styled.div`
         left: 10%;
         text-transform: uppercase;
         font-size: 140%;
-        color: #60b246;
-        border: 1px solid #60b246;
+        color: #fff;
         text-align: center;
         z-index:999;
     }
     
     @media(max-width:768px){
         margin-top:0;
-        >p{
+        >h2{
             display: none;
         }
         

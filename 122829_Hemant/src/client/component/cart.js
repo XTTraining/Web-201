@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Vegeterian, NonVegeterian } from '../styles/commonStyles';
+import PropTypes from 'prop-types';
 import {
     RowCoupon,
     PromoText,
@@ -33,7 +34,7 @@ class Cart extends React.Component {
             couponDiscount: 0
         };
     };
-
+    
     getSum = (total, num) => {
         return total + num;
     };
@@ -107,20 +108,31 @@ class Cart extends React.Component {
         return cartHtml;
     };
 
-    getCouponDiscount = (restaurants, subTotal) =>{
+    getCouponDiscount = (restaurants, subTotal) => {
         let couponApplied = this.refs.couponref.value;
         let matchedValue = restaurants.filter(elem => {
-            if(elem.coupon.toUpperCase()===couponApplied.toUpperCase()){
+            if (elem.coupon.toUpperCase() === couponApplied.toUpperCase()) {
                 return elem;
             }
         });
-        if(matchedValue.length>0){
-            const discount = Math.floor((subTotal * parseInt(matchedValue[0].offers.discount))/100);
+        if (matchedValue.length > 0) {
+            const discount = Math.floor((subTotal * parseInt(matchedValue[0].offers.discount)) / 100);
             this.setState({
                 couponDiscount: discount
             });
         }
-    }
+    };
+
+    handleRedirection = () => {
+        let ifLogin = this.props.userInfo && this.props.userInfo.user && this.props.userInfo.user.name
+            ? true : false;
+        if (ifLogin) {
+            this.context.router.history.push('/payment');
+        }
+        else{
+            this.context.router.history.push('/login');
+        }
+    };
 
     render() {
         const selectedItems = this.props.selectedMenuItems;
@@ -144,13 +156,13 @@ class Cart extends React.Component {
                             <input ref='couponref' type="text" name="name" id="promo-code" placeholder="" />
                         </PromoCodeBox>
                         <BtnBorder>
-                            <input type="submit" value="Apply" onClick={()=>this.getCouponDiscount(restaurants, this.getSubTotal(selectedItems))} />
+                            <input type="submit" value="Apply" onClick={() => this.getCouponDiscount(restaurants, this.getSubTotal(selectedItems))} />
                         </BtnBorder>
                     </RowCoupon>
                     <SubTotalUnorderedList>
                         <li>Taxes</li>
                         <li>INR {this.getTaxes(selectedItems)}</li>
-                        </SubTotalUnorderedList>
+                    </SubTotalUnorderedList>
                     <SubTotalUnorderedList>
                         <li>SubTotal</li>
                         <li>INR {this.getSubTotal(selectedItems)}</li>
@@ -165,10 +177,10 @@ class Cart extends React.Component {
                     </DelieveryCharges>
                     <EstimatedTotal>
                         <li>ESTIMATED TOTAL</li>
-                        <li>INR {this.getSubTotal(selectedItems)-this.state.couponDiscount}</li>
+                        <li>INR {this.getSubTotal(selectedItems) - this.state.couponDiscount}</li>
                     </EstimatedTotal>
                     <Checkout>
-                        <input type="submit" value="CHECKOUT" />
+                        <input onClick={()=>this.handleRedirection()} type="submit" value="CHECKOUT" />
                     </Checkout>
                 </CartCal>
             </CartSection>
@@ -180,8 +192,13 @@ class Cart extends React.Component {
 const mapStateToProps = state => {
     return {
         selectedMenuItems: state.selectedItems,
-        restaurants : state.restaurants
+        restaurants: state.restaurants,
+        userInfo: state.userInfo
     }
 };
+
+Cart.contextTypes = {
+    router: PropTypes.func.isRequired
+  };
 
 export default connect(mapStateToProps, {})(Cart);

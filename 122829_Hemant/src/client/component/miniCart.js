@@ -79,10 +79,11 @@ class MiniCart extends React.Component {
         const selectedItems = this.props.selectedMenuItems;
         return (
             <MiniCartSection>
+                
                 <MiniCartHeading>
                     Cart
                 </MiniCartHeading>
-                {selectedItems && selectedItems.length > 0 && this.getSubTotal(selectedItems) > 0 && (
+                {selectedItems && selectedItems.length > 0 && this.getSubTotal(selectedItems) > 0&&(
                     <MiniCartInformation>
                         {this.getCartItems(selectedItems)}
                         <ul>
@@ -97,7 +98,7 @@ class MiniCart extends React.Component {
                             <CheckoutButton>Checkout</CheckoutButton>
                         </Link>
                     </MiniCartInformation>
-                )}
+                    )}
             </MiniCartSection>
         );
     };
