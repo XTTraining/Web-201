@@ -1,54 +1,81 @@
-.main-content{
-    
+.main-content{    
     grid-column: full-start/full-end;
-    background-size: cover;
     background-position: center;
-    padding: 2rem 0;
-    font-family: $font-display;
-    //display: grid;
-    // grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
-    // grid-template-columns: minmax(min-content, max-content);
-    // grid-row-gap: 1.5rem;
-    // justify-content: center;
-    height:45rem;
-    min-height:100%;
+    margin: 5rem 0;
+    font-family: $font-display;    
+    height:35rem;    
     clear: both;
-    position: relative;
+    
     img{
-         width: 100vw;
-         max-width:100%;
-         height:100%;
+         width: 100%;
+         height:40rem;
+         @include respond(tab-land){            
+            margin-top: 3rem ;            
+        }
+
+        @include respond(phone){            
+            margin-top: 5rem ;            
+        }
     }
 
     .banner-heading{
         z-index: 1;
         text-transform: uppercase;
-        top: 50%;
+        top: 25rem;        
         color: $color-primary-dark;
         left: 25%;
-        width: 21vw;
-        min-width: 113px;
+        width: 40rem;
+        height: inherit;
+        min-width: 11.3rem;
         position: absolute;
         transform: translate(-50%,-50%);
         
         text-align: center;
+
+        @include respond(phone){            
+            left:20rem ;
+            top: 32rem;
+        }
+
+        @include respond(tab-land){            
+            top: 25rem ;            
+        }
+
+        @include respond(tab-port){            
+            top: 30rem ;            
+        }
     }
     .span-main{
-        font-size: 30px;
+        font-size: 4rem;
+        color: $color-primary-font;
 
+        @include respond(tab-port){            
+            font-size: 3rem;           
+        }
+        @include respond(phone){            
+            font-size: 3rem;           
+        }
     }
     .span-sub{
         display: block;
         color: $color-span-sub;
-        letter-spacing:4px;
+        letter-spacing:.4rem;
         padding-bottom: 2rem;
+        font-size: 2.4rem;
+
+        @include respond(tab-port){            
+            font-size: 2rem;           
+        }
+        @include respond(phone){            
+            font-size: 2rem;           
+        }
     }
 
     .btn:link,
     .btn:visited{
         text-decoration: none;
-        padding: 15px 25px; 
-        border-radius: 100px;        
+        padding: 1.5rem 2.5rem; 
+        border-radius: 10rem;        
         transition: all .2s;
     }
 
@@ -57,12 +84,12 @@
         color: $color-primary-font;        
     }
     .btn:active{
-        transform: translateY(-1px);
-        box-shadow: 0 10px 20px rgba(0,0,0,.2);
+        transform: translateY(-.1rem);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
     }
 
     .btn:hover{
-        transform: translateY(-3px);
-        box-shadow: 0 5px 10px rgba(0,0,0,.2);
+        transform: translateY(-.3rem);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
     }
 }

@@ -1,17 +1,18 @@
 // COLOR VARIABLES
-$color-primary: #f12929;
-$color-primary-heading:#f18d29;
-$color-primary-btn:#d85050;
-$color-primary-dark:#A00000;
+$color-primary: #f4f4f4;
+$color-primary-heading:#f4f4f4;
+$color-primary-btn:#dcd0c0;
+$color-primary-dark:#c0b283;
 $color-grey-dark-1:#CA0B0B;
-$color-primary-font:#E0FFFF;
-$color-nav-active:#00FF00;
-$color-span-sub:#21C121;
-$color-primary-hover:#98FB98;
+$color-primary-font:#373737;
+$color-nav-active:#f4f4f4;
+$color-span-sub:#6B063A;
+$color-primary-hover:#dcd0c0;
 $color-footer:#1C2A43;
 $color-cart-blue:#0088cc;
+$color_final_checkout:#3A4404;
 
-$color-accordion-btn:#09A209;
+$color-accordion-btn:#dcd0c0;
 
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
@@ -23,13 +24,6 @@ $bp-large: 62.5em;   // 1000px
 $bp-medium: 50em;    // 800px;
 $bp-small: 37.5em;    // 600px;
 
-*,
-*::before,
-*::after {
-    //margin: .5rem;
-    padding: 0;
-    box-sizing: inherit;
-}
 
 html {
     box-sizing: border-box;
@@ -45,7 +39,9 @@ body {
     color: $color-primary-font;
     font-weight: 300;
     line-height: 1.6;
+    font-size: 2rem;
     background-color:$color-primary;
+    margin: 0;
 }
 
  .container {
@@ -53,12 +49,9 @@ body {
      grid-template-rows: auto min-content auto repeat(6, min-content);
      grid-template-columns: [full-start] minmax(10rem, 1fr) [center-start] repeat(6, [col-start] minmax(min-content, 40rem) [col-end]) [center-end] minmax(6rem, 1fr)[full-end] ;
 
-    @media only screen and (max-width: $bp-large) {
-        grid-template-rows: 6rem auto min-content auto repeat(3, min-content);
+     @include respond(tab-port) {
+        grid-template-rows: 50rem auto min-content 40vw repeat(3, min-content);
         grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     }
-
-    // @media only screen and (max-width: $bp-medium) {
-    //     grid-template-rows: 6rem calc(100vh - 6rem);
-    // }
+    
  }

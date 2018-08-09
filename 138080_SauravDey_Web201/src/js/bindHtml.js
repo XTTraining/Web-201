@@ -1,12 +1,14 @@
-const jQuery= require('jquery');
+const $= require('jquery');
 
 function bindAccordion(menuData,searchItem="")
 {    
     let innerHtml=``;
+    
     for (let key in menuData) {
         innerHtml+=`<button class="accordion">${key}</button><div class="panel ">`;
         let subMenu=menuData[key];
-        let flag=false;        
+        let flag=false; 
+               
         for (let subKey in subMenu) {
             let subItem=subMenu[subKey];
             if(subKey.toLowerCase().indexOf(searchItem.toLowerCase())>-1)
@@ -20,13 +22,10 @@ function bindAccordion(menuData,searchItem="")
                 </div>
                 <div class="menu__qty">                    
                     <input type='button' value='-' class='qtyminus' field='quantity' />
-                    <input type='text' name='quantity' readonly=true value='0' class='qty' />
+                    <input type='text' name='quantity' readonly=true value='0' class='qty' aria-label="Quantity" />
                     <input type='button' value='+' class='qtyplus' field='quantity' />
                 </div>
-               <div class="menu__btn">
-               <div class="popup">
-                    <span class="popuptext">${subKey} successfully added to the cart</span>
-                </div>
+               <div class="menu__btn">               
                    <input type="button" class="btn__cart" value="Add to cart">
                    <input type="button" class="btn__buy" value="Buy">
                </div> 
@@ -37,20 +36,22 @@ function bindAccordion(menuData,searchItem="")
         }
         innerHtml+=`</div>`;
     }
-    jQuery(".features").children().remove();
-    jQuery('.features').append(innerHtml);
+    $(".features").children().remove();
+    $('.features').append(innerHtml);
 
-    jQuery('.accordion').each(function(){
-        if(jQuery(this).next("div > .panel").children().length<1)
+    $('.accordion').each(function(){
+        let thisPanel=$(this);
+        if(thisPanel.next("section > .panel").children().length<1)
         {
-            jQuery(this).attr("style","display:none");
+            thisPanel.attr("style","display:none");
         }
     });
 
-    jQuery(document).on("click",".popuptext",function(){
-        if(jQuery(this).hasClass('show'))
+    $(document).on("click",".popuptext",function(){
+        let popupClass=$(this);
+        if(popupClass.hasClass('show'))
         {
-            jQuery(this).removeClass('show');
+            popupClass.removeClass('show');
         }
     });
 }
@@ -60,12 +61,13 @@ function bindOrder(menu,order)
     let innerHtml=``;
     let netTotal=0;
     let gst=0;
-    jQuery(".order-list").children().remove();
+    $(".order-list").children().remove();
     if(menu==null||order=="")
     {
-        jQuery(".order-list").append("<a class='redirect-home' href=index.html>Continue Shopping</a>");
+        $(".order-list").append("<a class='redirect-home' href=index.html>Continue Shopping</a>");
         return;
     }
+
     for(let item in order)
     {        
         for (let key in menu) {            
@@ -83,7 +85,7 @@ function bindOrder(menu,order)
                         <span class="item__label__qty">Quantity</span>
                         <div class="item__qty">                    
                             <input type='button' value='-' class='qtyminus' field='quantity' />
-                            <input type='text' name='quantity' readonly=true value='${order[item].Qty}' class='qty' />
+                            <input type='text' name='quantity' readonly=true value='${order[item].Qty}' aria-label="search button" class='qty' />
                             <input type='button' value='+' class='qtyplus' field='quantity' />
                         </div>
                         <input type="button" class="remove__btn" value="Remove">                    
@@ -118,7 +120,7 @@ function bindOrder(menu,order)
         <button class="total__order__place">Place Order</button>
     </div>
     </div>`;    
-    jQuery(".order-list").append(innerHtml);
+    $(".order-list").append(innerHtml);
 }
 
 function bindCheckout(orderCookie)
@@ -138,7 +140,16 @@ function bindCheckout(orderCookie)
         <p>Net <span class="price black"><b>Rs. ${net}</b></span></p>
         <p>Tax <span class="price black"><b>Rs. ${gst}</b></span></p>
         <p>Grand Total <span class="price black"><b>Rs. ${Math.round(net+gst)}</b></span></p>`;        
-    jQuery(".order__place").append(innerHtml);
+    $(".order__place").append(innerHtml);
 }
 
-export { bindAccordion,bindOrder,bindCheckout};
+function bindCartButton(orderData)
+{    
+    let cartCount=0;
+    if(orderData!="")
+    {
+        cartCount= JSON.parse(orderData).length;
+    } 
+    $(".cart__order i").attr('data-count',cartCount);
+}
+export { bindAccordion,bindOrder,bindCheckout,bindCartButton};

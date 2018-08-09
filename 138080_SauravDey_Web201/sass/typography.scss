@@ -1,0 +1,65 @@
+
+h1{
+    font-size: 2.4rem;
+}
+
+.qtyplus,.qtyminus{  
+    border-radius: 50%;
+    padding: 0.25em 0.8em;                
+}
+
+.qty{               
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: .8rem;
+    width:50%;
+    &::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+    appearance: none;    }
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1%;
+}
+.col:first-child { margin-left: 0; }
+
+.topnav:before,
+.topnav:after { content:""; display:table; }
+.topnav:after { clear:both;}
+.topnav { zoom:1; }
+
+.span_6_of_6 {
+	width: 100%;
+}
+
+.span_5_of_6 {
+  	width: 83.16%;
+}
+
+.span_4_of_6 {
+  	width: 66.33%;
+}
+
+.span_3_of_6 {
+  	width: 48.5%;
+}
+
+.span_2_of_6 {
+      width: 32.66%;
+      
+      @include respond(tab-port){
+        width: 40.66%;
+      }
+}
+
+.span_1_of_6 {
+  	width: 15.83%;
+}
+
+@include respond(phone) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 { width: 100%; }
+}

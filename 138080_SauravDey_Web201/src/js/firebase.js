@@ -21,7 +21,6 @@ const firebaseDb = firebase.database().ref('/Menu');
   {  
     firebaseDb.once('value', function(snap){
         menuData= snap.val();
-        //console.log(`firebase file :: ${menuData}`);
     });
   }
 

@@ -6,14 +6,21 @@
     grid-gap: 4rem;
     display: flex;
     flex-direction: column;
-    font-size: 1.7rem;
-    margin-top: 7vh;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-top: 15rem;
+    margin-bottom: 4rem;
+    min-height: 20rem;
+    clear: both;
+
+    @include respond(phone){
+        font-size: 1.5rem;   
+        margin-top: 23rem;        
+    }
     
-    .redirect-home{        
+    & .redirect-home{        
         text-decoration: none;
-        padding: 15px 25px;
-        border-radius: 100px;
+        padding: 1.5rem 2.5rem;
+        border-radius: 10rem;
         text-align: center;
         background-color: $color-primary-btn;
         align-content: center;
@@ -21,18 +28,24 @@
         margin: auto;
     }
 
-    .success__order{
+    & .success__order{
         margin: auto;
         align-content: center;
         color: $color-span-sub;
     }
-    .item{
+    & .item{
         display: flex;
         color: inherit;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         margin-bottom: 3rem;
+        min-height: 25rem;
+
+        @include respond(mobile){
+            flex-direction: column;  
+            min-height: 20rem;          
+        }
 
         &__detail{
             text-align: center;
@@ -41,7 +54,7 @@
         }
 
         &__total{
-            
+
             span{
                 display: block;
                 text-align: center;
@@ -49,8 +62,8 @@
 
             &__label{
                 font-weight: 500;
-                color: $color-primary-hover;
-                font-size: 1.5rem;
+                color: $color-span-sub;
+                font-size: 2rem;
             }
 
             &__tag{
@@ -64,37 +77,23 @@
 
             &__qty{
                 font-weight: 500;
-                color: $color-primary-hover;
-                font-size: 1.5rem;
+                color: $color-span-sub;
+                font-size: 2rem;
             }
         }
 
-        
-
-    .remove__btn{
-        margin-top: 10px;
+    & .remove__btn{
+        margin-top: 1rem;
         padding: 1rem 3rem;
         border-radius: 2rem;
     }
     }
 
-    .total{
+    & .total{
         text-align: right;
         margin-right: 5rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 500;
-
-        // &__net__price{
-
-        //     &__tag{
-                
-        //     }
-
-        // }
-
-        // &__tax{
-
-        // }
 
         &__grand{
             font-size: 2rem;
@@ -106,20 +105,15 @@
 
             &__place{
                 padding: 2rem 6rem;                
-                border-radius: 10px; 
+                border-radius: 1rem; 
                 font-size: 2rem;
-                font-weight: 700;
+                font-weight: 700;                
+                margin-top: 2rem;
             }
         }
     }
 
-    @media screen and (max-width: 575px) {
-        .item {
-            flex-direction: column;
-        }
-    }
-
-    .item div{
+    & .item div{
         img{
             width: 30vw;
         }
@@ -132,75 +126,83 @@
     font-family: $font-primary;
     grid-gap: 4rem;
     display: flex;
-    flex-direction: column;
-    font-size: 1.7rem;
-    margin-top: 7vh;    
-    padding: 8px;
-
-    * {
-        box-sizing: border-box;
-      }
+    flex-direction: column;    
+    margin-top: 15rem;  
+    
+    @include respond(phone)
+    {
+        margin-top: 22rem;
+    }
       
       .row {
-        display: -ms-flexbox; /* IE10 */
+        display: -ms-flexbox; 
         display: flex;
-        -ms-flex-wrap: wrap; /* IE10 */
+        -ms-flex-wrap: wrap; 
         flex-wrap: wrap;
-        margin: 0 -16px;
+        margin: 0 -1.6rem;        
+
+        @include respond(phone){
+            flex-direction: column-reverse!important;
+            
+        }
       }
       
       .col-25 {
-        -ms-flex: 25%; /* IE10 */
+        -ms-flex: 25%; 
         flex: 25%;
+
+        @include respond(phone){
+            margin-bottom: 2rem;
+        }
       }
       
       .col-50 {
-        -ms-flex: 70%; /* IE10 */
-        flex: 70%;
+        -ms-flex: 65%; 
+        flex: 65%;
       }      
       
       .col-25,
       .col-50
       {
-        padding: 0 16px;
+        padding: 0 1.6rem;
       }
       
       &__container {
         background-color: $color-primary-dark;
-        padding: 5px 20px 15px 20px;
-        border: 1px solid $color-primary-hover;
-        border-radius: 3px;
+        padding: .5rem 2rem 1.5rem 2rem;
+        border: .1rem solid $color-primary-hover;
+        border-radius: .3rem;
       }
       
       input[type=text] {
         width: 100%;
-        margin-bottom: 20px;
-        padding: 12px;
-        border: 1px solid $color-primary-font;
-        border-radius: 3px;
+        margin-bottom: 2rem;
+        padding: 1.2rem 0 1rem 1rem;
+        border: .1rem solid $color-primary-font;
+        border-radius: .3rem;
       }
       
       label {
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         display: block;
       }
       
       .icon-container {
-        margin-bottom: 8px;
-        padding: 7px 0;
-        font-size: 24px;
+        margin-bottom: .8rem;
+        padding: .7rem 0;
+        font-size: 2.4rem;
       }
       
       .btn {
         background-color: $color-accordion-btn;
         color: $color-primary-font;
-        padding: 12px;
-        margin: 10px 0;
+        padding: 1.2rem;
+        margin: 1rem 0;
         border: none;
         width: 100%;
-        border-radius: 3px;
+        border-radius: .3rem;
         cursor: pointer;
-        font-size: 17px;
+        font-size: 2rem;
       }
       
       .btn:hover {
@@ -213,7 +215,7 @@
       }
       
       hr {
-        border: 1px solid $color-primary-hover;
+        border: .1rem solid $color-primary-hover;
       }
       
       span.price {
@@ -222,16 +224,6 @@
       }
 
       .black{
-          color: $color-primary-heading !important;
-      }
-      
-      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-      @media (max-width: 800px) {
-        .row {
-          flex-direction: column-reverse;
-        }
-        .col-25 {
-          margin-bottom: 20px;
-        }
+          color: $color_final_checkout !important;
       }
 }
